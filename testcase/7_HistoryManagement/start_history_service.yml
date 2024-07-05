@@ -1,0 +1,7 @@
+-  name: 开启历史归档服务
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/service/historicarchive/start
+      method: post
+   validate:
+      -  equals: {status_code: 200}

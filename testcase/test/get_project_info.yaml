@@ -1,0 +1,10 @@
+-  name: 工程信息
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/${get_extract_data(project_id)}/info
+      method: get
+   extract:
+      x_project: identifier
+   validate:
+    -  equals: {status_code: 200}
+    -  contains: id

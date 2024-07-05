@@ -1,0 +1,20 @@
+-  name: 添加历史变量
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/historicarchive/group/${get_extract_data(history_group_id)}/var
+      method: put
+      json:
+         [
+            19,
+            20,
+            28,
+            30,
+            32,
+            33,
+            41,
+            47
+         ]
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

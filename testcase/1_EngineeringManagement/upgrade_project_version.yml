@@ -1,0 +1,45 @@
+-  name: 检查本地工程id是否冲突
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/checklocalprojectfileidconflict
+      method: post
+      data:
+         localFilePath: ${get_project_path2()}\data\EngineeringManagement\2.0.2测试兼容性.cmsproj
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {result: False}
+
+-  name: 导入本地低版本工程文件
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/importlocalproject
+      method: post
+      data:
+         localFilePath: ${get_project_path2()}\data\EngineeringManagement\2.0.2测试兼容性.cmsproj
+         importConflictHandleType: 1
+   extract:
+      import_low_project_id: id
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 升级工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/updateprojectfile
+      method: put
+      data:
+         id: ${get_extract_data(import_low_project_id)}
+         isKeepOldFile: true
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 删除升级后的工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/deletenodes
+      method: put
+      data:
+         ids: ${get_extract_data(import_low_project_id)}
+         isDeleteFile: true
+   validate:
+      -  equals: {status_code: 200}

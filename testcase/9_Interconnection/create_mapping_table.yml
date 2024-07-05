@@ -1,0 +1,18 @@
+-  name: 创建映射表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/${get_extract_data(intn_id)}/table
+      method: post
+      json:
+        {
+          "isBasic": true,
+          "databaseTableName": "student",
+          "querySql": "",
+          "name": "插入${get_random_number(1000,9999)}"
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+     maptable_id: id
+   validate:
+      -  equals: {status_code: 200}

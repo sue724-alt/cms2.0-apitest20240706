@@ -1,0 +1,78 @@
+[2023-05-28 14:35:53,952] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-28 14:35:53,952] logger_util.py->write_log line:61 [INFO] 接口名称：异常用例-变量触发
+[2023-05-28 14:35:53,953] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-28 14:35:53,953] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/c9da8004-af75-4056-aa84-40301ba9c6ad/triggers
+[2023-05-28 14:35:53,953] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-28 14:35:53,953] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': None, 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': False, 'condition': None, 'conditionDetail': 1, 'frequencyCheck': False, 'alarmPointIds': None, 'triggerType': 2}]
+[2023-05-28 14:35:53,953] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-28 14:35:54,110] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '触发动作不能为空'}]
+[2023-05-28 14:35:54,110] logger_util.py->write_log line:61 [INFO] 实际结果：触发动作不能为空
+[2023-05-28 14:35:54,110] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-28 14:35:54,111] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-28 14:35:54,117] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-28 14:35:54,117] logger_util.py->write_log line:61 [INFO] 接口名称：异常用例-定时触发
+[2023-05-28 14:35:54,117] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-28 14:35:54,117] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/c9da8004-af75-4056-aa84-40301ba9c6ad/triggers
+[2023-05-28 14:35:54,117] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-28 14:35:54,117] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': None, 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': False, 'condition': None, 'conditionDetail': 1, 'frequencyCheck': False, 'alarmPointIds': None, 'triggerType': 1}]
+[2023-05-28 14:35:54,118] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-28 14:35:54,123] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '请填写触发时间'}]
+[2023-05-28 14:35:54,124] logger_util.py->write_log line:61 [INFO] 实际结果：请填写触发时间
+[2023-05-28 14:35:54,124] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-28 14:35:54,124] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-28 14:35:54,130] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-28 14:35:54,130] logger_util.py->write_log line:61 [INFO] 接口名称：异常用例-定时触发
+[2023-05-28 14:35:54,130] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-28 14:35:54,130] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/c9da8004-af75-4056-aa84-40301ba9c6ad/triggers
+[2023-05-28 14:35:54,130] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-28 14:35:54,131] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': None, 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': True, 'condition': None, 'conditionDetail': 1, 'frequencyCheck': False, 'alarmPointIds': None, 'triggerType': 1}]
+[2023-05-28 14:35:54,131] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-28 14:35:54,136] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果不包含字符串：触发动作不能为空
+[2023-05-28 14:35:54,136] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-05-28 14:35:54,136] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-28 14:35:54,137] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败：返回结果不包含字符串：" + value)
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果不包含字符串：触发动作不能为空
+
+[2023-05-28 14:35:54,137] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败：返回结果不包含字符串：" + value)
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果不包含字符串：触发动作不能为空
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 247, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 398, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败：返回结果不包含字符串：" + value)
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果不包含字符串：触发动作不能为空
+
+
+[2023-05-28 14:35:54,238] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-28 14:35:54,238] logger_util.py->write_log line:61 [INFO] 接口名称：异常用例-字段触发
+[2023-05-28 14:35:54,238] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-28 14:35:54,238] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/c9da8004-af75-4056-aa84-40301ba9c6ad/triggers
+[2023-05-28 14:35:54,238] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-28 14:35:54,239] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': None, 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': True, 'condition': None, 'conditionDetail': 1, 'frequencyCheck': False, 'alarmPointIds': None, 'triggerType': 3}]
+[2023-05-28 14:35:54,239] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-28 14:35:54,244] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '触发动作不能为空'}]
+[2023-05-28 14:35:54,244] logger_util.py->write_log line:61 [INFO] 实际结果：触发动作不能为空
+[2023-05-28 14:35:54,244] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-28 14:35:54,244] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

@@ -1,0 +1,43 @@
+[2023-05-18 16:05:50,204] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 276, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 41, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 20, in get_base_url
+    return  read_config_file('base',node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 13, in read_config_file
+    return value[one_node][two_node]
+KeyError: 'cms_url'
+
+[2023-05-18 16:05:50,204] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 276, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 41, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 20, in get_base_url
+    return  read_config_file('base',node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 13, in read_config_file
+    return value[one_node][two_node]
+KeyError: 'cms_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 176, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 304, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 276, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 41, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 20, in get_base_url
+    return  read_config_file('base',node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 13, in read_config_file
+    return value[one_node][two_node]
+KeyError: 'cms_url'
+
+

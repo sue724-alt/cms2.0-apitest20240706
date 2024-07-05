@@ -1,0 +1,10 @@
+-  name: 搜索图片
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery/tree?keyword=22&groupPath=我的
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

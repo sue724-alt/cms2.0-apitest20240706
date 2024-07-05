@@ -1,0 +1,22 @@
+-  name: 配置变化触发-百分比
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/historicarchive/group/${get_extract_data(history_group_id)}/archivesetting
+      method: put
+      json:
+        {
+          "enableArchive": true,
+          "archiveType": 1,
+          "intervalValue": 1,
+          "intervalUnit": 1,
+          "enableDeadZone": true,
+          "deadZoneType": 1,
+          "deadZoneThreshold": 10.15,
+          "enableMinInterval": true,
+          "minIntervalValue": 1,
+          "minIntervalUnit": 1
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

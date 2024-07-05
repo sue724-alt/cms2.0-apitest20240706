@@ -1,0 +1,380 @@
+[2024-01-16 05:49:30,786] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:30,786] logger_util.py->write_log line:61 [INFO] 接口名称：创建互联项
+[2024-01-16 05:49:30,786] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2024-01-16 05:49:30,786] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection
+[2024-01-16 05:49:30,786] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:30,786] logger_util.py->write_log line:61 [INFO] 请求参数：{'id': None, 'name': 'mysql6352', 'connectionType': 1, 'databaseType': 1, 'authenticationType': None, 'server': '127.0.0.1', 'port': '3306', 'database': 'TestDB', 'databasePath': '', 'userName': 'root', 'password': 'syc123', 'changedPassword': True, 'mqttType': None, 'pushType': None, 'timingPeriod': None, 'changingPeriod': None, 'cloudDeviceId': '', 'originalSecret': ''}
+[2024-01-16 05:49:30,787] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:30,809] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:30,809] logger_util.py->write_log line:61 [INFO] 实际结果：{'data': {'id': 4, 'name': 'mysql6352', 'connectionType': 1, 'databaseType': 1, 'authenticationType': 0, 'server': '127.0.0.1', 'port': 3306, 'database': 'TestDB', 'databasePath': '', 'userName': 'root'}, 'message': ''}
+[2024-01-16 05:49:30,810] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:30,810] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:30,819] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:30,819] logger_util.py->write_log line:61 [INFO] 接口名称：创建映射表-定时触发-插入
+[2024-01-16 05:49:30,819] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2024-01-16 05:49:30,819] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/4/table
+[2024-01-16 05:49:30,820] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:30,820] logger_util.py->write_log line:61 [INFO] 请求参数：{'isBasic': True, 'databaseTableName': 'student', 'querySql': '', 'name': '定时_插入6484'}
+[2024-01-16 05:49:30,820] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:30,846] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:30,846] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 11, 'name': '定时_插入6484', 'connectionItemId': 4, 'fields': [{'tableName': 'student', 'tableAlias': '', 'columnName': 'id', 'displayName': 'id', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'time', 'displayName': 'time', 'dataTypeName': 'DateTime', 'databaseTypeName': 'DateTime', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'name', 'displayName': 'name', 'dataTypeName': 'String', 'databaseTypeName': 'VarChar', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'age', 'displayName': 'age', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'money', 'displayName': 'money', 'dataTypeName': 'Single', 'databaseTypeName': 'Float', 'isValueType': True, 'isAsterisk': True}], 'isBasic': True, 'basicDatabaseTableName': 'student', 'querySql': 'select * from `student`', 'detail': None, 'action': None, 'status': 1, 'prevStatus': 0, 'lastErrorMsg': None, 'lastErrorDateTime': None}
+[2024-01-16 05:49:30,846] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:30,847] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:31,859] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:31,859] logger_util.py->write_log line:61 [INFO] 接口名称：保存配置-插入
+[2024-01-16 05:49:31,859] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2024-01-16 05:49:31,859] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/11/save
+[2024-01-16 05:49:31,859] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:31,859] logger_util.py->write_log line:61 [INFO] 请求参数：{'actionType': 2, 'filters': [], 'sorts': [{'field': 'id', 'sortType': 2}], 'mappings': [{'field': 'time', 'relativeVariable': 'aa16', 'dataType': '日期时间', 'order': 1}, {'field': 'name', 'relativeVariable': 'A12', 'dataType': '字符串', 'order': 2}, {'field': 'age', 'relativeVariable': 'A2', 'dataType': '有符号8位整型', 'order': 3}, {'field': 'money', 'relativeVariable': 'A10', 'dataType': 'F32位浮点数IEEE754', 'order': 4}]}
+[2024-01-16 05:49:31,859] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:31,892] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:31,892] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 11, 'name': '定时_插入6484', 'connectionItemId': 4, 'fields': [{'tableName': 'student', 'tableAlias': '', 'columnName': 'id', 'displayName': 'id', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'time', 'displayName': 'time', 'dataTypeName': 'DateTime', 'databaseTypeName': 'DateTime', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'name', 'displayName': 'name', 'dataTypeName': 'String', 'databaseTypeName': 'VarChar', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'age', 'displayName': 'age', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'money', 'displayName': 'money', 'dataTypeName': 'Single', 'databaseTypeName': 'Float', 'isValueType': True, 'isAsterisk': True}], 'isBasic': True, 'basicDatabaseTableName': 'student', 'querySql': 'select * from `student`', 'detail': {'actionType': 2, 'filters': [], 'sorts': [{'displayName': 'id', 'sortType': 2}], 'mapping': {'pendingDisplayNameRelativeVariable': None, 'ioMappings': [{'displayName': 'name', 'relativeVariable': 'A12', 'dataType': 16384, 'order': 2}, {'displayName': 'age', 'relativeVariable': 'A2', 'dataType': 2, 'order': 3}, {'displayName': 'money', 'relativeVariable': 'A10', 'dataType': 512, 'order': 4}], 'innerMappings': [{'displayName': 'time', 'relativeVariable': 'aa16', 'dataType': 8192, 'order': 1}], 'systemMappings': []}}, 'action': {'actionType': 2, 'mainSql': 'insert into `student` (`name`,`age`,`money`,`time`) values ({0},{1},{2},{3})', 'sortSql': '`id` desc', 'filterSql': '', 'mainSqlParams': [{'key': 'A12', 'value': False}, {'key': 'A2', 'value': True}, {'key': 'A10', 'value': True}, {'key': 'aa16', 'value': False}], 'filterSqlParams': [], 'assignment': None}, 'status': 1, 'prevStatus': 0, 'lastErrorMsg': None, 'lastErrorDateTime': None}
+[2024-01-16 05:49:31,892] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:31,892] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:32,912] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:32,912] logger_util.py->write_log line:61 [INFO] 接口名称：触发配置-定时
+[2024-01-16 05:49:32,912] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2024-01-16 05:49:32,912] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/11/trigger/save
+[2024-01-16 05:49:32,912] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:32,912] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': '2023-11-28T06:55:22.000Z', 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': True, 'condition': 'A2>10', 'conditionDetail': 1, 'frequencyCheck': False, 'alarmPointIds': [], 'triggerType': 1}]
+[2024-01-16 05:49:32,912] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:32,945] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:32,945] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2024-01-16 05:49:32,945] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:32,945] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:33,968] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:33,968] logger_util.py->write_log line:61 [INFO] 接口名称：刷新-定时触发-插入
+[2024-01-16 05:49:33,968] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2024-01-16 05:49:33,968] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/11/preview
+[2024-01-16 05:49:33,968] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:33,968] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:33,978] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：age
+[2024-01-16 05:49:33,979] logger_util.py->write_log line:61 [INFO] 实际结果：{'status': 1, 'lastErrorMsg': None, 'total': 0, 'headers': ['id', 'time', 'name', 'age', 'money'], 'data': []}
+[2024-01-16 05:49:33,979] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2024-01-16 05:49:33,979] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2024-01-16 05:49:33,979] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：age
+
+[2024-01-16 05:49:33,980] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：age
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：age
+
+
+[2024-01-16 05:49:34,148] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:34,148] logger_util.py->write_log line:61 [INFO] 接口名称：禁用定时插入映射表
+[2024-01-16 05:49:34,148] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2024-01-16 05:49:34,148] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/switch/2/11/off
+[2024-01-16 05:49:34,148] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:34,149] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:34,173] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:34,173] logger_util.py->write_log line:61 [INFO] 实际结果：[{'nodeGuid': 'e239564c-8564-4639-8ead-aeb88d05a625', 'id': 11, 'type': 2, 'name': '定时_插入6484', 'status': 2, 'errorMsg': None, 'children': []}]
+[2024-01-16 05:49:34,173] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:34,173] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:35,189] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:35,189] logger_util.py->write_log line:61 [INFO] 接口名称：创建映射表-变量触发-插入
+[2024-01-16 05:49:35,189] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2024-01-16 05:49:35,189] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/4/table
+[2024-01-16 05:49:35,189] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:35,189] logger_util.py->write_log line:61 [INFO] 请求参数：{'isBasic': True, 'databaseTableName': 'student', 'querySql': '', 'name': '变量触发_插入1241'}
+[2024-01-16 05:49:35,189] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:35,215] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:35,215] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 12, 'name': '变量触发_插入1241', 'connectionItemId': 4, 'fields': [{'tableName': 'student', 'tableAlias': '', 'columnName': 'id', 'displayName': 'id', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'time', 'displayName': 'time', 'dataTypeName': 'DateTime', 'databaseTypeName': 'DateTime', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'name', 'displayName': 'name', 'dataTypeName': 'String', 'databaseTypeName': 'VarChar', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'age', 'displayName': 'age', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'money', 'displayName': 'money', 'dataTypeName': 'Single', 'databaseTypeName': 'Float', 'isValueType': True, 'isAsterisk': True}], 'isBasic': True, 'basicDatabaseTableName': 'student', 'querySql': 'select * from `student`', 'detail': None, 'action': None, 'status': 1, 'prevStatus': 0, 'lastErrorMsg': None, 'lastErrorDateTime': None}
+[2024-01-16 05:49:35,215] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:35,215] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:37,225] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:37,225] logger_util.py->write_log line:61 [INFO] 接口名称：保存配置-插入
+[2024-01-16 05:49:37,225] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2024-01-16 05:49:37,225] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/12/save
+[2024-01-16 05:49:37,225] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:37,225] logger_util.py->write_log line:61 [INFO] 请求参数：{'actionType': 2, 'filters': [], 'sorts': [{'field': 'id', 'sortType': 2}], 'mappings': [{'field': 'time', 'relativeVariable': 'aa16', 'dataType': '日期时间', 'order': 1}, {'field': 'name', 'relativeVariable': 'A12', 'dataType': '字符串', 'order': 2}, {'field': 'age', 'relativeVariable': 'A2', 'dataType': '有符号8位整型', 'order': 3}, {'field': 'money', 'relativeVariable': 'A10', 'dataType': 'F32位浮点数IEEE754', 'order': 4}]}
+[2024-01-16 05:49:37,226] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:37,258] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:37,258] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 12, 'name': '变量触发_插入1241', 'connectionItemId': 4, 'fields': [{'tableName': 'student', 'tableAlias': '', 'columnName': 'id', 'displayName': 'id', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'time', 'displayName': 'time', 'dataTypeName': 'DateTime', 'databaseTypeName': 'DateTime', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'name', 'displayName': 'name', 'dataTypeName': 'String', 'databaseTypeName': 'VarChar', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'age', 'displayName': 'age', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'money', 'displayName': 'money', 'dataTypeName': 'Single', 'databaseTypeName': 'Float', 'isValueType': True, 'isAsterisk': True}], 'isBasic': True, 'basicDatabaseTableName': 'student', 'querySql': 'select * from `student`', 'detail': {'actionType': 2, 'filters': [], 'sorts': [{'displayName': 'id', 'sortType': 2}], 'mapping': {'pendingDisplayNameRelativeVariable': None, 'ioMappings': [{'displayName': 'name', 'relativeVariable': 'A12', 'dataType': 16384, 'order': 2}, {'displayName': 'age', 'relativeVariable': 'A2', 'dataType': 2, 'order': 3}, {'displayName': 'money', 'relativeVariable': 'A10', 'dataType': 512, 'order': 4}], 'innerMappings': [{'displayName': 'time', 'relativeVariable': 'aa16', 'dataType': 8192, 'order': 1}], 'systemMappings': []}}, 'action': {'actionType': 2, 'mainSql': 'insert into `student` (`name`,`age`,`money`,`time`) values ({0},{1},{2},{3})', 'sortSql': '`id` desc', 'filterSql': '', 'mainSqlParams': [{'key': 'A12', 'value': False}, {'key': 'A2', 'value': True}, {'key': 'A10', 'value': True}, {'key': 'aa16', 'value': False}], 'filterSqlParams': [], 'assignment': None}, 'status': 1, 'prevStatus': 0, 'lastErrorMsg': None, 'lastErrorDateTime': None}
+[2024-01-16 05:49:37,258] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:37,258] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:39,267] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:39,267] logger_util.py->write_log line:61 [INFO] 接口名称：触发配置-变量触发
+[2024-01-16 05:49:39,267] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2024-01-16 05:49:39,267] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/12/trigger/save
+[2024-01-16 05:49:39,267] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:39,267] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': '', 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': False, 'condition': 'A1', 'conditionDetail': 1, 'frequencyCheck': False, 'alarmPointIds': [], 'triggerType': 2}]
+[2024-01-16 05:49:39,267] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:39,300] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:39,300] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2024-01-16 05:49:39,300] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:39,300] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:41,319] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:41,320] logger_util.py->write_log line:61 [INFO] 接口名称：下发A1=false
+[2024-01-16 05:49:41,320] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2024-01-16 05:49:41,320] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2024-01-16 05:49:41,320] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwNTk1ODc2NCwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.V1F1q3si58OsWhNqCnETwfgfgry_ValYKVTLD-MbnGQ'}
+[2024-01-16 05:49:41,320] logger_util.py->write_log line:61 [INFO] 请求参数：{'A1': 'false'}
+[2024-01-16 05:49:41,320] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:41,332] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2024-01-16 05:49:41,333] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A1': {'value': False, 'quality': 0, 'errorMsg': None}}}
+[2024-01-16 05:49:41,333] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:41,333] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:43,350] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:43,350] logger_util.py->write_log line:61 [INFO] 接口名称：下发A1=true
+[2024-01-16 05:49:43,350] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2024-01-16 05:49:43,350] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2024-01-16 05:49:43,351] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwNTk1ODc2NCwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.V1F1q3si58OsWhNqCnETwfgfgry_ValYKVTLD-MbnGQ'}
+[2024-01-16 05:49:43,351] logger_util.py->write_log line:61 [INFO] 请求参数：{'A1': 'true'}
+[2024-01-16 05:49:43,351] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:43,363] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2024-01-16 05:49:43,363] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A1': {'value': True, 'quality': 0, 'errorMsg': None}}}
+[2024-01-16 05:49:43,363] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:43,363] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:45,377] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:45,377] logger_util.py->write_log line:61 [INFO] 接口名称：刷新-变量触发-插入
+[2024-01-16 05:49:45,378] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2024-01-16 05:49:45,378] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/12/preview
+[2024-01-16 05:49:45,378] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:45,378] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:45,387] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：age
+[2024-01-16 05:49:45,388] logger_util.py->write_log line:61 [INFO] 实际结果：{'status': 1, 'lastErrorMsg': None, 'total': 0, 'headers': ['id', 'time', 'name', 'age', 'money'], 'data': []}
+[2024-01-16 05:49:45,388] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2024-01-16 05:49:45,388] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2024-01-16 05:49:45,388] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：age
+
+[2024-01-16 05:49:45,388] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：age
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：age
+
+
+[2024-01-16 05:49:45,503] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:45,504] logger_util.py->write_log line:61 [INFO] 接口名称：禁用变量插入映射表
+[2024-01-16 05:49:45,504] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2024-01-16 05:49:45,504] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/switch/2/12/off
+[2024-01-16 05:49:45,504] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:45,504] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:45,528] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:45,528] logger_util.py->write_log line:61 [INFO] 实际结果：[{'nodeGuid': '8dd5e19f-456b-4b20-b449-64363bec4c42', 'id': 12, 'type': 2, 'name': '变量触发_插入1241', 'status': 2, 'errorMsg': None, 'children': []}]
+[2024-01-16 05:49:45,528] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:45,528] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:45,535] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:45,535] logger_util.py->write_log line:61 [INFO] 接口名称：创建映射表-报警触发-插入
+[2024-01-16 05:49:45,535] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2024-01-16 05:49:45,535] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/4/table
+[2024-01-16 05:49:45,536] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:45,536] logger_util.py->write_log line:61 [INFO] 请求参数：{'isBasic': True, 'databaseTableName': 'student', 'querySql': '', 'name': '报警触发_插入2434'}
+[2024-01-16 05:49:45,536] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:45,561] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:45,561] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 13, 'name': '报警触发_插入2434', 'connectionItemId': 4, 'fields': [{'tableName': 'student', 'tableAlias': '', 'columnName': 'id', 'displayName': 'id', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'time', 'displayName': 'time', 'dataTypeName': 'DateTime', 'databaseTypeName': 'DateTime', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'name', 'displayName': 'name', 'dataTypeName': 'String', 'databaseTypeName': 'VarChar', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'age', 'displayName': 'age', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'money', 'displayName': 'money', 'dataTypeName': 'Single', 'databaseTypeName': 'Float', 'isValueType': True, 'isAsterisk': True}], 'isBasic': True, 'basicDatabaseTableName': 'student', 'querySql': 'select * from `student`', 'detail': None, 'action': None, 'status': 1, 'prevStatus': 0, 'lastErrorMsg': None, 'lastErrorDateTime': None}
+[2024-01-16 05:49:45,561] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:45,562] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:47,575] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:47,575] logger_util.py->write_log line:61 [INFO] 接口名称：保存配置-插入
+[2024-01-16 05:49:47,575] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2024-01-16 05:49:47,575] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/13/save
+[2024-01-16 05:49:47,576] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:47,576] logger_util.py->write_log line:61 [INFO] 请求参数：{'actionType': 2, 'filters': [], 'sorts': [{'field': 'id', 'sortType': 2}], 'mappings': [{'field': 'time', 'relativeVariable': 'aa16', 'dataType': '日期时间', 'order': 1}, {'field': 'name', 'relativeVariable': 'A12', 'dataType': '字符串', 'order': 2}, {'field': 'age', 'relativeVariable': 'A2', 'dataType': '有符号8位整型', 'order': 3}, {'field': 'money', 'relativeVariable': 'A10', 'dataType': 'F32位浮点数IEEE754', 'order': 4}]}
+[2024-01-16 05:49:47,576] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:47,607] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2024-01-16 05:49:47,607] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 13, 'name': '报警触发_插入2434', 'connectionItemId': 4, 'fields': [{'tableName': 'student', 'tableAlias': '', 'columnName': 'id', 'displayName': 'id', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'time', 'displayName': 'time', 'dataTypeName': 'DateTime', 'databaseTypeName': 'DateTime', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'name', 'displayName': 'name', 'dataTypeName': 'String', 'databaseTypeName': 'VarChar', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'age', 'displayName': 'age', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'money', 'displayName': 'money', 'dataTypeName': 'Single', 'databaseTypeName': 'Float', 'isValueType': True, 'isAsterisk': True}], 'isBasic': True, 'basicDatabaseTableName': 'student', 'querySql': 'select * from `student`', 'detail': {'actionType': 2, 'filters': [], 'sorts': [{'displayName': 'id', 'sortType': 2}], 'mapping': {'pendingDisplayNameRelativeVariable': None, 'ioMappings': [{'displayName': 'name', 'relativeVariable': 'A12', 'dataType': 16384, 'order': 2}, {'displayName': 'age', 'relativeVariable': 'A2', 'dataType': 2, 'order': 3}, {'displayName': 'money', 'relativeVariable': 'A10', 'dataType': 512, 'order': 4}], 'innerMappings': [{'displayName': 'time', 'relativeVariable': 'aa16', 'dataType': 8192, 'order': 1}], 'systemMappings': []}}, 'action': {'actionType': 2, 'mainSql': 'insert into `student` (`name`,`age`,`money`,`time`) values ({0},{1},{2},{3})', 'sortSql': '`id` desc', 'filterSql': '', 'mainSqlParams': [{'key': 'A12', 'value': False}, {'key': 'A2', 'value': True}, {'key': 'A10', 'value': True}, {'key': 'aa16', 'value': False}], 'filterSqlParams': [], 'assignment': None}, 'status': 1, 'prevStatus': 0, 'lastErrorMsg': None, 'lastErrorDateTime': None}
+[2024-01-16 05:49:47,607] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:47,607] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:49,615] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 316, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 140, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Alarm_Point_ID'
+
+[2024-01-16 05:49:49,615] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 316, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 140, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Alarm_Point_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 185, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 335, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 316, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 140, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Alarm_Point_ID'
+
+
+[2024-01-16 05:49:49,657] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:49,657] logger_util.py->write_log line:61 [INFO] 接口名称：下发A1=false
+[2024-01-16 05:49:49,657] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2024-01-16 05:49:49,658] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2024-01-16 05:49:49,658] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwNTk1ODc2NCwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.V1F1q3si58OsWhNqCnETwfgfgry_ValYKVTLD-MbnGQ'}
+[2024-01-16 05:49:49,658] logger_util.py->write_log line:61 [INFO] 请求参数：{'A1': 'false'}
+[2024-01-16 05:49:49,658] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:49,670] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2024-01-16 05:49:49,670] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A1': {'value': False, 'quality': 0, 'errorMsg': None}}}
+[2024-01-16 05:49:49,670] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:49,670] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:51,686] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:51,686] logger_util.py->write_log line:61 [INFO] 接口名称：下发A1=true
+[2024-01-16 05:49:51,686] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2024-01-16 05:49:51,686] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2024-01-16 05:49:51,686] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwNTk1ODc2NCwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.V1F1q3si58OsWhNqCnETwfgfgry_ValYKVTLD-MbnGQ'}
+[2024-01-16 05:49:51,686] logger_util.py->write_log line:61 [INFO] 请求参数：{'A1': 'true'}
+[2024-01-16 05:49:51,686] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:51,698] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2024-01-16 05:49:51,698] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A1': {'value': True, 'quality': 0, 'errorMsg': None}}}
+[2024-01-16 05:49:51,698] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2024-01-16 05:49:51,698] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2024-01-16 05:49:53,711] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2024-01-16 05:49:53,711] logger_util.py->write_log line:61 [INFO] 接口名称：刷新-报警触发-插入
+[2024-01-16 05:49:53,711] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2024-01-16 05:49:53,711] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/13/preview
+[2024-01-16 05:49:53,712] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '67ebccb4a3b44b1a8a7df3f964ccbac7'}
+[2024-01-16 05:49:53,712] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2024-01-16 05:49:53,720] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：age
+[2024-01-16 05:49:53,720] logger_util.py->write_log line:61 [INFO] 实际结果：{'status': 1, 'lastErrorMsg': None, 'total': 0, 'headers': ['id', 'time', 'name', 'age', 'money'], 'data': []}
+[2024-01-16 05:49:53,720] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2024-01-16 05:49:53,721] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2024-01-16 05:49:53,721] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：age
+
+[2024-01-16 05:49:53,721] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：age
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：age
+
+

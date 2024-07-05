@@ -1,0 +1,931 @@
+[2022-09-25 16:24:44,357] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:24:44,358] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:24:44,358] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:24:44,358] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:24:44,358] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:24:44,358] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'A1': '1556'}}
+[2022-09-25 16:24:44,359] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:24:46,382] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:24:46,382] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:24:46,382] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:24:46,383] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:24:46,383] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:24:46,482] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:24:46,482] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:24:46,482] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:24:46,483] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:24:46,483] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:24:46,483] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'A2': '1556'}}
+[2022-09-25 16:24:46,483] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:24:48,502] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:24:48,503] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:24:48,503] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:24:48,503] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:24:48,503] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:24:48,529] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:24:48,529] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:24:48,529] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:24:48,529] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:24:48,529] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:24:48,530] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'A3': '1556'}}
+[2022-09-25 16:24:48,530] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:24:50,556] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:24:50,556] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:24:50,556] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:24:50,556] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:24:50,557] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:24:50,580] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:24:50,580] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:24:50,580] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:24:50,580] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:24:50,580] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:24:50,580] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'A4': '1.556'}}
+[2022-09-25 16:24:50,580] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:24:52,588] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:24:52,588] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:24:52,588] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:24:52,588] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:24:52,589] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:24:52,614] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:24:52,614] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:24:52,614] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:24:52,614] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:24:52,614] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:24:52,614] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'A5': '1.556'}}
+[2022-09-25 16:24:52,614] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:24:54,659] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:24:54,659] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:24:54,659] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:24:54,660] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:24:54,660] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:24:54,686] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:24:54,686] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:24:54,686] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:24:54,686] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:24:54,686] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:24:54,686] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'A6': '1.556'}}
+[2022-09-25 16:24:54,686] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:24:56,705] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:24:56,706] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:24:56,706] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:24:56,706] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:24:56,706] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:24:56,736] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:24:56,736] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:24:56,736] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:24:56,736] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:24:56,737] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:24:56,737] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'A7': '15560'}}
+[2022-09-25 16:24:56,737] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:24:58,753] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:24:58,753] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:24:58,753] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:24:58,754] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:24:58,754] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:24:58,779] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:24:58,779] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:24:58,779] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:24:58,779] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:24:58,779] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:24:58,779] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'A8': '15560'}}
+[2022-09-25 16:24:58,780] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:00,791] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:00,791] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:00,792] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:00,792] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:00,792] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:00,821] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:00,821] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:00,821] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:00,821] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:00,821] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:00,821] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'A9': '15560'}}
+[2022-09-25 16:25:00,821] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:02,840] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:02,840] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:02,840] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:02,840] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:02,841] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:02,867] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:02,867] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:02,867] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:02,867] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:02,868] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:02,868] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'C1': '100'}}
+[2022-09-25 16:25:02,868] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:04,889] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:04,889] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:04,889] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:04,889] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:04,890] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:04,916] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:04,916] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:04,916] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:04,917] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:04,917] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:04,917] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'C2': '100'}}
+[2022-09-25 16:25:04,917] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:06,945] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:06,945] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:06,945] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:06,945] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:06,946] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:06,974] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:06,974] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:06,974] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:06,974] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:06,974] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:06,974] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'C3': '100'}}
+[2022-09-25 16:25:06,974] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:09,005] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:09,005] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:09,005] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:09,005] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:09,006] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:09,032] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:09,032] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:09,032] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:09,032] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:09,032] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:09,032] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'C4': '100'}}
+[2022-09-25 16:25:09,032] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:11,061] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:11,061] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:11,061] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:11,061] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:11,062] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:11,088] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:11,088] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:11,088] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:11,088] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:11,088] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:11,089] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'C5': '100'}}
+[2022-09-25 16:25:11,089] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:13,104] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:13,104] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:13,104] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:13,104] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:13,105] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:13,130] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:13,130] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:13,130] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:13,130] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:13,130] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:13,130] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'C6': '100'}}
+[2022-09-25 16:25:13,130] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:15,153] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:15,154] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:15,154] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:15,154] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:15,154] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:15,179] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:15,179] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:15,179] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:15,179] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:15,179] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:15,179] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'C7': '100'}}
+[2022-09-25 16:25:15,179] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:17,210] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:17,210] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:17,210] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:17,211] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:17,211] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:17,242] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:17,242] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:17,242] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:17,242] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:17,242] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:17,243] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'a1': '1556'}}
+[2022-09-25 16:25:17,243] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:19,263] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:19,263] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:19,263] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:19,263] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:19,264] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:19,289] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:19,289] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:19,289] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:19,289] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:19,289] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:19,289] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'a2': '1556'}}
+[2022-09-25 16:25:19,289] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:21,330] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:21,330] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:21,330] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:21,331] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:21,331] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:21,360] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:21,360] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:21,360] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:21,360] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:21,360] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:21,361] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'a3': '1556'}}
+[2022-09-25 16:25:21,361] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:23,385] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:23,385] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:23,385] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:23,386] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:23,386] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:23,410] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:23,410] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:23,410] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:23,410] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:23,410] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:23,410] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'c1': '100'}}
+[2022-09-25 16:25:23,410] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:25,439] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:25,439] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:25,439] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:25,439] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:25,440] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:25,468] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:25,468] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:25,468] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:25,468] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:25,468] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:25,468] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'c2': '100'}}
+[2022-09-25 16:25:25,468] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:27,494] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:27,494] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:27,494] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:27,494] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:27,494] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:27,522] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:27,522] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:27,522] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:27,522] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:27,522] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:27,522] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'c3': '100'}}
+[2022-09-25 16:25:27,522] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-09-25 16:25:29,542] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2022-09-25 16:25:29,542] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-09-25 16:25:29,542] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-09-25 16:25:29,543] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2022-09-25 16:25:29,543] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 288, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 394, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2022-09-25 16:25:29,572] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-09-25 16:25:29,572] logger_util.py->write_log line:61 [INFO] 接口名称：cms变量下发
+[2022-09-25 16:25:29,572] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-09-25 16:25:29,572] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2022-09-25 16:25:29,572] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '7afb29a8886d48189d0a935643282ae7', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NDE4MDU5NywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.xl4wpYLOyBOvtSKsqWge0Hv04UimXmkMZz_zhsmnYYY'}
+[2022-09-25 16:25:29,572] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'c4': '100'}}
+[2022-09-25 16:25:29,572] logger_util.py->write_log line:61 [INFO] 文件上传：None

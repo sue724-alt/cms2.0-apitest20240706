@@ -1,0 +1,14 @@
+-  name: 创建逻辑变量通道
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel
+      method: post
+      json:
+        {"type":4,"name":"逻辑变量","description":"","config":null}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      logic_tunnel_id: id
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id

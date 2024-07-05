@@ -1,0 +1,139 @@
+[2023-08-23 10:59:01,501] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,501] logger_util.py->write_log line:61 [INFO] 接口名称：新增io变量
+[2023-08-23 10:59:01,501] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:59:01,501] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:59:01,501] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,501] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': '51', 'name': 'E1', 'description': '', 'typeName': '有符号8位整型', 'config': {'readWriteMode': 0, 'address': '400001', 'interval': 1000, 'stringLength': None, 'zoom': 1, 'digit': None, 'readWriteRule': 1}, 'index': 1}]
+[2023-08-23 10:59:01,502] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,533] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-23 10:59:01,533] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 112, 'tunnelId': 58, 'groupId': 51, 'sort': 0, 'name': 'E1', 'description': '', 'tunnelType': 1, 'config': {'address': '400001', 'readWriteMode': 0, 'interval': 1000, 'stringLength': None, 'zoom': 1, 'digit': None, 'readWriteRule': 1}, 'type': 1, 'typeName': '有符号8位整型', 'historicGroupId': '00000000-0000-0000-0000-000000000000', 'historicGroupName': None, 'archiveSetting': None, 'historicBriefMsg': None, 'createTime': '2023-08-23T10:59:01.5232771+08:00', 'updateTime': '2023-08-23T10:59:01.5232777+08:00'}]
+[2023-08-23 10:59:01,533] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,533] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:59:01,542] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,542] logger_util.py->write_log line:61 [INFO] 接口名称：io变量异常校验-校验变量名为空
+[2023-08-23 10:59:01,542] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:59:01,542] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:59:01,543] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,543] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': 51, 'name': '', 'description': '校验变量名为空', 'typeName': '有符号8位整型', 'config': {'readWriteMode': 0, 'address': '400001', 'interval': 10000}, 'stringLength': 'null', 'zoom': 1, 'digit': None, 'readWriteRule': 1, 'index': 1}]
+[2023-08-23 10:59:01,543] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,550] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-23 10:59:01,550] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：变量名不可为空，请重新输入
+[2023-08-23 10:59:01,550] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,550] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:59:01,555] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,555] logger_util.py->write_log line:61 [INFO] 接口名称：io变量异常校验-重复提交同变量名
+[2023-08-23 10:59:01,555] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:59:01,555] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:59:01,555] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,556] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': 51, 'name': 'E1', 'description': '重复提交同变量名', 'typeName': '有符号8位整型', 'config': {'readWriteMode': 0, 'address': '400001', 'interval': 10000}, 'stringLength': 'null', 'zoom': 1, 'digit': None, 'readWriteRule': 1, 'index': 1}]
+[2023-08-23 10:59:01,556] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,564] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-23 10:59:01,564] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：变量名<E1>已存在，请重新输入
+[2023-08-23 10:59:01,565] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,565] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:59:01,569] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,569] logger_util.py->write_log line:61 [INFO] 接口名称：io变量异常校验-校验变量地址为空
+[2023-08-23 10:59:01,570] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:59:01,570] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:59:01,570] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,570] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': 51, 'name': 'E2', 'description': '校验变量地址为空', 'typeName': '有符号8位整型', 'config': {'readWriteMode': 0, 'address': '', 'interval': 10000}, 'stringLength': 'null', 'zoom': 1, 'digit': None, 'readWriteRule': 1, 'index': 1}]
+[2023-08-23 10:59:01,570] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,578] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-23 10:59:01,578] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：变量地址不能为空
+[2023-08-23 10:59:01,578] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,579] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:59:01,583] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,583] logger_util.py->write_log line:61 [INFO] 接口名称：io变量异常校验-校验变量地址非法
+[2023-08-23 10:59:01,584] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:59:01,584] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:59:01,584] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,584] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': 51, 'name': 'E2', 'description': '校验变量地址为空', 'typeName': '有符号8位整型', 'config': {'readWriteMode': 0, 'address': 'abc', 'interval': 10000}, 'stringLength': 'null', 'zoom': 1, 'digit': None, 'readWriteRule': 1, 'index': 1}]
+[2023-08-23 10:59:01,584] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,594] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-23 10:59:01,594] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：变量地址<abc>错误
+[2023-08-23 10:59:01,594] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,594] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:59:01,599] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,599] logger_util.py->write_log line:61 [INFO] 接口名称：io变量异常校验-校验采集间隔为空
+[2023-08-23 10:59:01,599] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:59:01,599] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:59:01,599] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,599] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': 51, 'name': 'E2', 'description': '校验采集间隔为空', 'typeName': '有符号8位整型', 'config': {'readWriteMode': 0, 'address': '400001', 'interval': None}, 'stringLength': 'null', 'zoom': 1, 'digit': None, 'readWriteRule': 1, 'index': 1}]
+[2023-08-23 10:59:01,600] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,608] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-23 10:59:01,608] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误
+[2023-08-23 10:59:01,608] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,608] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:59:01,614] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,614] logger_util.py->write_log line:61 [INFO] 接口名称：io变量异常校验-采集间隔小于10
+[2023-08-23 10:59:01,614] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:59:01,614] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:59:01,614] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,615] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': 51, 'name': 'E2', 'description': '采集间隔小于10', 'typeName': '有符号8位整型', 'config': {'readWriteMode': 0, 'address': '400001', 'interval': 9}, 'stringLength': 'null', 'zoom': 1, 'digit': None, 'readWriteRule': 1, 'index': 1}]
+[2023-08-23 10:59:01,615] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,623] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-23 10:59:01,623] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：采集间隔<9>超出范围10-10000
+[2023-08-23 10:59:01,623] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,623] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:59:01,628] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,628] logger_util.py->write_log line:61 [INFO] 接口名称：io变量异常校验-采集间隔大于10000
+[2023-08-23 10:59:01,628] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:59:01,628] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:59:01,628] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,628] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': 51, 'name': 'E2', 'description': '采集间隔小于10', 'typeName': '有符号8位整型', 'config': {'readWriteMode': 0, 'address': '400001', 'interval': 10001}, 'stringLength': 'null', 'zoom': 1, 'digit': None, 'readWriteRule': 1, 'index': 1}]
+[2023-08-23 10:59:01,628] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,638] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-23 10:59:01,639] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：采集间隔<10001>超出范围10-10000
+[2023-08-23 10:59:01,639] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,639] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:59:01,644] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,644] logger_util.py->write_log line:61 [INFO] 接口名称：io变量异常校验-字符串长度为空
+[2023-08-23 10:59:01,644] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:59:01,644] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:59:01,644] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,644] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': 51, 'name': 'E2', 'description': '字符串长度为空', 'typeName': '字符串', 'config': {'readWriteMode': 0, 'address': '400001', 'interval': 1000}, 'stringLength': '', 'zoom': 1, 'digit': None, 'readWriteRule': 1, 'index': 1}]
+[2023-08-23 10:59:01,644] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,654] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-23 10:59:01,654] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：字符长度不能为空
+[2023-08-23 10:59:01,654] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,654] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:59:01,663] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:59:01,664] logger_util.py->write_log line:61 [INFO] 接口名称：删除io变量
+[2023-08-23 10:59:01,664] logger_util.py->write_log line:61 [INFO] 接口方式：delete
+[2023-08-23 10:59:01,664] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag/112
+[2023-08-23 10:59:01,664] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:59:01,664] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:59:01,678] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-23 10:59:01,678] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-23 10:59:01,678] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:59:01,678] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

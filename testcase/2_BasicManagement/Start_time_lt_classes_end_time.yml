@@ -1,0 +1,13 @@
+-  name: 班次开始时间不能小于上一个班次结束时间
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/base/shift
+      method: put
+      json:
+         {"count":2,"startTime":{"isNextDay":false,"time":"08:00"},"endTime":{"isNextDay":true,"time":"08:00"},"shifts":[{"shiftName":"早班","startTime":{"isNextDay":false,"time":"08:00"},"endTime":{"isNextDay":false,"time":"20:00"},"id":0},{"shiftName":"晚班","startTime":{"isNextDay":false,"time":"18:00"},"endTime":{"isNextDay":true,"time":"08:00"},"id":1}]}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   -  equals: {status_code: 400}
+   -  equals: {code: 400}
+   -  equals: {msg: 班次开始时间小于上一班次结束时间}

@@ -1,0 +1,37 @@
+[2023-05-28 18:16:42,885] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 414, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 208, in replace_load
+    self.ddt_load(key, *value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 43, in ddt_load
+    data[key][int_key] = int_value
+NameError: name 'data' is not defined
+
+[2023-05-28 18:16:42,886] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 414, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 208, in replace_load
+    self.ddt_load(key, *value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 43, in ddt_load
+    data[key][int_key] = int_value
+NameError: name 'data' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 293, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 434, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 414, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 208, in replace_load
+    self.ddt_load(key, *value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 43, in ddt_load
+    data[key][int_key] = int_value
+NameError: name 'data' is not defined
+
+

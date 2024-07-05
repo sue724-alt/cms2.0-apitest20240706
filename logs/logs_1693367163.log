@@ -1,0 +1,81 @@
+[2023-08-30 11:46:03,556] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-30 11:46:03,557] logger_util.py->write_log line:61 [INFO] 接口名称：获取数据管理配置树
+[2023-08-30 11:46:03,557] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-30 11:46:03,557] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/dataconfig/tree
+[2023-08-30 11:46:03,557] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '9b3f642b8f2947f7bfa06d9c153093e3'}
+[2023-08-30 11:46:03,558] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-30 11:46:03,715] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'name': '报警管理'}}]
+[2023-08-30 11:46:03,716] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': '5e9d9cf3-5eb8-4b4a-a620-601d46be2693', 'parentId': '00000000-0000-0000-0000-000000000000', 'name': '新建文件夹-1754', 'nodeType': 1, 'children': [], 'sort': 1, 'enable': True, 'operations': [1, 4], 'functions': None}, {'id': 'f620b182-7169-4563-98af-9d076c186163', 'parentId': '00000000-0000-0000-0000-000000000000', 'name': '报警管理', 'nodeType': 1, 'children': [{'id': 'a9b66e92-6f83-44e3-ba02-ccbdb0f149c1', 'parentId': 'f620b182-7169-4563-98af-9d076c186163', 'name': '报警管理-实时表', 'nodeType': 2, 'children': [], 'sort': 1, 'enable': False, 'operations': [], 'functions': []}, {'id': 'e342f0fa-977d-459a-97b2-f4fc4b36c7e4', 'parentId': 'f620b182-7169-4563-98af-9d076c186163', 'name': '报警管理-历史表', 'nodeType': 2, 'children': [], 'sort': 2, 'enable': False, 'operations': [], 'functions': [2]}], 'sort': 2, 'enable': True, 'operations': [], 'functions': None}]
+[2023-08-30 11:46:03,716] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-30 11:46:03,716] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-30 11:46:03,722] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-30 11:46:03,722] logger_util.py->write_log line:61 [INFO] 接口名称：创建文件夹
+[2023-08-30 11:46:03,722] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-30 11:46:03,722] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/dataconfig/folder
+[2023-08-30 11:46:03,722] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '9b3f642b8f2947f7bfa06d9c153093e3'}
+[2023-08-30 11:46:03,722] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': '00000000-0000-0000-0000-000000000000', 'name': '文件夹221', 'sort': 2}
+[2023-08-30 11:46:03,723] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-30 11:46:03,805] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 2}}, {'contains': 'id'}]
+[2023-08-30 11:46:03,805] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '7edfd00e-a7b8-4f4c-a27b-0f313c556a47', 'name': '文件夹221', 'parentId': '00000000-0000-0000-0000-000000000000', 'level': 0, 'sort': 2, 'createDateTime': '2023-08-30T11:46:07.5752845+08:00', 'operationTypes': [1, 4]}
+[2023-08-30 11:46:03,805] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-30 11:46:03,805] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-30 11:46:03,813] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-30 11:46:03,813] logger_util.py->write_log line:61 [INFO] 接口名称：获取所有文件夹
+[2023-08-30 11:46:03,813] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-30 11:46:03,813] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/dataconfig/folder
+[2023-08-30 11:46:03,813] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '9b3f642b8f2947f7bfa06d9c153093e3'}
+[2023-08-30 11:46:03,813] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-30 11:46:03,834] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'name': '报警管理'}}]
+[2023-08-30 11:46:03,834] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 'f620b182-7169-4563-98af-9d076c186163', 'name': '报警管理', 'parentId': '00000000-0000-0000-0000-000000000000', 'level': 0, 'sort': 3, 'createDateTime': '0001-01-01T00:00:00', 'operationTypes': []}, {'id': '5e9d9cf3-5eb8-4b4a-a620-601d46be2693', 'name': '新建文件夹-1754', 'parentId': '00000000-0000-0000-0000-000000000000', 'level': 0, 'sort': 1, 'createDateTime': '2023-08-30T11:41:10.8915609', 'operationTypes': [1, 4]}, {'id': '7edfd00e-a7b8-4f4c-a27b-0f313c556a47', 'name': '文件夹221', 'parentId': '00000000-0000-0000-0000-000000000000', 'level': 0, 'sort': 2, 'createDateTime': '2023-08-30T11:46:07.5752845', 'operationTypes': [1, 4]}]
+[2023-08-30 11:46:03,834] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-30 11:46:03,834] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-30 11:46:03,845] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-30 11:46:03,845] logger_util.py->write_log line:61 [INFO] 接口名称：重命名文件夹
+[2023-08-30 11:46:03,845] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-30 11:46:03,845] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/dataconfig/folder/7edfd00e-a7b8-4f4c-a27b-0f313c556a47/name
+[2023-08-30 11:46:03,845] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '9b3f642b8f2947f7bfa06d9c153093e3'}
+[2023-08-30 11:46:03,845] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '重命名文件夹199'}
+[2023-08-30 11:46:03,846] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-30 11:46:03,871] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}, {'contains': 'name'}]
+[2023-08-30 11:46:03,871] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '7edfd00e-a7b8-4f4c-a27b-0f313c556a47', 'name': '重命名文件夹199', 'parentId': '00000000-0000-0000-0000-000000000000', 'level': 0, 'sort': 2, 'createDateTime': '2023-08-30T11:46:07.5752845', 'operationTypes': [1, 4]}
+[2023-08-30 11:46:03,871] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-30 11:46:03,871] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-30 11:46:03,878] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-30 11:46:03,878] logger_util.py->write_log line:61 [INFO] 接口名称：删除文件夹
+[2023-08-30 11:46:03,878] logger_util.py->write_log line:61 [INFO] 接口方式：delete
+[2023-08-30 11:46:03,878] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/dataconfig/folder/7edfd00e-a7b8-4f4c-a27b-0f313c556a47
+[2023-08-30 11:46:03,878] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '9b3f642b8f2947f7bfa06d9c153093e3'}
+[2023-08-30 11:46:03,878] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-30 11:46:03,914] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-30 11:46:03,915] logger_util.py->write_log line:61 [INFO] 实际结果：['7edfd00e-a7b8-4f4c-a27b-0f313c556a47']
+[2023-08-30 11:46:03,915] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-30 11:46:03,915] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-30 11:46:03,921] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-30 11:46:03,922] logger_util.py->write_log line:61 [INFO] 接口名称：创建文件夹
+[2023-08-30 11:46:03,922] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-30 11:46:03,922] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/dataconfig/folder
+[2023-08-30 11:46:03,922] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '9b3f642b8f2947f7bfa06d9c153093e3'}
+[2023-08-30 11:46:03,922] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': '00000000-0000-0000-0000-000000000000', 'name': '文件夹403', 'sort': 2}
+[2023-08-30 11:46:03,922] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-30 11:46:03,955] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 2}}, {'contains': 'id'}]
+[2023-08-30 11:46:03,955] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 'aa1b5f3d-b934-4e06-81ce-f8286862481d', 'name': '文件夹403', 'parentId': '00000000-0000-0000-0000-000000000000', 'level': 0, 'sort': 2, 'createDateTime': '2023-08-30T11:46:07.7231371+08:00', 'operationTypes': [1, 4]}
+[2023-08-30 11:46:03,955] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-30 11:46:03,955] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

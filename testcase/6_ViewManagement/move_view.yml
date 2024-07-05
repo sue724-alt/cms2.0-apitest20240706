@@ -1,0 +1,39 @@
+-  name: 创建画面节点3
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/node?copyFrom=
+      method: post
+      json:
+        {
+           "name": "子画面${get_random_number(1,1000)}",
+           "parentId": null,
+           "type": 1,
+           "sort": 1
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      move_view_id: content
+   validate:
+   - equals:
+       status_code: 200
+
+-  name: 创建画面节点3
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/node/${get_extract_data(move_view_id)}/sort
+      method: post
+      json:
+        {
+          "parentId": "${get_extract_data(view_id)}",
+          "sort": 1
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      view_id1: id
+   validate:
+   - equals:
+       status_code: 200

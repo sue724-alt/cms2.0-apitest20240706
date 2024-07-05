@@ -1,0 +1,100 @@
+[2023-05-24 14:54:54,183] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-24 14:54:54,183] logger_util.py->write_log line:61 [INFO] 接口名称：创建归档表
+[2023-05-24 14:54:54,183] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-05-24 14:54:54,183] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable
+[2023-05-24 14:54:54,183] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-24 14:54:54,184] logger_util.py->write_log line:61 [INFO] 请求参数：{'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表56', 'sort': 2}
+[2023-05-24 14:54:54,184] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-24 14:54:54,304] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 2}}, {'contains': 'id'}]
+[2023-05-24 14:54:54,304] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '3084cbba-4fa7-4922-a851-145a9044c158', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表56', 'sort': 2, 'createDateTime': '2023-05-24T14:54:54.3609064+08:00', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}
+[2023-05-24 14:54:54,304] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-24 14:54:54,305] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-24 14:54:54,311] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-24 14:54:54,311] logger_util.py->write_log line:61 [INFO] 接口名称：获取归档表
+[2023-05-24 14:54:54,311] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-05-24 14:54:54,311] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable
+[2023-05-24 14:54:54,311] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-24 14:54:54,311] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-24 14:54:54,322] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 2}}]
+[2023-05-24 14:54:54,322] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 'a9b66e92-6f83-44e3-ba02-ccbdb0f149c1', 'folderId': 'f620b182-7169-4563-98af-9d076c186163', 'name': '报警管理-实时表', 'sort': 1, 'createDateTime': '0001-01-01T00:00:00', 'operationTypes': [], 'functionTypes': [], 'extendedHeaders': [], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}, {'id': 'e342f0fa-977d-459a-97b2-f4fc4b36c7e4', 'folderId': 'f620b182-7169-4563-98af-9d076c186163', 'name': '报警管理-历史表', 'sort': 2, 'createDateTime': '0001-01-01T00:00:00', 'operationTypes': [], 'functionTypes': [2], 'extendedHeaders': [], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}, {'id': '5882c397-d83b-4bde-8b39-ce9a7950ce73', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表', 'sort': 6, 'createDateTime': '2023-05-23T11:23:54.1306619', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': True, 'cacheConfig_QuantityLimit': 1000, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 1, 'cacheConfig_ClearCache': 'H1', 'storageConfig_ScheduledClear': True, 'storageConfig_ClearTriggerTime': '2023-05-24T10:22:59', 'storageConfig_ClearFrequency': 1, 'storageConfig_ClearFrequencyUnit': 3, 'storageConfig_ClearRetain': 1, 'storageConfig_ClearRetainUnit': 4, 'storageConfig_ScheduledBackup': True, 'storageConfig_BackupTriggerTime': '2023-05-24T10:32:47', 'storageConfig_BackupFrequency': 1, 'storageConfig_BackupFrequencyUnit': 3, 'storageConfig_BackupPath': 'E:\\'}, {'id': '0c276630-b7e2-44e5-bb12-ba518fbf6057', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表69', 'sort': 5, 'createDateTime': '2023-05-24T14:52:23.6229607', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}, {'id': 'ba05f3ab-a0ee-4987-8543-6c743a271c6f', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表58', 'sort': 4, 'createDateTime': '2023-05-24T14:52:55.2312714', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}, {'id': '6a4752e0-0613-4579-83d7-06bd8df25d61', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表86', 'sort': 3, 'createDateTime': '2023-05-24T14:53:23.1973592', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}, {'id': '3084cbba-4fa7-4922-a851-145a9044c158', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表56', 'sort': 2, 'createDateTime': '2023-05-24T14:54:54.3609064', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}]
+[2023-05-24 14:54:54,327] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-24 14:54:54,327] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-24 14:54:54,339] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-24 14:54:54,339] logger_util.py->write_log line:61 [INFO] 接口名称：重命名归档表
+[2023-05-24 14:54:54,339] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-24 14:54:54,339] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/3084cbba-4fa7-4922-a851-145a9044c158/name
+[2023-05-24 14:54:54,339] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-24 14:54:54,339] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '归档表86'}
+[2023-05-24 14:54:54,339] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-24 14:54:54,361] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}, {'contains': 'name'}]
+[2023-05-24 14:54:54,361] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '3084cbba-4fa7-4922-a851-145a9044c158', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表86', 'sort': 2, 'createDateTime': '2023-05-24T14:54:54.3609064', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}
+[2023-05-24 14:54:54,362] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-24 14:54:54,362] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-24 14:54:54,367] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-24 14:54:54,367] logger_util.py->write_log line:61 [INFO] 接口名称：删除归档表
+[2023-05-24 14:54:54,367] logger_util.py->write_log line:61 [INFO] 接口方式：delete
+[2023-05-24 14:54:54,368] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/3084cbba-4fa7-4922-a851-145a9044c158
+[2023-05-24 14:54:54,368] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-24 14:54:54,368] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-24 14:54:55,249] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-05-24 14:54:55,249] logger_util.py->write_log line:61 [INFO] 实际结果：['3084cbba-4fa7-4922-a851-145a9044c158']
+[2023-05-24 14:54:55,249] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-24 14:54:55,249] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-24 14:54:55,256] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-24 14:54:55,256] logger_util.py->write_log line:61 [INFO] 接口名称：创建归档表
+[2023-05-24 14:54:55,256] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-05-24 14:54:55,256] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable
+[2023-05-24 14:54:55,256] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-24 14:54:55,256] logger_util.py->write_log line:61 [INFO] 请求参数：{'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表85', 'sort': 2}
+[2023-05-24 14:54:55,257] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-24 14:54:55,374] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 2}}, {'contains': 'id'}]
+[2023-05-24 14:54:55,374] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 'ca027303-3ad5-4161-b934-63973c7128bf', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表85', 'sort': 2, 'createDateTime': '2023-05-24T14:54:55.4154183+08:00', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}
+[2023-05-24 14:54:55,374] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-24 14:54:55,374] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-24 14:54:55,385] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-24 14:54:55,385] logger_util.py->write_log line:61 [INFO] 接口名称：设置归档表字段配置
+[2023-05-24 14:54:55,385] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-24 14:54:55,385] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/ca027303-3ad5-4161-b934-63973c7128bf/fields
+[2023-05-24 14:54:55,385] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-24 14:54:55,385] logger_util.py->write_log line:61 [INFO] 请求参数：[{'fieldName': 'A1', 'fieldType': 1, 'associatedVariable': 'A1', 'formula': None, 'id': 'FTFb6625335e26a4fd0bc4e5d2c3e98013f'}]
+[2023-05-24 14:54:55,385] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-24 14:54:55,390] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-05-24 14:54:55,390] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-05-24 14:54:55,390] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-24 14:54:55,391] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 345, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-05-24 14:54:55,391] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 345, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 228, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 395, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 345, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+

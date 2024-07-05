@@ -1,0 +1,68 @@
+[2023-11-28 14:29:41,401] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-28 14:29:41,402] logger_util.py->write_log line:61 [INFO] 接口名称：测试连接互联项
+[2023-11-28 14:29:41,402] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-28 14:29:41,402] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection
+[2023-11-28 14:29:41,402] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-28 14:29:41,402] logger_util.py->write_log line:61 [INFO] 请求参数：{'id': None, 'name': 'mysql5181', 'connectionType': 1, 'databaseType': 1, 'authenticationType': None, 'server': '127.0.0.1', 'port': '3306', 'database': 'TestDB', 'databasePath': '', 'userName': 'root', 'password': 'syc123', 'changedPassword': True, 'mqttType': None, 'pushType': None, 'timingPeriod': None, 'changingPeriod': None, 'cloudDeviceId': '', 'originalSecret': ''}
+[2023-11-28 14:29:41,407] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-28 14:29:41,435] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-28 14:29:41,435] logger_util.py->write_log line:61 [INFO] 实际结果：{'data': {'id': 52, 'name': 'mysql5181', 'connectionType': 1, 'databaseType': 1, 'authenticationType': 0, 'server': '127.0.0.1', 'port': 3306, 'database': 'TestDB', 'databasePath': '', 'userName': 'root'}, 'message': ''}
+[2023-11-28 14:29:41,435] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-28 14:29:41,435] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-28 14:29:41,445] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-28 14:29:41,445] logger_util.py->write_log line:61 [INFO] 接口名称：创建映射表表-查询
+[2023-11-28 14:29:41,445] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-28 14:29:41,445] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/52/table
+[2023-11-28 14:29:41,445] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-28 14:29:41,445] logger_util.py->write_log line:61 [INFO] 请求参数：{'isBasic': True, 'databaseTableName': 'student', 'querySql': '', 'name': '查询5925'}
+[2023-11-28 14:29:41,445] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-28 14:29:41,472] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-28 14:29:41,472] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 27, 'name': '查询5925', 'connectionItemId': 52, 'fields': [{'tableName': 'student', 'tableAlias': '', 'columnName': 'id', 'displayName': 'id', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'time', 'displayName': 'time', 'dataTypeName': 'DateTime', 'databaseTypeName': 'DateTime', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'name', 'displayName': 'name', 'dataTypeName': 'String', 'databaseTypeName': 'VarChar', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'age', 'displayName': 'age', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'money', 'displayName': 'money', 'dataTypeName': 'Single', 'databaseTypeName': 'Float', 'isValueType': True, 'isAsterisk': True}], 'isBasic': True, 'basicDatabaseTableName': 'student', 'querySql': 'select * from `student`', 'detail': None, 'action': None, 'status': 1, 'prevStatus': 0, 'lastErrorMsg': None, 'lastErrorDateTime': None}
+[2023-11-28 14:29:41,472] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-28 14:29:41,472] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-28 14:29:41,482] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-28 14:29:41,482] logger_util.py->write_log line:61 [INFO] 接口名称：保存配置-查询
+[2023-11-28 14:29:41,482] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-11-28 14:29:41,482] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/27/save
+[2023-11-28 14:29:41,482] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-28 14:29:41,482] logger_util.py->write_log line:61 [INFO] 请求参数：{'actionType': 1, 'filters': [], 'sorts': [{'field': 'id', 'sortType': 2}], 'mappings': [{'field': 'time', 'relativeVariable': 'aa16', 'dataType': '日期时间', 'order': 1}, {'field': 'name', 'relativeVariable': 'A12', 'dataType': '字符串', 'order': 2}, {'field': 'age', 'relativeVariable': 'A2', 'dataType': '有符号8位整型', 'order': 3}, {'field': 'money', 'relativeVariable': 'A10', 'dataType': 'F32位浮点数IEEE754', 'order': 4}]}
+[2023-11-28 14:29:41,482] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-28 14:29:41,518] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-28 14:29:41,518] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 27, 'name': '查询5925', 'connectionItemId': 52, 'fields': [{'tableName': 'student', 'tableAlias': '', 'columnName': 'id', 'displayName': 'id', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'time', 'displayName': 'time', 'dataTypeName': 'DateTime', 'databaseTypeName': 'DateTime', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'name', 'displayName': 'name', 'dataTypeName': 'String', 'databaseTypeName': 'VarChar', 'isValueType': False, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'age', 'displayName': 'age', 'dataTypeName': 'Int32', 'databaseTypeName': 'Int32', 'isValueType': True, 'isAsterisk': True}, {'tableName': 'student', 'tableAlias': '', 'columnName': 'money', 'displayName': 'money', 'dataTypeName': 'Single', 'databaseTypeName': 'Float', 'isValueType': True, 'isAsterisk': True}], 'isBasic': True, 'basicDatabaseTableName': 'student', 'querySql': 'select * from `student`', 'detail': {'actionType': 1, 'filters': [], 'sorts': [{'displayName': 'id', 'sortType': 2}], 'mapping': {'pendingDisplayNameRelativeVariable': None, 'ioMappings': [{'displayName': 'name', 'relativeVariable': 'A12', 'dataType': 16384, 'order': 2}, {'displayName': 'age', 'relativeVariable': 'A2', 'dataType': 2, 'order': 3}, {'displayName': 'money', 'relativeVariable': 'A10', 'dataType': 512, 'order': 4}], 'innerMappings': [{'displayName': 'time', 'relativeVariable': 'aa16', 'dataType': 8192, 'order': 1}], 'systemMappings': []}}, 'action': {'actionType': 1, 'mainSql': 'select * from `student`', 'sortSql': '`id` desc', 'filterSql': '', 'mainSqlParams': None, 'filterSqlParams': [], 'assignment': {'ioAssignments': [{'displayName': 'name', 'relativeVariable': 'A12', 'dataType': 16384}, {'displayName': 'age', 'relativeVariable': 'A2', 'dataType': 2}, {'displayName': 'money', 'relativeVariable': 'A10', 'dataType': 512}], 'innerAssignments': [{'displayName': 'time', 'relativeVariable': 'aa16', 'dataType': 8192}], 'systemAssignments': None}}, 'status': 1, 'prevStatus': 0, 'lastErrorMsg': None, 'lastErrorDateTime': None}
+[2023-11-28 14:29:41,519] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-28 14:29:41,519] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-28 14:29:41,525] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-28 14:29:41,525] logger_util.py->write_log line:61 [INFO] 接口名称：执行查询语句
+[2023-11-28 14:29:41,525] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-28 14:29:41,525] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/27/executetest
+[2023-11-28 14:29:41,525] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-28 14:29:41,525] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-28 14:29:42,067] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'action': '查询'}}, {'equals': {'status': '成功'}}, {'equals': {'A12': '中文1'}}, {'equals': {'A2': '10'}}, {'equals': {'A10': '10.456'}}, {'equals': {'aa16': '2023/10/20 18:40:55'}}]
+[2023-11-28 14:29:42,067] logger_util.py->write_log line:61 [INFO] 实际结果：{'record': {'dateTime': '2023/11/28 14:29:42', 'action': '查询', 'status': '成功', 'data': {'A12': '中文1', 'A2': '10', 'A10': '10.456', 'aa16': '2023/10/20 18:40:55'}}, 'info': '测试时间: 2023/11/28 14:29:41\r\n动作: 查询\r\n\r\n数据库:\r\n执行结果: OK\r\n查询时间: 0.00s\r\n\r\n变量:\r\n下发结果: OK\r\n', 'status': 1, 'lastErrorMsg': None}
+[2023-11-28 14:29:42,067] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-28 14:29:42,067] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-28 14:29:42,074] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-28 14:29:42,074] logger_util.py->write_log line:61 [INFO] 接口名称：刷新-插入
+[2023-11-28 14:29:42,074] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-28 14:29:42,074] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/27/preview
+[2023-11-28 14:29:42,075] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-28 14:29:42,075] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-28 14:29:42,100] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'age': 10}}, {'equals': {'money': 10.456}}, {'equals': {'name': '中文1'}}, {'equals': {'time': '2023-10-20 18:40:55'}}]
+[2023-11-28 14:29:42,100] logger_util.py->write_log line:61 [INFO] 实际结果：{'status': 1, 'lastErrorMsg': None, 'total': 1, 'headers': ['id', 'time', 'name', 'age', 'money'], 'data': [{'id': 1, 'time': '2023-10-20 18:40:55', 'name': '中文1', 'age': 10, 'money': 10.456}]}
+[2023-11-28 14:29:42,100] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-28 14:29:42,100] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

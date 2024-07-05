@@ -1,0 +1,14 @@
+-  name: $csv{name}_变量下发
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      name-tagname-tagvalue: data/test/variable_write.csv
+   request:
+      url: /api/v1/variable/setvalues
+      method: post
+      json:
+        {"$csv{tagname}":"$csv{tagvalue}"}
+      headers:
+         X-Project: ${get_config(project,x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+   -  equals: {status_code: 200}

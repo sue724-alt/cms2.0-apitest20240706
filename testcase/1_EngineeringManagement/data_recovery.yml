@@ -1,0 +1,22 @@
+-  name: 远程导入工程文件
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/importremoteproject
+      method: post
+      files:
+         file: ${get_project_path2()}\data\EngineeringManagement\2.1.0工程(升级验证)_升2.2.cmsproj
+   extract:
+      import_remoteproject_id: id
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id
+
+-  name: 数据恢复
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/${get_extract_data(import_remoteproject_id)}/import
+      method: post
+      files:
+         formFile: ${get_project_path()}\data\EngineeringManagement\升级工程备份文件(CMS2.2.0).cmsbak
+   validate:
+      -  equals: {status_code: 200}

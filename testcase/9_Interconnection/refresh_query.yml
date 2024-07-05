@@ -1,0 +1,13 @@
+-  name: 刷新-查询
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(query_maptable_id)}/preview
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {age: 10}
+      -  equals: {money: 10.456}
+      -  equals: {name: '中文1'}
+      -  equals: {time: '2023-10-20 18:40:55'}

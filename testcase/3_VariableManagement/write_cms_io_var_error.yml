@@ -1,0 +1,19 @@
+-  name: 异常下发io变量-$csv{title}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      title-name-value-result_vaule-allSuccess-errorMsg: data/VariableManagement/write_cms_io_var_error.csv
+   request:
+      url: /api/v1/variable/setvalues
+      method: post
+      json:
+         $csv{name}: "$csv{value}"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - equals:
+            allSuccess: ddt{{$csv{allSuccess}}}
+      - equals:
+           errorMsg: $csv{errorMsg}

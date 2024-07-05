@@ -1,0 +1,11 @@
+-  name: 上传png图片
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery?group=%E6%88%91%E7%9A%84\Default
+      method: post
+      files:
+         formFiles: "${get_project_path()}\\data\\picture\\11.png"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+    -  equals: {status_code: 200}

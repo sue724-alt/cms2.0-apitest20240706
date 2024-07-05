@@ -1,0 +1,42 @@
+[2023-06-01 16:55:14,900] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-01 16:55:14,900] logger_util.py->write_log line:61 [INFO] 接口名称：设置归档表触发配置-变量触发
+[2023-06-01 16:55:14,900] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-06-01 16:55:14,901] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable/366dcab2-52e0-4ce3-9989-c9853a150941/triggers
+[2023-06-01 16:55:14,901] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': '83d42c5d5ad141bba528b7690b19996e'}
+[2023-06-01 16:55:14,901] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': 'null', 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': False, 'condition': 'G1 ==  true', 'conditionDetail': 1, 'frequencyCheck': False, 'alarmPointIds': '', 'triggerType': 2}]
+[2023-06-01 16:55:14,901] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-01 16:55:14,905] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-06-01 16:55:14,906] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-06-01 16:55:14,906] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-01 16:55:14,906] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 354, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-06-01 16:55:14,907] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 354, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 236, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 404, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 354, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+

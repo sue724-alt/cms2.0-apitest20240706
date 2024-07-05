@@ -1,0 +1,324 @@
+[2023-11-08 14:09:18,324] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 14:09:18,324] logger_util.py->write_log line:61 [INFO] 接口名称：创建画面节点
+[2023-11-08 14:09:18,324] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-08 14:09:18,324] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/node?copyFrom=
+[2023-11-08 14:09:18,324] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 14:09:18,325] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '新建页面743', 'parentId': None, 'type': 1, 'sort': 1}
+[2023-11-08 14:09:18,325] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 14:09:18,384] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 14:09:18,384] logger_util.py->write_log line:61 [INFO] 实际结果：8
+[2023-11-08 14:09:18,385] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 14:09:18,385] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 14:09:18,424] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+[2023-11-08 14:09:18,460] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 189, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 328, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+
+[2023-11-08 14:09:18,633] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 14:09:18,633] logger_util.py->write_log line:61 [INFO] 接口名称：获取所有画面节点
+[2023-11-08 14:09:18,633] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-08 14:09:18,633] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/node
+[2023-11-08 14:09:18,633] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 14:09:18,634] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 14:09:18,639] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 14:09:18,639] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 8, 'parentId': None, 'name': '新建页面743', 'type': 1, 'sort': 1, 'createTime': '2023-11-08T14:09:18.3338557', 'updateTime': '2023-11-08T14:09:18.3611263'}]
+[2023-11-08 14:09:18,639] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 14:09:18,639] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 14:09:18,645] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 14:09:18,645] logger_util.py->write_log line:61 [INFO] 接口名称：获取画面节点树
+[2023-11-08 14:09:18,645] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-08 14:09:18,645] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/node/tree
+[2023-11-08 14:09:18,645] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 14:09:18,645] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 14:09:18,655] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 14:09:18,655] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [], 'hasEvent': False, 'id': 8, 'parentId': None, 'name': '新建页面743', 'type': 1, 'sort': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-11-08T14:09:18.3611263'}]
+[2023-11-08 14:09:18,655] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 14:09:18,655] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 14:09:18,660] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 14:09:18,661] logger_util.py->write_log line:61 [INFO] 接口名称：获取所有画面子节点
+[2023-11-08 14:09:18,661] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-08 14:09:18,661] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/node/subs
+[2023-11-08 14:09:18,661] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 14:09:18,661] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 14:09:18,668] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 14:09:18,668] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 8, 'parentId': None, 'name': '新建页面743', 'type': 1, 'sort': 1, 'createTime': '2023-11-08T14:09:18.3338557', 'updateTime': '2023-11-08T14:09:18.3611263'}]
+[2023-11-08 14:09:18,668] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 14:09:18,668] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 14:09:18,674] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+[2023-11-08 14:09:18,675] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 189, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 328, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+
+[2023-11-08 14:09:18,725] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 14:09:18,725] logger_util.py->write_log line:61 [INFO] 接口名称：创建画面节点
+[2023-11-08 14:09:18,725] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-08 14:09:18,725] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/node?copyFrom=
+[2023-11-08 14:09:18,725] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 14:09:18,725] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '新建页面35', 'parentId': None, 'type': 1, 'sort': 1}
+[2023-11-08 14:09:18,725] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 14:09:18,789] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 14:09:18,789] logger_util.py->write_log line:61 [INFO] 实际结果：9
+[2023-11-08 14:09:18,789] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 14:09:18,789] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 14:09:18,795] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+[2023-11-08 14:09:18,796] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 189, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 328, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+
+[2023-11-08 14:09:18,847] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 14:09:18,848] logger_util.py->write_log line:61 [INFO] 接口名称：创建画面节点1
+[2023-11-08 14:09:18,848] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-08 14:09:18,849] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/node?copyFrom=
+[2023-11-08 14:09:18,849] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 14:09:18,849] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '新建页面269', 'parentId': None, 'type': 1, 'sort': 1}
+[2023-11-08 14:09:18,850] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 14:09:18,926] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 14:09:18,926] logger_util.py->write_log line:61 [INFO] 实际结果：10
+[2023-11-08 14:09:18,926] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 14:09:18,926] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 14:09:18,934] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 14:09:18,934] logger_util.py->write_log line:61 [INFO] 接口名称：创建画面节点2
+[2023-11-08 14:09:18,934] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-08 14:09:18,934] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/node?copyFrom=
+[2023-11-08 14:09:18,934] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 14:09:18,934] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '新建页面996', 'parentId': None, 'type': 1, 'sort': 1}
+[2023-11-08 14:09:18,934] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 14:09:19,009] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 14:09:19,009] logger_util.py->write_log line:61 [INFO] 实际结果：11
+[2023-11-08 14:09:19,009] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 14:09:19,009] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 14:09:19,016] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 309, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+[2023-11-08 14:09:19,016] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 309, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 189, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 328, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 309, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+
+[2023-11-08 14:09:19,069] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 14:09:19,070] logger_util.py->write_log line:61 [INFO] 接口名称：创建画面节点3
+[2023-11-08 14:09:19,070] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-08 14:09:19,070] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/node?copyFrom=
+[2023-11-08 14:09:19,070] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 14:09:19,070] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '子画面876', 'parentId': None, 'type': 1, 'sort': 1}
+[2023-11-08 14:09:19,070] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 14:09:19,159] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 14:09:19,159] logger_util.py->write_log line:61 [INFO] 实际结果：12
+[2023-11-08 14:09:19,159] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 14:09:19,159] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 14:09:19,167] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+[2023-11-08 14:09:19,167] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 189, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 328, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 302, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+

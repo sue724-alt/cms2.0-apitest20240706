@@ -1,0 +1,29 @@
+-  name: 创建历史文件夹
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/historicarchive/folder
+      method: post
+      json:
+        {
+          "name": "新建文件夹${get_random_number(1,1000)}"
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      history_folder_delete_id: id
+   validate:
+   - equals:
+       status_code: 200
+
+-  name: 删除历史文件夹
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/historicarchive/folder/${get_extract_data(history_folder_delete_id)}
+      method: delete
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

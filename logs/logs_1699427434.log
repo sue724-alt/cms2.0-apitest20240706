@@ -1,0 +1,165 @@
+[2023-11-08 15:10:34,973] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 15:10:34,973] logger_util.py->write_log line:61 [INFO] 接口名称：创建图库组
+[2023-11-08 15:10:34,973] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-08 15:10:34,973] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/image/gallery?groupKey=我的
+[2023-11-08 15:10:34,973] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 15:10:34,974] logger_util.py->write_log line:61 [INFO] 请求参数：图库组412
+[2023-11-08 15:10:34,974] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 15:10:34,978] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 15:10:34,978] logger_util.py->write_log line:61 [INFO] 实际结果：{'groupKey': '我的\\图库组412', 'groupName': '图库组412'}
+[2023-11-08 15:10:34,979] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 15:10:34,979] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 15:10:34,986] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 15:10:34,986] logger_util.py->write_log line:61 [INFO] 接口名称：获取图库树
+[2023-11-08 15:10:34,986] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-08 15:10:34,986] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:180000/api/v1/view/image/gallery/tree?keyword=&groupPath=我的
+[2023-11-08 15:10:34,986] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 15:10:34,986] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 15:10:35,049] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\venv\lib\site-packages\urllib3\util\url.py", line 425, in parse_url
+    host, port = _HOST_PORT_RE.match(host_port).groups()  # type: ignore[union-attr]
+AttributeError: 'NoneType' object has no attribute 'groups'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\models.py", line 434, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\urllib3\util\url.py", line 451, in parse_url
+    raise LocationParseError(source_url) from e
+urllib3.exceptions.LocationParseError: Failed to parse: http://127.0.0.1:180000/api/v1/view/image/gallery/tree?keyword=&groupPath=我的
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\models.py", line 436, in prepare_url
+    raise InvalidURL(*e.args)
+requests.exceptions.InvalidURL: Failed to parse: http://127.0.0.1:180000/api/v1/view/image/gallery/tree?keyword=&groupPath=我的
+
+[2023-11-08 15:10:35,049] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\venv\lib\site-packages\urllib3\util\url.py", line 425, in parse_url
+    host, port = _HOST_PORT_RE.match(host_port).groups()  # type: ignore[union-attr]
+AttributeError: 'NoneType' object has no attribute 'groups'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\models.py", line 434, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\urllib3\util\url.py", line 451, in parse_url
+    raise LocationParseError(source_url) from e
+urllib3.exceptions.LocationParseError: Failed to parse: http://127.0.0.1:180000/api/v1/view/image/gallery/tree?keyword=&groupPath=我的
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\models.py", line 436, in prepare_url
+    raise InvalidURL(*e.args)
+requests.exceptions.InvalidURL: Failed to parse: http://127.0.0.1:180000/api/v1/view/image/gallery/tree?keyword=&groupPath=我的
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 189, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 328, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\venv\lib\site-packages\urllib3\util\url.py", line 425, in parse_url
+    host, port = _HOST_PORT_RE.match(host_port).groups()  # type: ignore[union-attr]
+AttributeError: 'NoneType' object has no attribute 'groups'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\models.py", line 434, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\urllib3\util\url.py", line 451, in parse_url
+    raise LocationParseError(source_url) from e
+urllib3.exceptions.LocationParseError: Failed to parse: http://127.0.0.1:180000/api/v1/view/image/gallery/tree?keyword=&groupPath=我的
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "E:\Project_python\api_cms\venv\lib\site-packages\requests\models.py", line 436, in prepare_url
+    raise InvalidURL(*e.args)
+requests.exceptions.InvalidURL: Failed to parse: http://127.0.0.1:180000/api/v1/view/image/gallery/tree?keyword=&groupPath=我的
+
+
+[2023-11-08 15:10:35,262] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 15:10:35,262] logger_util.py->write_log line:61 [INFO] 接口名称：重命名图库组
+[2023-11-08 15:10:35,262] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-11-08 15:10:35,262] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/image/gallery/rename?group=我的\图库组412
+[2023-11-08 15:10:35,262] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 15:10:35,263] logger_util.py->write_log line:61 [INFO] 请求参数：重命名827
+[2023-11-08 15:10:35,263] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 15:10:35,266] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 15:10:35,266] logger_util.py->write_log line:61 [INFO] 实际结果：{'groupKey': '我的\\重命名827', 'groupName': '重命名827'}
+[2023-11-08 15:10:35,266] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 15:10:35,266] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-08 15:10:35,273] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-08 15:10:35,273] logger_util.py->write_log line:61 [INFO] 接口名称：获取分组结构
+[2023-11-08 15:10:35,273] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-08 15:10:35,273] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000//api/v1/view/image/gallery/struct
+[2023-11-08 15:10:35,274] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'cade0634c4a44304911e8cfdb1b8f8b9'}
+[2023-11-08 15:10:35,274] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-08 15:10:35,276] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-08 15:10:35,276] logger_util.py->write_log line:61 [INFO] 实际结果：<!DOCTYPE html>
+<html lang="zh-CN" theme="industrialBlack">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="http://at.alicdn.com/t/font_3273823_ids2nmnjyss.css"> -->
+    <title>CMS 2.0</title>
+    <script type="module" crossorigin src="./index_2.4.0_20231103_200339_release_2.4.0_1a9fbb4.js"></script>
+    <link rel="stylesheet" href="./assets/index.7a1a418d.css">
+  </head>
+
+  <body>
+    <div id="app"></div>
+    
+    <!-- <script type="module" src="http://at.alicdn.com/t/font_3273823_ids2nmnjyss.js"></script> -->
+    
+    
+  </body>
+</html>
+
+[2023-11-08 15:10:35,276] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-08 15:10:35,276] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

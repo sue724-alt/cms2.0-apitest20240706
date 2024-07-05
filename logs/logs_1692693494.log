@@ -1,0 +1,195 @@
+[2023-08-22 16:38:14,957] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:14,958] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道1
+[2023-08-22 16:38:14,958] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:14,958] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:14,958] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:14,958] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道1', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '2143', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:14,959] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:14,989] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:38:14,990] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 5, 'parentId': None, 'sort': 2, 'name': '通道1', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '2143', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'enable': True, 'createTime': '2023-08-22T16:38:14.9842516+08:00', 'updateTime': '2023-08-22T16:38:14.9842521+08:00'}
+[2023-08-22 16:38:14,990] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:14,990] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:14,995] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:14,995] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-设备IP为空
+[2023-08-22 16:38:14,995] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:14,995] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:14,995] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:14,996] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道2', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:14,996] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,001] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中设备IP不能为空'}]
+[2023-08-22 16:38:15,001] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中设备IP不能为空
+[2023-08-22 16:38:15,001] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,001] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,006] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,006] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-设备IP非法
+[2023-08-22 16:38:15,006] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,006] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,006] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,006] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道3', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': 'abc', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,006] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,012] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中设备IP<abc>不正确'}]
+[2023-08-22 16:38:15,012] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中设备IP<abc>不正确
+[2023-08-22 16:38:15,012] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,012] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,016] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,016] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-设备ID为空
+[2023-08-22 16:38:15,017] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,017] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,017] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,017] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道4', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,017] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,022] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中设备ID不能为空'}]
+[2023-08-22 16:38:15,022] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中设备ID不能为空
+[2023-08-22 16:38:15,022] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,022] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,027] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,028] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-设备ID非法
+[2023-08-22 16:38:15,028] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,028] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,028] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,028] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道5', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': 'abc', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,028] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,034] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中设备ID<abc>不正确'}]
+[2023-08-22 16:38:15,034] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中设备ID<abc>不正确
+[2023-08-22 16:38:15,034] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,034] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,047] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,048] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-端口号为空
+[2023-08-22 16:38:15,048] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,048] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,048] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,048] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道6', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,048] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,054] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中端口号不能为空'}]
+[2023-08-22 16:38:15,054] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中端口号不能为空
+[2023-08-22 16:38:15,054] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,054] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,059] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,059] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-端口号非法
+[2023-08-22 16:38:15,059] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,059] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,059] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,059] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道7', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': 'abc', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,060] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,065] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中端口号<abc>不正确'}]
+[2023-08-22 16:38:15,065] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中端口号<abc>不正确
+[2023-08-22 16:38:15,065] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,065] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,070] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,070] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-连接超时为空
+[2023-08-22 16:38:15,070] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,070] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,070] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,070] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道8', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,070] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,076] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中连接超时不能为空'}]
+[2023-08-22 16:38:15,076] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中连接超时不能为空
+[2023-08-22 16:38:15,076] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,076] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,081] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,081] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-连接超时非法
+[2023-08-22 16:38:15,081] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,081] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,081] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,081] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道9', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': 'abc', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,082] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,090] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中连接超时<abc>不正确'}]
+[2023-08-22 16:38:15,090] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中连接超时<abc>不正确
+[2023-08-22 16:38:15,090] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,090] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,095] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,095] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-响应超时为空
+[2023-08-22 16:38:15,095] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,095] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,096] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,096] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道10', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,096] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,102] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中响应超时不能为空'}]
+[2023-08-22 16:38:15,102] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中响应超时不能为空
+[2023-08-22 16:38:15,102] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,102] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,107] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,107] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-响应超时非法
+[2023-08-22 16:38:15,107] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,107] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,107] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,107] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道11', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': 'abc', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,108] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,113] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中响应超时<abc>不正确'}]
+[2023-08-22 16:38:15,113] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中响应超时<abc>不正确
+[2023-08-22 16:38:15,113] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,113] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,118] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,118] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-PDU长度为空
+[2023-08-22 16:38:15,118] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,118] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,118] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,118] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道12', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': ''}}, 'copyConfig': None}
+[2023-08-22 16:38:15,118] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,124] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中PDU长度不能为空'}]
+[2023-08-22 16:38:15,124] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中PDU长度不能为空
+[2023-08-22 16:38:15,124] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,124] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,129] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,129] logger_util.py->write_log line:61 [INFO] 接口名称：通道异常校验-PDU长度非法
+[2023-08-22 16:38:15,129] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:38:15,129] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:38:15,129] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,129] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道13', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': 'abc'}}, 'copyConfig': None}
+[2023-08-22 16:38:15,129] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,135] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中PDU长度<abc>不正确'}]
+[2023-08-22 16:38:15,135] logger_util.py->write_log line:61 [INFO] 实际结果：通道配置错误：驱动配置中PDU长度<abc>不正确
+[2023-08-22 16:38:15,135] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,135] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:38:15,143] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:38:15,144] logger_util.py->write_log line:61 [INFO] 接口名称：删除通道1
+[2023-08-22 16:38:15,144] logger_util.py->write_log line:61 [INFO] 接口方式：delete
+[2023-08-22 16:38:15,144] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/5
+[2023-08-22 16:38:15,144] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:38:15,144] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:38:15,155] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:38:15,156] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-22 16:38:15,156] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:38:15,156] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

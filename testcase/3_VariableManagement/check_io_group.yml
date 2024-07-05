@@ -1,0 +1,50 @@
+-  name: 创建io变量组
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(io_tunnel_id)}/group
+      method: post
+      json:
+         {"name":"io组1"}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      io_group_id: id
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id
+
+-  name: 校验io变量组-变量组为空
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(io_tunnel_id)}/group
+      method: post
+      json:
+         {"name":""}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 400}
+      -  equals: {content: 变量组名称不能为空}
+
+-  name: 校验io变量组-变量组重复
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(io_tunnel_id)}/group
+      method: post
+      json:
+         {"name":"io组1"}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 400}
+      -  equals: {content: 变量组名称不能重复}
+
+-  name: 删除io变量组
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(io_tunnel_id)}/group/${get_extract_data(io_group_id)}
+      method: delete
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

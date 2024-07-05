@@ -1,0 +1,13 @@
+-  name: 开始时间不可大于结束时间
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/base/shift
+      method: put
+      json:
+         {"count":1,"startTime":{"isNextDay":false,"time":"08:00"},"endTime":{"isNextDay":false,"time":"07:00"},"shifts":[{"id":0,"shiftName":"班次1","startTime":{"isNextDay":false,"time":"08:00"},"endTime":{"isNextDay":false,"time":"07:00"}}]}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   -  equals: {status_code: 400}
+   -  equals: {code: 400}
+   -  equals: {msg: 班次开始时间大于结束时间}

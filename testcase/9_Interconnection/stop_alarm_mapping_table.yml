@@ -1,0 +1,9 @@
+-  name: 禁用报警插入映射表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/switch/2/${get_extract_data(alarm_maptable_id)}/off
+      method: put
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

@@ -1,0 +1,11 @@
+-  name: 数据清除
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/node/2/${get_extract_data(Original_Table_var_Trigger_ID)}/cleanup
+      method: get
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

@@ -1,0 +1,31 @@
+[2023-05-28 18:05:52,144] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 304, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 85, in replace_load
+    int_value = float(num)
+ValueError: could not convert string to float: 'ctiveDateTime": "2023-05-22T06:15:31.000Z", "frequencyValue": "ddt{{1}}", "frequencyUnit": 2, "matchAll": true, "condition": "A1==100", "conditionDetail": 1, "frequencyCheck": false, "triggerType":'
+
+[2023-05-28 18:05:52,145] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 304, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 85, in replace_load
+    int_value = float(num)
+ValueError: could not convert string to float: 'ctiveDateTime": "2023-05-22T06:15:31.000Z", "frequencyValue": "ddt{{1}}", "frequencyUnit": 2, "matchAll": true, "condition": "A1==100", "conditionDetail": 1, "frequencyCheck": false, "triggerType":'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 183, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 324, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 304, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 85, in replace_load
+    int_value = float(num)
+ValueError: could not convert string to float: 'ctiveDateTime": "2023-05-22T06:15:31.000Z", "frequencyValue": "ddt{{1}}", "frequencyUnit": 2, "matchAll": true, "condition": "A1==100", "conditionDetail": 1, "frequencyCheck": false, "triggerType":'
+
+

@@ -1,0 +1,16 @@
+-  name: $csv{name}创建副本
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      name-TableId-nodeType: data\DataManagement\create_a_copy.csv
+   request:
+      url: /api/v1/dataconfig/createreplicas
+      method: post
+      json:
+        copyFromId: ${get_extract_data($csv{TableId})}
+        nodeType: ddt{{$csv{nodeType}}}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

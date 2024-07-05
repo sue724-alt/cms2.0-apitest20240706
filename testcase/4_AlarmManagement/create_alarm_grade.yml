@@ -1,0 +1,16 @@
+-  name: 创建报警等级
+   base_url: ${get_base_url(base_url)}
+   request:
+      url: /api/v1/alarmlevel/add
+      method: post
+      json:
+         [{"name":"报警等级${get_random_number(1,1000)}"}]
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      Alarm_Grade_ID: id.0
+      Alarm_Grade_Name: name.0
+   validate:
+   - equals:
+       status_code: 200

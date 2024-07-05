@@ -1,0 +1,11 @@
+-  name: 添加逻辑变量
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(logic_tunnel_id)}/tag
+      method: post
+      json:
+         [{"archiveSetting":null,"groupId":null,"name":"logic1","description":"","typeName":"二进制变量","config":{"expression":"A2 * A10 == 852.016   ||   A10 - A2 !=  66.456 && A2 + A10   >  10  &&  A10  /  A2  < 10"},"index":1},{"archiveSetting":null,"groupId":null,"name":"logic2","description":"","typeName":"二进制变量","config":{"expression":"A2 >= 11  || A12 == \"123\""},"index":2},{"archiveSetting":null,"groupId":null,"name":"logic3","description":"","typeName":"二进制变量","config":{"expression":"A2 >= 100  || A12 == \"Abcf\""},"index":3}]
+      headers:
+        X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

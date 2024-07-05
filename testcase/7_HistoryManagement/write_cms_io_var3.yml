@@ -1,0 +1,17 @@
+-  name: 下发$csv{name}=$csv{value}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      name-value: data/HistoryManagement/history_write_cms_io_var3.csv
+   request:
+      url: /api/v1/variable/setvalues
+      method: post
+      json:
+         $csv{name}: "$csv{value}"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - equals:
+            allSuccess: true

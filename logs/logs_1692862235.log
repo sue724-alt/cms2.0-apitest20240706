@@ -1,0 +1,129 @@
+[2023-08-24 15:30:35,404] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 15:30:35,404] logger_util.py->write_log line:61 [INFO] 接口名称：创建内部通道
+[2023-08-24 15:30:35,404] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 15:30:35,404] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-24 15:30:35,404] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 15:30:35,404] logger_util.py->write_log line:61 [INFO] 请求参数：{'type': 3, 'name': '内部7088', 'description': '', 'config': None}
+[2023-08-24 15:30:35,405] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 15:30:35,429] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-24 15:30:35,430] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 128, 'parentId': None, 'sort': 12, 'name': '内部7088', 'description': '', 'type': 3, 'typeTag': None, 'config': None, 'enable': True, 'createTime': '2023-08-24T15:30:35.4237982+08:00', 'updateTime': '2023-08-24T15:30:35.4237987+08:00'}
+[2023-08-24 15:30:35,430] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 15:30:35,430] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 15:30:35,434] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 15:30:35,434] logger_util.py->write_log line:61 [INFO] 接口名称：创建内部通道1
+[2023-08-24 15:30:35,434] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 15:30:35,435] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-24 15:30:35,435] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 15:30:35,435] logger_util.py->write_log line:61 [INFO] 请求参数：{'type': 3, 'name': '内部通道1', 'description': '', 'config': None}
+[2023-08-24 15:30:35,435] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 15:30:35,440] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-24 15:30:35,440] logger_util.py->write_log line:61 [INFO] 实际结果：通道名称不能重复
+[2023-08-24 15:30:35,440] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-24 15:30:35,440] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-24 15:30:35,441] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-24 15:30:35,441] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 255, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-24 15:30:35,545] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 15:30:35,545] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部通道必填项-通道名为空
+[2023-08-24 15:30:35,545] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 15:30:35,545] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-24 15:30:35,545] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 15:30:35,545] logger_util.py->write_log line:61 [INFO] 请求参数：{'type': 3, 'name': '', 'description': '', 'config': None}
+[2023-08-24 15:30:35,545] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 15:30:35,550] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'equals': {'content': '通道名称不能为空'}}]
+[2023-08-24 15:30:35,550] logger_util.py->write_log line:61 [INFO] 实际结果：通道名称不能为空
+[2023-08-24 15:30:35,550] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 15:30:35,551] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 15:30:35,556] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 15:30:35,556] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部通道必填项-通道名重复
+[2023-08-24 15:30:35,556] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 15:30:35,556] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-24 15:30:35,556] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 15:30:35,556] logger_util.py->write_log line:61 [INFO] 请求参数：{'type': 3, 'name': '内部通道1', 'description': '', 'config': None}
+[2023-08-24 15:30:35,556] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 15:30:35,562] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'equals': {'content': '通道名称不能重复'}}]
+[2023-08-24 15:30:35,562] logger_util.py->write_log line:61 [INFO] 实际结果：通道名称不能重复
+[2023-08-24 15:30:35,562] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 15:30:35,562] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 15:30:35,620] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 299, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'inner_tunnel_id1'
+
+[2023-08-24 15:30:35,621] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 299, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'inner_tunnel_id1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 299, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'inner_tunnel_id1'
+
+

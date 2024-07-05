@@ -1,0 +1,42 @@
+[2023-06-05 18:13:55,146] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 18:13:55,146] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警点
+[2023-06-05 18:13:55,146] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-05 18:13:55,146] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmpoint/add
+[2023-06-05 18:13:55,146] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 18:13:55,147] logger_util.py->write_log line:61 [INFO] 请求参数：[{'groupID': 'd539a0e0-aab8-464c-b023-3ddb190c2c0a', 'groupName': 'string', 'name': '报警名称1', 'content': '报警信息11', 'expression': 'G1==true', 'levelID': '4765f62d-dbda-41a9-9db9-22ff7d241f58', 'levelName': '报警等级58', 'typeIDs': ['43b65952-7fe4-4ab0-b118-aec93d7f849c']}]
+[2023-06-05 18:13:55,147] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 18:13:55,163] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-06-05 18:13:55,163] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-06-05 18:13:55,163] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-05 18:13:55,164] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-06-05 18:13:55,164] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 416, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+

@@ -1,0 +1,428 @@
+[2023-08-22 16:20:09,660] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:09,660] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道新建通道
+[2023-08-22 16:20:09,660] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:09,660] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:09,660] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:09,660] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道1', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:09,661] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:09,677] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-22 16:20:09,678] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-22 16:20:09,678] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-22 16:20:09,678] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-22 16:20:09,679] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 249, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-22 16:20:09,779] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:09,779] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道通道名称为空
+[2023-08-22 16:20:09,779] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:09,780] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:09,780] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:09,780] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:09,780] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:09,785] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-22 16:20:09,785] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-22 16:20:09,785] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-22 16:20:09,786] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-22 16:20:09,786] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 249, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-22 16:20:09,812] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:09,813] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道设备IP为空
+[2023-08-22 16:20:09,813] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:09,813] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:09,813] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:09,813] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道2', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': 'null', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:09,813] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:09,818] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-22 16:20:09,818] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-22 16:20:09,819] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-22 16:20:09,819] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-22 16:20:09,819] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 249, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-22 16:20:09,845] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:09,845] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道设备IP非法
+[2023-08-22 16:20:09,845] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:09,845] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:09,845] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:09,845] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道3', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': 'abc', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:09,846] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:09,851] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-22 16:20:09,851] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-22 16:20:09,851] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-22 16:20:09,851] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-22 16:20:09,852] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 249, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-22 16:20:09,878] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:09,878] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道设备ID为空
+[2023-08-22 16:20:09,878] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:09,878] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:09,878] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:09,878] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道4', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': 'null', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:09,878] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:09,884] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-22 16:20:09,884] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-22 16:20:09,884] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-22 16:20:09,884] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-22 16:20:09,885] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 249, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-22 16:20:09,909] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:09,910] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道设备ID非法
+[2023-08-22 16:20:09,910] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:09,910] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:09,910] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:09,910] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道5', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': 'abc', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:09,910] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:09,915] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-22 16:20:09,915] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-22 16:20:09,916] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-22 16:20:09,916] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-22 16:20:09,916] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 249, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-22 16:20:09,942] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:09,942] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道端口号为空
+[2023-08-22 16:20:09,942] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:09,942] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:09,942] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:09,942] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道6', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': 'null', 'HeadAddress': '1', 'ConnectTimeOut': 'null', 'ResponseTimeout': 'null', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': 'null'}}, 'copyConfig': None}
+[2023-08-22 16:20:09,942] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:09,948] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-22 16:20:09,948] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-22 16:20:09,948] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-22 16:20:09,948] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-22 16:20:09,948] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 249, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-22 16:20:09,974] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:09,974] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道端口号非法
+[2023-08-22 16:20:09,974] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:09,974] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:09,974] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:09,975] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道7', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': 'abc', 'HeadAddress': '1', 'ConnectTimeOut': 'abc', 'ResponseTimeout': 'abc', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': 'abc'}}, 'copyConfig': None}
+[2023-08-22 16:20:09,975] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:09,980] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-22 16:20:09,980] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-22 16:20:09,980] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-22 16:20:09,981] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-22 16:20:09,981] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 249, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-22 16:20:10,008] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:10,008] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道连接超时为空
+[2023-08-22 16:20:10,008] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:10,008] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:10,008] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:10,008] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道8', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:10,008] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:10,030] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:20:10,030] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 60, 'parentId': None, 'sort': 37, 'name': '通道8', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'enable': True, 'createTime': '2023-08-22T16:20:10.0244934+08:00', 'updateTime': '2023-08-22T16:20:10.0244939+08:00'}
+[2023-08-22 16:20:10,030] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:20:10,030] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:20:10,035] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:10,035] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道连接超时非法
+[2023-08-22 16:20:10,035] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:10,035] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:10,035] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:10,035] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道9', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:10,035] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:10,055] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:20:10,055] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 61, 'parentId': None, 'sort': 38, 'name': '通道9', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'enable': True, 'createTime': '2023-08-22T16:20:10.0502232+08:00', 'updateTime': '2023-08-22T16:20:10.0502239+08:00'}
+[2023-08-22 16:20:10,055] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:20:10,055] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:20:10,060] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:10,060] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道响应超时为空
+[2023-08-22 16:20:10,060] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:10,060] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:10,060] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:10,060] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道10', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:10,060] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:10,079] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:20:10,080] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 62, 'parentId': None, 'sort': 39, 'name': '通道10', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'enable': True, 'createTime': '2023-08-22T16:20:10.0744911+08:00', 'updateTime': '2023-08-22T16:20:10.0744916+08:00'}
+[2023-08-22 16:20:10,080] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:20:10,080] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:20:10,085] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:10,085] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道响应超时非法
+[2023-08-22 16:20:10,085] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:10,085] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:10,085] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:10,085] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道11', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:10,085] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:10,104] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:20:10,104] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 63, 'parentId': None, 'sort': 40, 'name': '通道11', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'enable': True, 'createTime': '2023-08-22T16:20:10.0992896+08:00', 'updateTime': '2023-08-22T16:20:10.0992908+08:00'}
+[2023-08-22 16:20:10,104] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:20:10,104] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:20:10,109] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:10,109] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道PDU长度为空
+[2023-08-22 16:20:10,109] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:10,109] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:10,109] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:10,109] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道12', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:10,109] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:10,129] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:20:10,129] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 64, 'parentId': None, 'sort': 41, 'name': '通道12', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'enable': True, 'createTime': '2023-08-22T16:20:10.1232242+08:00', 'updateTime': '2023-08-22T16:20:10.1232247+08:00'}
+[2023-08-22 16:20:10,129] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:20:10,129] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:20:10,134] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:20:10,134] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道PDU长度非法
+[2023-08-22 16:20:10,134] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:20:10,134] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:20:10,134] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:20:10,134] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道13', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'copyConfig': None}
+[2023-08-22 16:20:10,134] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:20:10,154] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:20:10,154] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 65, 'parentId': None, 'sort': 42, 'name': '通道13', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '502', 'ResponseTimeout': '502', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '502'}}, 'enable': True, 'createTime': '2023-08-22T16:20:10.1485577+08:00', 'updateTime': '2023-08-22T16:20:10.1485582+08:00'}
+[2023-08-22 16:20:10,154] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:20:10,154] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

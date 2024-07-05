@@ -1,0 +1,9 @@
+-  name: 获取归档配置
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/historicarchive/group/${get_extract_data(history_group_id)}/archivesetting
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

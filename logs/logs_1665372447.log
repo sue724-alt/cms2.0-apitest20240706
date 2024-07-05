@@ -1,0 +1,43 @@
+[2022-10-10 11:27:27,989] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 332, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 46, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 20, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+[2022-10-10 11:27:27,990] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 332, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 46, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 20, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 204, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 360, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 332, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 46, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 20, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+

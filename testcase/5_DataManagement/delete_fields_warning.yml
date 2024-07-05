@@ -1,0 +1,18 @@
+-  name: 字段配置删除警告
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/node/field/delewarning
+      method: post
+      json:
+        fieldIds:
+        - ${get_extract_data(A2_id)}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200
+   - equals:
+        limited: True
+   - equals:
+        msg: 该字段已被关联的聚合表使用，不允许删除

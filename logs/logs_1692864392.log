@@ -1,0 +1,152 @@
+[2023-08-24 16:06:32,024] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:32,024] logger_util.py->write_log line:61 [INFO] 接口名称：创建内部通道1
+[2023-08-24 16:06:32,024] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 16:06:32,024] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-24 16:06:32,024] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:32,024] logger_util.py->write_log line:61 [INFO] 请求参数：{'type': 3, 'name': '内部通道1', 'description': '', 'config': None}
+[2023-08-24 16:06:32,025] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:32,049] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-24 16:06:32,049] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 145, 'parentId': None, 'sort': 11, 'name': '内部通道1', 'description': '', 'type': 3, 'typeTag': None, 'config': None, 'enable': True, 'createTime': '2023-08-24T16:06:32.042545+08:00', 'updateTime': '2023-08-24T16:06:32.0425454+08:00'}
+[2023-08-24 16:06:32,049] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:32,049] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:32,054] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:32,055] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部通道必填项-通道名为空
+[2023-08-24 16:06:32,055] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 16:06:32,055] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-24 16:06:32,055] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:32,055] logger_util.py->write_log line:61 [INFO] 请求参数：{'type': 3, 'name': '', 'description': '', 'config': None}
+[2023-08-24 16:06:32,055] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:32,060] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'equals': {'content': '通道名称不能为空'}}]
+[2023-08-24 16:06:32,060] logger_util.py->write_log line:61 [INFO] 实际结果：通道名称不能为空
+[2023-08-24 16:06:32,060] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:32,060] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:32,066] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:32,066] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部通道必填项-通道名重复
+[2023-08-24 16:06:32,066] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 16:06:32,066] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-24 16:06:32,066] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:32,066] logger_util.py->write_log line:61 [INFO] 请求参数：{'type': 3, 'name': '内部通道1', 'description': '', 'config': None}
+[2023-08-24 16:06:32,066] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:32,072] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'equals': {'content': '通道名称不能重复'}}]
+[2023-08-24 16:06:32,072] logger_util.py->write_log line:61 [INFO] 实际结果：通道名称不能重复
+[2023-08-24 16:06:32,072] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:32,072] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:32,081] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:32,081] logger_util.py->write_log line:61 [INFO] 接口名称：删除通道1
+[2023-08-24 16:06:32,081] logger_util.py->write_log line:61 [INFO] 接口方式：delete
+[2023-08-24 16:06:32,081] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/145
+[2023-08-24 16:06:32,081] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:32,081] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:36,027] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-24 16:06:36,027] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-24 16:06:36,027] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:36,027] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:36,032] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:36,032] logger_util.py->write_log line:61 [INFO] 接口名称：创建内部通道
+[2023-08-24 16:06:36,033] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 16:06:36,033] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-24 16:06:36,033] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:36,033] logger_util.py->write_log line:61 [INFO] 请求参数：{'type': 3, 'name': '内部7806', 'description': '', 'config': None}
+[2023-08-24 16:06:36,033] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:36,047] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-24 16:06:36,047] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 146, 'parentId': None, 'sort': 11, 'name': '内部7806', 'description': '', 'type': 3, 'typeTag': None, 'config': None, 'enable': True, 'createTime': '2023-08-24T16:06:36.0399002+08:00', 'updateTime': '2023-08-24T16:06:36.0399006+08:00'}
+[2023-08-24 16:06:36,047] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:36,047] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:36,057] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:36,057] logger_util.py->write_log line:61 [INFO] 接口名称：编辑内部通道
+[2023-08-24 16:06:36,057] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-24 16:06:36,057] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146
+[2023-08-24 16:06:36,057] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:36,057] logger_util.py->write_log line:61 [INFO] 请求参数：{'type': 3, 'name': '编辑内部通道4276', 'description': '描述1', 'config': None}
+[2023-08-24 16:06:36,057] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:43,713] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-24 16:06:43,713] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 146, 'parentId': None, 'sort': 11, 'name': '编辑内部通道4276', 'description': '描述1', 'type': 3, 'typeTag': None, 'config': None, 'enable': True, 'createTime': '2023-08-24T16:06:36.0399002', 'updateTime': '2023-08-24T16:06:36.0693554+08:00'}
+[2023-08-24 16:06:43,713] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:43,713] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:43,727] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:43,727] logger_util.py->write_log line:61 [INFO] 接口名称：创建内部变量组
+[2023-08-24 16:06:43,727] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 16:06:43,728] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/group
+[2023-08-24 16:06:43,728] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:43,728] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '内部组1'}
+[2023-08-24 16:06:43,728] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:43,743] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-24 16:06:43,743] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 112, 'sort': 0, 'name': '内部组1', 'tunnelId': 146, 'createTime': '2023-08-24T16:06:43.7367553+08:00', 'updateTime': '2023-08-24T16:06:43.7367564+08:00'}
+[2023-08-24 16:06:43,743] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:43,743] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:43,752] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:43,752] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量组-变量组为空
+[2023-08-24 16:06:43,752] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 16:06:43,752] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/group
+[2023-08-24 16:06:43,752] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:43,752] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': ''}
+[2023-08-24 16:06:43,752] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:43,760] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'equals': {'content': '变量组名称不能为空'}}]
+[2023-08-24 16:06:43,760] logger_util.py->write_log line:61 [INFO] 实际结果：变量组名称不能为空
+[2023-08-24 16:06:43,760] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:43,761] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:43,766] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:43,766] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量组-变量组重复
+[2023-08-24 16:06:43,766] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 16:06:43,766] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/group
+[2023-08-24 16:06:43,766] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:43,766] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '内部组1'}
+[2023-08-24 16:06:43,766] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:43,774] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}, {'equals': {'content': '变量组名称不能重复'}}]
+[2023-08-24 16:06:43,774] logger_util.py->write_log line:61 [INFO] 实际结果：变量组名称不能重复
+[2023-08-24 16:06:43,774] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:43,774] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:43,780] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:43,780] logger_util.py->write_log line:61 [INFO] 接口名称：删除内部变量组
+[2023-08-24 16:06:43,780] logger_util.py->write_log line:61 [INFO] 接口方式：delete
+[2023-08-24 16:06:43,780] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/group/112
+[2023-08-24 16:06:43,780] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:43,780] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:51,312] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-24 16:06:51,312] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-24 16:06:51,312] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:51,312] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 16:06:51,317] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 16:06:51,317] logger_util.py->write_log line:61 [INFO] 接口名称：创建内部变量组
+[2023-08-24 16:06:51,317] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 16:06:51,317] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/group
+[2023-08-24 16:06:51,317] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 16:06:51,318] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '内部组9067'}
+[2023-08-24 16:06:51,318] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 16:06:51,334] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-24 16:06:51,335] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 113, 'sort': 0, 'name': '内部组9067', 'tunnelId': 146, 'createTime': '2023-08-24T16:06:51.3275806+08:00', 'updateTime': '2023-08-24T16:06:51.3275811+08:00'}
+[2023-08-24 16:06:51,335] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 16:06:51,335] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

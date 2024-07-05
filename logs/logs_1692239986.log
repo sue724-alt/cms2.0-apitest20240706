@@ -1,0 +1,164 @@
+[2023-08-17 10:39:46,783] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:46,784] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-17 10:39:46,784] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 10:39:46,784] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 10:39:46,784] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:46,784] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程2444', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-17 10:39:46,785] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:47,119] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:47,119] logger_util.py->write_log line:61 [INFO] 实际结果：210
+[2023-08-17 10:39:47,119] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:47,120] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:47,124] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:47,124] logger_util.py->write_log line:61 [INFO] 接口名称：创建文件夹
+[2023-08-17 10:39:47,124] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 10:39:47,124] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 10:39:47,124] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:47,124] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '文件夹2056', 'type': 0}
+[2023-08-17 10:39:47,124] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:47,147] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:47,147] logger_util.py->write_log line:61 [INFO] 实际结果：211
+[2023-08-17 10:39:47,147] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:47,147] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:47,156] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:47,156] logger_util.py->write_log line:61 [INFO] 接口名称：获取工程信息
+[2023-08-17 10:39:47,156] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 10:39:47,156] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/210/info
+[2023-08-17 10:39:47,157] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:47,157] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:48,590] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:48,590] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 210, 'name': '工程2444', 'identifier': '10e5706157bc4259971fbb83deb65aa0', 'path': 'C:\\自动化工程\\工程2444.cmsproj', 'createTime': '2023-08-17T10:39:47.0962514', 'updateTime': '2023-08-17T10:39:47.0962515'}
+[2023-08-17 10:39:48,590] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:48,590] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:48,595] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:48,595] logger_util.py->write_log line:61 [INFO] 接口名称：获取工程树节点
+[2023-08-17 10:39:48,595] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 10:39:48,595] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/tree
+[2023-08-17 10:39:48,595] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:48,595] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:48,600] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:48,601] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [], 'fileAvailableState': False, 'version': None, 'id': 211, 'parentId': None, 'name': '文件夹2056', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T10:39:47.1278721'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 210, 'parentId': None, 'name': '工程2444', 'path': 'C:\\自动化工程\\工程2444.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T10:39:47.0707692'}]
+[2023-08-17 10:39:48,601] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:48,601] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:48,610] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:48,611] logger_util.py->write_log line:61 [INFO] 接口名称：移动工程节点
+[2023-08-17 10:39:48,611] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 10:39:48,611] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/moveprojectnodes
+[2023-08-17 10:39:48,611] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:48,611] logger_util.py->write_log line:61 [INFO] 请求参数：{'destNodeID': '211', 'selectNodeIDs': '210'}
+[2023-08-17 10:39:48,611] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:48,650] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:48,651] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 210, 'parentId': 211, 'name': '工程2444', 'path': 'C:\\自动化工程\\工程2444.cmsproj', 'type': 1, 'createTime': '2023-08-17T10:39:47.0707684', 'updateTime': '2023-08-17T10:39:48.6150904+08:00'}]
+[2023-08-17 10:39:48,651] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:48,651] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:48,655] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:48,655] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-17 10:39:48,655] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 10:39:48,655] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 10:39:48,655] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:48,656] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '删除工程保留路径下的文件1692239988.655084', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-17 10:39:48,656] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:48,960] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:48,960] logger_util.py->write_log line:61 [INFO] 实际结果：212
+[2023-08-17 10:39:48,960] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:48,960] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:48,967] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:48,968] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-17 10:39:48,968] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 10:39:48,968] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 10:39:48,968] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:48,968] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '212', 'isDeleteFile': False}
+[2023-08-17 10:39:48,968] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:49,038] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:49,038] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 10:39:49,038] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:49,038] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:49,043] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:49,043] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-17 10:39:49,044] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 10:39:49,044] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 10:39:49,044] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:49,044] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程2873', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-17 10:39:49,044] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:49,412] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:49,412] logger_util.py->write_log line:61 [INFO] 实际结果：213
+[2023-08-17 10:39:49,413] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:49,413] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:49,436] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:49,436] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-17 10:39:49,436] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 10:39:49,436] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 10:39:49,436] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:49,436] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '213', 'isDeleteFile': True}
+[2023-08-17 10:39:49,437] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:49,484] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:49,484] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 10:39:49,484] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:49,484] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:49,488] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:49,489] logger_util.py->write_log line:61 [INFO] 接口名称：创建文件夹
+[2023-08-17 10:39:49,489] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 10:39:49,489] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 10:39:49,489] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:49,489] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '文件夹5962', 'type': 0}
+[2023-08-17 10:39:49,489] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:49,513] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:49,513] logger_util.py->write_log line:61 [INFO] 实际结果：214
+[2023-08-17 10:39:49,513] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:49,513] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:49,521] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:49,521] logger_util.py->write_log line:61 [INFO] 接口名称：删除文件夹
+[2023-08-17 10:39:49,522] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 10:39:49,522] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 10:39:49,522] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:49,522] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '214', 'isDeleteFile': True}
+[2023-08-17 10:39:49,522] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:49,542] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:49,542] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 10:39:49,542] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:49,542] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:49,548] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:49,548] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程副本
+[2023-08-17 10:39:49,548] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 10:39:49,548] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/copyprojectnode
+[2023-08-17 10:39:49,548] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:49,548] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': '211', 'path': 'C:\\自动化工程', 'name': '工程副本1692239989.547874', 'type': 1, 'rawProjectNodeID': '210', 'copyType': 0}
+[2023-08-17 10:39:49,548] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:49,604] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:49,604] logger_util.py->write_log line:61 [INFO] 实际结果：215
+[2023-08-17 10:39:49,604] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:49,604] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:49,617] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:49,617] logger_util.py->write_log line:61 [INFO] 接口名称：查询
+[2023-08-17 10:39:49,617] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 10:39:49,617] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/tree?rootId=&isOrderByDesc=false&orderFieldName=name&keyWord=副本
+[2023-08-17 10:39:49,617] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:49,617] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:49,625] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:49,626] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 215, 'parentId': 211, 'name': '工程副本1692239989.547874', 'path': 'C:\\自动化工程\\工程副本1692239989.547874.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T10:39:49.5648505'}], 'fileAvailableState': False, 'version': None, 'id': 211, 'parentId': None, 'name': '文件夹2056', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T10:39:47.1278721'}]
+[2023-08-17 10:39:49,626] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:49,626] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 10:39:49,630] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 10:39:49,630] logger_util.py->write_log line:61 [INFO] 接口名称：刷新列表
+[2023-08-17 10:39:49,630] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 10:39:49,630] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/tree?rootId=&isOrderByDesc=false&orderFieldName=name&keyWord=
+[2023-08-17 10:39:49,630] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 10:39:49,631] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 10:39:49,638] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 10:39:49,638] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 210, 'parentId': 211, 'name': '工程2444', 'path': 'C:\\自动化工程\\工程2444.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T10:39:48.6150904'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 215, 'parentId': 211, 'name': '工程副本1692239989.547874', 'path': 'C:\\自动化工程\\工程副本1692239989.547874.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T10:39:49.5648505'}], 'fileAvailableState': False, 'version': None, 'id': 211, 'parentId': None, 'name': '文件夹2056', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T10:39:47.1278721'}]
+[2023-08-17 10:39:49,639] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 10:39:49,639] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

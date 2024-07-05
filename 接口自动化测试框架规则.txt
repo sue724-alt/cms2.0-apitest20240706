@@ -1,0 +1,81 @@
+接口自动化测试框架文件编写规则
+1.必须有的四个一级关键字：name,base_url,request,validate
+2.在request一级关键字下必须包括两个二级关键字：method，url
+3.传参方式：在request一级关键字下，通过二级关键字传参：
+    如果是get请求，通过params传参
+    如果是post请求：
+        传json格式，通过json关键传参
+        传表单格式，通过data关键传参
+        传文件格式，通过files关键字传参
+4.如果需要做接口关联的话，那么必须使用一级关键字：extract
+提取：
+    如：json提取方式
+       extract:
+                 access_token: access_token
+    如：正则表达式提取方式
+        extract:
+                 picture_group: '"key":"(.*?)"'
+    list提取
+        索引提取：ID: id.0
+        (取第一个列表中的id)
+        提取返回结果：content
+    dict提取：
+        包含列表提取：字段名.索引   originalId.0 （遍历所有originalId值并取第一个）
+        纯字段提取： 字段名        originalId
+
+取值：
+    提取上个接口返回值：${get_extract_data(字段名)}，如：${get_extract_data(access_token)}
+    函数取值：${函数名(参数1,参数2)}，如：${get_random_number(1000,9999)}
+
+5.热加载，当yaml需要使用动态参数时，那么可以在debug_talk.py文件中写调用方法。
+注意：传参时，需要什么类型的数据，需要做强转。int(min),int(max)
+如：
+    #获取随机数的方法
+    def get_random_number(self,min,max):
+        return random.randint(int(min),int(max))
+6.此框架支持两种断言方式：分别为equals和contains断言：
+    equals：{预期结果: 实际结果}，预期结果等于实际结果
+    若返回只有一个结果，使用content取响应中所有数据，equals: {content,预期值}
+    contains：key值，json文件中包含key值
+    如：
+        validate:
+        -  equals: {status_code: 200}
+        -  contains: access_token
+7.数据驱动：使用csv和一级关键字parameters实现，如:
+yaml写法：
+    parameters:
+      name1-name2: data/get_caate_node.csv
+csv写法：
+    name1,name2
+    创建工程1,test88
+    创建工程2,test99
+引用：
+    $csv{name1},xxx$csv{name2}xxx--->注意这里返回字符串，若要返回数值型，ddt{{数值/动态参数}}
+8.日志监控，异常处理以及基础路径的设置
+9.读取csv，取整函数：ddt{{数值/动态参数}}
+    1. 将字符串的true、false转为bool型的True和False
+    2. 将空或null 转为 None
+    3. 将带小数点的数值自动转为 浮点数
+    3. 将字符串类数值 转为 数值型
+10.读取空值，csv直接写入""空值
+11.断言：
+    equals：
+        实际值，预期值
+        （实际值等于预期值）
+    contains：实际字段
+        （仅字典类型：返回内容包含某个字段）
+    greater_than：
+        实际值：预期值
+        （实际值大于预期值，针对列表数据）
+    length_greater_than:
+        实际值：预期值
+        （字符串长度大于预期值，针对列表数据）
+    （注意：仅支持返回数据是json或列表格式，嵌套类型不支持，如列表嵌套字典，字典再嵌套列表）
+    引用csv文件数据：需加引号，如：-  equals: {data: '$csv{tagvalue}'}
+
+12、报错汇总：
+    1. 读取yaml文件报：expected ',' or '}', but got '{'
+       解决方式：格式异常，需改为yaml格式
+
+
+

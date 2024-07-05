@@ -1,0 +1,23 @@
+-  name: 清空实时报警表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/node/2/a9b66e92-6f83-44e3-ba02-ccbdb0f149c1/cleanup
+      method: get
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200
+
+-  name: 清空历史报警表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/node/2/e342f0fa-977d-459a-97b2-f4fc4b36c7e4/cleanup
+      method: get
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

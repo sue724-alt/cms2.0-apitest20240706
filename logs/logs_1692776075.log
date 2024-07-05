@@ -1,0 +1,176 @@
+[2023-08-23 15:34:35,517] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 15:34:35,517] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B1-int8含缩放比10
+[2023-08-23 15:34:35,517] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 15:34:35,517] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 15:34:35,517] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 15:34:35,518] logger_util.py->write_log line:61 [INFO] 请求参数：{'B1': '127'}
+[2023-08-23 15:34:35,518] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 15:34:35,600] logger_util.py->error_log line:65 [INFO] 断言失败:allSuccess不等于True
+[2023-08-23 15:34:35,601] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B1': {'value': 127, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 15:34:35,601] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-23 15:34:35,602] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-23 15:34:35,604] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+[2023-08-23 15:34:35,606] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 408, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+
+[2023-08-23 15:34:35,718] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 15:34:35,718] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B1-int8含缩放比10
+[2023-08-23 15:34:35,718] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 15:34:35,719] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 15:34:35,719] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 15:34:35,719] logger_util.py->write_log line:61 [INFO] 请求参数：{'B1': '-128'}
+[2023-08-23 15:34:35,719] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 15:34:35,787] logger_util.py->error_log line:65 [INFO] 断言失败:allSuccess不等于True
+[2023-08-23 15:34:35,787] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B1': {'value': -128, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 15:34:35,788] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-23 15:34:35,788] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-23 15:34:35,789] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+[2023-08-23 15:34:35,790] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 408, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+
+[2023-08-23 15:34:35,835] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 15:34:35,835] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B1-int8含缩放比10
+[2023-08-23 15:34:35,835] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 15:34:35,836] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 15:34:35,836] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 15:34:35,836] logger_util.py->write_log line:61 [INFO] 请求参数：{'B1': '1271'}
+[2023-08-23 15:34:35,836] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 15:34:35,838] logger_util.py->error_log line:65 [INFO] 断言失败:allSuccess不等于False
+[2023-08-23 15:34:35,838] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': False, 'items': {'B1': {'value': 1271, 'quality': 2, 'errorMsg': '请输入正确的值, 应在-1280 - 1270'}}}
+[2023-08-23 15:34:35,839] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-23 15:34:35,839] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-23 15:34:35,839] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于False
+
+[2023-08-23 15:34:35,839] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于False
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 408, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于False
+
+
+[2023-08-23 15:34:35,869] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 15:34:35,869] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B1-int8含缩放比10
+[2023-08-23 15:34:35,869] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 15:34:35,869] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 15:34:35,869] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 15:34:35,870] logger_util.py->write_log line:61 [INFO] 请求参数：{'B1': '-1281'}
+[2023-08-23 15:34:35,870] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 15:34:35,872] logger_util.py->error_log line:65 [INFO] 断言失败:allSuccess不等于False
+[2023-08-23 15:34:35,872] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': False, 'items': {'B1': {'value': -1281, 'quality': 2, 'errorMsg': '请输入正确的值, 应在-1280 - 1270'}}}
+[2023-08-23 15:34:35,873] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-23 15:34:35,873] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-23 15:34:35,873] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于False
+
+[2023-08-23 15:34:35,873] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于False
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 408, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 363, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于False
+
+

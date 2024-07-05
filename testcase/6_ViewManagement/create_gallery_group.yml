@@ -1,0 +1,14 @@
+-  name: 创建图库组
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery?groupKey=我的
+      method: post
+      json: 图库组${get_random_number(1,1000)}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      groupKey: groupKey
+   validate:
+   - equals:
+       status_code: 200

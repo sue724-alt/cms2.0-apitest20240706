@@ -1,0 +1,45 @@
+-  name: 读取逻辑变量_logic1
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/getvalues
+      method: post
+      json:
+         - logic1
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - equals:
+           logic1: 'True'
+-  name: 读取逻辑变量_logic2
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/getvalues
+      method: post
+      json:
+         - logic2
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - equals:
+           logic2: 'True'
+-  name: 读取逻辑变量_logic3
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/getvalues
+      method: post
+      json:
+         - logic3
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - equals:
+           logic3: 'True'

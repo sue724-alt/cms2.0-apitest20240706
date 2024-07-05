@@ -1,0 +1,17 @@
+-  name: 读取内部变量-$csv{title}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      title-name-value: data/VariableManagement/read_cms_inner_var.csv
+   request:
+      url: /api/v1/variable/getvalues
+      method: post
+      json:
+         - $csv{name}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - equals:
+           $csv{name}: $csv{value}

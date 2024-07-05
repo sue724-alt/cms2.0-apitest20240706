@@ -1,0 +1,17 @@
+-  name: 查询删除警告-$csv{name}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+     name-nodetype-id-msg: data/DataManagement/query_delete_warning.csv
+   request:
+      url: /api/v1/dataconfig/node/deletewarning/$csv{nodetype}/${get_extract_data($csv{id})}
+      method: get
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200
+   - equals:
+        popUp: True
+   - equals:
+        msg: $csv{msg}

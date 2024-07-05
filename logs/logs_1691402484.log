@@ -1,0 +1,12 @@
+[2023-08-07 18:01:24,032] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-07 18:01:24,033] logger_util.py->write_log line:61 [INFO] 接口名称：modbus协议下发
+[2023-08-07 18:01:24,033] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-07 18:01:24,033] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:6700/v1/cms/io/write
+[2023-08-07 18:01:24,033] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json'}
+[2023-08-07 18:01:24,033] logger_util.py->write_log line:61 [INFO] 请求参数：{'tagDatas': {'MOD_SINT1': 11, 'MOD_INT1': 22}}
+[2023-08-07 18:01:24,034] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-07 18:01:24,146] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'msg': 'All write successfully'}}, {'equals': {'MOD_INT1': 0}}, {'equals': {'MOD_SINT1': 0}}]
+[2023-08-07 18:01:24,146] logger_util.py->write_log line:61 [INFO] 实际结果：{'body': {'code': 0, 'msg': 'All write successfully', 'tagResults': {'MOD_INT1': 0, 'MOD_SINT1': 0}, 'traceId': 'DFA6BD85-A87A-471E-9B1D-E7C3FFB86152'}, 'header': {'code': 0, 'cur_module': 'siot', 'msg': 'All write successfully', 'timespend': 108, 'tracelist': [{'code': 0, 'module': 'siot', 'msg': 'All write successfully', 'submodule_timespend': {'api': 108, 'control': 107, 'driver': 28}, 'timespend': 108}]}}
+[2023-08-07 18:01:24,146] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-07 18:01:24,146] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

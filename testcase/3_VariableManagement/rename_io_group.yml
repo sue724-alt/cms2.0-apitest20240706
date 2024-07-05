@@ -1,0 +1,12 @@
+-  name: 重命名变量组
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(io_tunnel_id)}/group/${get_extract_data(io_group_id)}
+      method: put
+      json:
+         {"name":"重命名变量组${get_random_number(1000,9999)}"}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id

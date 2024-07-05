@@ -1,0 +1,15 @@
+-  name: 更新节点-重命名工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/updatenode
+      method: put
+      data:
+         ParentId: null
+         Id: ${get_extract_data(project_id)}
+         Name: 重命名${get_random_number(1000,9999)}
+         Path: C:\自动化工程\${get_extract_data(project_name)}.cmsproj
+         Type: 1
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id
+      -  contains: name

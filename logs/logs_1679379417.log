@@ -1,0 +1,825 @@
+[2023-03-21 14:16:57,582] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-03-21 14:16:57,582] logger_util.py->write_log line:61 [INFO] 接口名称：新建工程
+[2023-03-21 14:16:57,582] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-03-21 14:16:57,582] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.5.120:18000/api/v1/project/node
+[2023-03-21 14:16:57,582] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+[2023-03-21 14:16:57,582] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程4516', 'path': 'E:\\APP\\CMS201', 'type': 1, 'parentId': 0}
+[2023-03-21 14:16:57,583] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-03-21 14:17:18,757] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D6953D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D6953D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D6953D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+[2023-03-21 14:17:18,777] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D6953D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D6953D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D6953D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 176, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 304, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D6953D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D6953D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D6953D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+
+[2023-03-21 14:17:19,030] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-03-21 14:17:19,030] logger_util.py->write_log line:61 [INFO] 接口名称：新建文件夹
+[2023-03-21 14:17:19,030] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-03-21 14:17:19,030] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.5.120:18000/api/v1/project/node
+[2023-03-21 14:17:19,030] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+[2023-03-21 14:17:19,030] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '文件夹9935', 'path': None, 'type': 0, 'parentId': 0}
+[2023-03-21 14:17:19,031] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-03-21 14:17:40,061] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D9154C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D9154C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D9154C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+[2023-03-21 14:17:40,076] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D9154C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D9154C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D9154C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 176, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 304, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D9154C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D9154C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D9154C0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+
+[2023-03-21 14:17:40,242] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 276, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 41, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+[2023-03-21 14:17:40,243] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 276, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 41, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 176, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 304, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 276, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 41, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+
+[2023-03-21 14:17:40,286] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-03-21 14:17:40,286] logger_util.py->write_log line:61 [INFO] 接口名称：新建工程
+[2023-03-21 14:17:40,286] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-03-21 14:17:40,286] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.5.120:18000/api/v1/project/node
+[2023-03-21 14:17:40,286] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+[2023-03-21 14:17:40,286] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程4510', 'path': 'E:\\APP\\CMS201', 'type': 1, 'parentId': 0}
+[2023-03-21 14:17:40,287] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-03-21 14:18:01,335] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D837790>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D837790>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D837790>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+[2023-03-21 14:18:01,350] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D837790>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D837790>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D837790>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 176, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 304, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D837790>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D837790>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D837790>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+
+[2023-03-21 14:18:01,495] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-03-21 14:18:01,495] logger_util.py->write_log line:61 [INFO] 接口名称：新建文件夹
+[2023-03-21 14:18:01,495] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-03-21 14:18:01,495] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.5.120:18000/api/v1/project/node
+[2023-03-21 14:18:01,495] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+[2023-03-21 14:18:01,496] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '文件夹2230', 'path': None, 'type': 0, 'parentId': 0}
+[2023-03-21 14:18:01,496] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-03-21 14:18:22,557] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D7C33A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D7C33A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D7C33A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+[2023-03-21 14:18:22,573] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D7C33A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D7C33A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D7C33A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 176, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 304, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "D:\Pyhton\Pyton39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028D5D7C33A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "D:\Pyhton\Pyton39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D7C33A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 301, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.5.120', port=18000): Max retries exceeded with url: /api/v1/project/node (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028D5D7C33A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。'))
+
+
+[2023-03-21 14:18:22,715] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-03-21 14:18:22,716] logger_util.py->write_log line:61 [INFO] 接口名称：移动文件
+[2023-03-21 14:18:22,716] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-03-21 14:18:22,716] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/4
+[2023-03-21 14:18:22,716] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-03-21 14:18:22,716] logger_util.py->write_log line:61 [INFO] 请求参数：{'child': [], 'id': 4, 'parentId': 5, 'name': '移动工程6868', 'path': 'E:\\APP\\CMS201\\移动工程6868', 'type': 1}
+[2023-03-21 14:18:22,716] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-03-21 14:18:22,791] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-03-21 14:18:22,792] logger_util.py->write_log line:61 [INFO] 接口名称：获取工程信息
+[2023-03-21 14:18:22,792] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-03-21 14:18:22,792] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/4/info
+[2023-03-21 14:18:22,792] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+[2023-03-21 14:18:22,792] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-03-21 14:18:22,887] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-03-21 14:18:22,887] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 4, 'name': '工程5376', 'identifier': 'ba453a1fd97840e0a2a6094dcd117e60', 'path': 'E:\\APP\\CMS201\\移动工程6868.cmsproj', 'createTime': '2023-03-21T14:18:09.9883699', 'updateTime': '2023-03-21T14:18:22.7233557'}
+[2023-03-21 14:18:22,887] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-03-21 14:18:22,887] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

@@ -1,0 +1,59 @@
+-  name: 上传jpeg图片
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery?group=${get_extract_data(groupKey)}
+      method: post
+      files:
+         formFiles: "${get_project_path()}\\data\\picture\\11.jpeg"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      imageName11: imageName.0
+   validate:
+   - equals:
+       status_code: 200
+
+-  name: 上传png图片
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery?group=${get_extract_data(groupKey)}
+      method: post
+      files:
+         formFiles: "${get_project_path()}\\data\\picture\\22.png"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      imageName22: imageName.0
+   validate:
+   - equals:
+       status_code: 200
+
+-  name: 上传jpg图片
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery?group=${get_extract_data(groupKey)}
+      method: post
+      files:
+         formFiles: "${get_project_path()}\\data\\picture\\33.jpg"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      imageName33: imageName.0
+   validate:
+   - equals:
+       status_code: 200
+
+-  name: 上传gif图片
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery?group=${get_extract_data(groupKey)}
+      method: post
+      files:
+         formFiles: "${get_project_path()}\\data\\picture\\44.gif"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      imageName44: imageName.0
+   validate:
+   - equals:
+       status_code: 200

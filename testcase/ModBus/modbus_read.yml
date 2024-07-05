@@ -1,0 +1,19 @@
+-  name: modbus协议读取-$csv{name}
+   base_url: ${get_base_url(siot_url)}
+   parameters:
+      name-tagname-tagvalue: data/modbus/modbus_read.csv
+   request:
+      url: /v1/cms/io/read
+      method: post
+      json:
+        {
+           "tagNames": [
+              "$csv{tagname}"
+           ]
+        }
+      headers:
+         Content-Type: application/json
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {msg: All read successfully}
+      -  equals: {data: '$csv{tagvalue}'}

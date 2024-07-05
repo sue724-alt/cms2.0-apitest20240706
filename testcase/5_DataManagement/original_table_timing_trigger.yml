@@ -1,0 +1,59 @@
+-  name: 创建文件夹
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/folder
+      method: post
+      json:
+        {"parentId":"00000000-0000-0000-0000-000000000000","name":"归档表","sort":2}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      Folder_ID1: id
+   validate:
+   - equals:
+       status_code: 200
+   - contains: id
+
+-  name: 创建归档表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/filingtable
+      method: post
+      json:
+        {"folderId":"${get_extract_data(Folder_ID1)}","name":"归档表_定时触发","sort":1}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      Original_Table_Timing_Trigger_ID: id
+   validate:
+   - equals:
+       status_code: 200
+   - contains: id
+
+-  name: 归档表字段配置
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/filingtable/${get_extract_data(Original_Table_Timing_Trigger_ID)}/fields
+      method: put
+      json:
+        [{"fieldName":"系统时间","fieldType":3,"associatedVariable":"System_DateTime","formula":"","id":""},{"fieldName":"班次","fieldType":2,"associatedVariable":"System_Shift","formula":"","id":""},{"fieldName":"A1","fieldType":1,"associatedVariable":"A2","formula":"","id":""},{"fieldName":"B1","fieldType":1,"associatedVariable":"A10","formula":"","id":""},{"fieldName":"G1","fieldType":1,"associatedVariable":"A1","formula":"","id":""},{"fieldName":"H1","fieldType":2,"associatedVariable":"A12","formula":"","id":""},{"fieldName":"绝对值B1","fieldType":1,"associatedVariable":"","formula":"ABS( [B1] )","id":""},{"fieldName":"随机数0_1","fieldType":1,"associatedVariable":"","formula":"RAND(  )","id":""},{"fieldName":"随机数1_100","fieldType":1,"associatedVariable":"","formula":"RANDBETWEEN( 1,100 )","id":""},{"fieldName":"ROUND1","fieldType":1,"associatedVariable":"","formula":"ROUND( [B1],1 )","id":""},{"fieldName":"ROUNDDOWN1","fieldType":1,"associatedVariable":"","formula":"ROUNDDOWN( [B1],1 )","id":""},{"fieldName":"ROUNDUP1","fieldType":1,"associatedVariable":"","formula":"ROUNDUP( [B1],1 )","id":""},{"fieldName":"SUM1","fieldType":1,"associatedVariable":"","formula":"SUM( [A1],[B1] )","id":""},{"fieldName":"AVERAGE1","fieldType":1,"associatedVariable":"","formula":"AVERAGE( [A1],[B1] )","id":""},{"fieldName":"COUNT1","fieldType":1,"associatedVariable":"","formula":"COUNT( [A1],[B1] )","id":""},{"fieldName":"COUNTA1","fieldType":1,"associatedVariable":"","formula":"COUNTA( [A1],[B1] )","id":""},{"fieldName":"MAX1","fieldType":1,"associatedVariable":"","formula":"MAX( [A1],[B1] )","id":""},{"fieldName":"MEDIAN1","fieldType":1,"associatedVariable":"","formula":"MEDIAN( [A1],[B1] )","id":""},{"fieldName":"MIN1","fieldType":1,"associatedVariable":"","formula":"MIN( [A1],[B1] )","id":""},{"fieldName":"CHAR2","fieldType":2,"associatedVariable":"","formula":"CHAR( 92 )","id":""},{"fieldName":"CONCATENATE2","fieldType":2,"associatedVariable":"","formula":"CONCATENATE( [H1],\"123\" )","id":""},{"fieldName":"LEFT2","fieldType":2,"associatedVariable":"","formula":"LEFT( [H1],2 )","id":""},{"fieldName":"LEN2","fieldType":2,"associatedVariable":"","formula":"LEN( [H1] )","id":""},{"fieldName":"LOWER2","fieldType":2,"associatedVariable":"","formula":"LOWER( [H1] )","id":""},{"fieldName":"UPPER2","fieldType":2,"associatedVariable":"","formula":"UPPER( [H1] )","id":""},{"fieldName":"MID2","fieldType":2,"associatedVariable":"","formula":"MID( [H1],1,2 )","id":""},{"fieldName":"REPLACE2","fieldType":2,"associatedVariable":"","formula":"REPLACE( [H1],1,2,\"替换\" )","id":""},{"fieldName":"RIGHT2","fieldType":2,"associatedVariable":"","formula":"RIGHT( [H1],2 )","id":""},{"fieldName":"TEXT月日","fieldType":2,"associatedVariable":"","formula":"TEXT( \"2022-10-20\",\"M月d日\" )","id":""},{"fieldName":"TODATE2","fieldType":3,"associatedVariable":"","formula":"TODATE( \"2023-06-19\" )","id":""},{"fieldName":"TRIM2","fieldType":2,"associatedVariable":"","formula":"TRIM( [H1] )","id":""},{"fieldName":"DATE3","fieldType":3,"associatedVariable":"","formula":"DATE( 2023,6,19)","id":""},{"fieldName":"差值3年","fieldType":1,"associatedVariable":"","formula":"DATEDIF( \"2020-01-01 18:30:30\",\"2023-06-27 19:45:55\",\"Y\" )","id":""},{"fieldName":"差值5月","fieldType":1,"associatedVariable":"","formula":"DATEDIF( \"2023-01-01 18:30:30\",\"2023-06-27 19:45:55\",\"M\" )","id":""},{"fieldName":"差值177日","fieldType":1,"associatedVariable":"","formula":"DATEDIF( \"2023-01-01 18:30:30\",\"2023-06-27 19:45:55\",\"D\" )","id":""},{"fieldName":"差值4249时","fieldType":1,"associatedVariable":"","formula":"DATEDIF( \"2023-01-01 18:30:30\",\"2023-06-27 19:45:55\",\"h\" )","id":""},{"fieldName":"差值254955分","fieldType":1,"associatedVariable":"","formula":"DATEDIF( \"2023-01-01 18:30:30\",\"2023-06-27 19:45:55\",\"m\" )","id":""},{"fieldName":"差值15297325秒","fieldType":1,"associatedVariable":"","formula":"DATEDIF( \"2023-01-01 18:30:30\",\"2023-06-27 19:45:55\",\"s\" )","id":""},{"fieldName":"DAYS18天","fieldType":2,"associatedVariable":"","formula":"DAYS( \"2023-06-19\",\"2023-06-01\" )","id":""},{"fieldName":"NOW3","fieldType":3,"associatedVariable":"","formula":"NOW(  )","id":""},{"fieldName":"YEAR3","fieldType":2,"associatedVariable":"","formula":"YEAR( [系统时间] )","id":""},{"fieldName":"MONTH3","fieldType":2,"associatedVariable":"","formula":"MONTH( [系统时间] )","id":""},{"fieldName":"DAY3","fieldType":2,"associatedVariable":"","formula":"DAY( [系统时间] )","id":""},{"fieldName":"HOUR3","fieldType":2,"associatedVariable":"","formula":"HOUR( [系统时间] )","id":""},{"fieldName":"MINUTE3","fieldType":2,"associatedVariable":"","formula":"MINUTE( [系统时间] )","id":""},{"fieldName":"SECOND3","fieldType":2,"associatedVariable":"","formula":"SECOND( [系统时间] )","id":""},{"fieldName":"TODAY3","fieldType":3,"associatedVariable":"","formula":"TODAY(  )","id":""},{"fieldName":"WEEKDAY3","fieldType":2,"associatedVariable":"","formula":"WEEKDAY( [系统时间],1 )","id":""},{"fieldName":"WEEKNUM3","fieldType":2,"associatedVariable":"","formula":"WEEKNUM( [系统时间],1 )","id":""},{"fieldName":"AND4","fieldType":2,"associatedVariable":"","formula":"AND( [A1]==100,[B1]==100 )","id":""},{"fieldName":"FALSE4","fieldType":2,"associatedVariable":"","formula":"FALSE(  )","id":""},{"fieldName":"TRUE4","fieldType":2,"associatedVariable":"","formula":"TRUE(  )","id":""},{"fieldName":"IF4","fieldType":2,"associatedVariable":"","formula":"IF( [A1]>10,\"及格\",\"不及格\" )","id":""},{"fieldName":"NOT_true4","fieldType":2,"associatedVariable":"","formula":"NOT( TRUE(  ) )","id":""},{"fieldName":"NOT_false4","fieldType":2,"associatedVariable":"","formula":"NOT( FALSE(  ) )","id":""},{"fieldName":"OR4","fieldType":2,"associatedVariable":"","formula":"OR( [A1]==100,[B1]==100 )","id":""},{"fieldName":"PREVALUE4","fieldType":3,"associatedVariable":"","formula":"PREVALUE( [系统时间] )","id":""},{"fieldName":"Change4","fieldType":1,"associatedVariable":"","formula":"Change( [A1],100 )","id":""}]
+      headers:
+         Content-Type: application/json; =UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   -  equals: {status_code: 200}
+
+-  name: 归档表触发配置-定时触发
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/filingtable/${get_extract_data(Original_Table_Timing_Trigger_ID)}/triggers
+      method: put
+      json:
+        [{"effectiveDateTime":"2024-01-04T06:36:45.000Z","frequencyValue":1,"frequencyUnit":1,"matchAll":true,"condition":"A2 * A10 == 852.016  ||  A10 - A2 !=  66.456 && A2 + A10   >  10  &&  A10  /  A2  < 10","conditionDetail":1,"frequencyCheck":false,"alarmPointIds":[],"variables":[],"triggerType":1}]
+      headers:
+         Content-Type: application/json; =UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   -  equals: {status_code: 200}

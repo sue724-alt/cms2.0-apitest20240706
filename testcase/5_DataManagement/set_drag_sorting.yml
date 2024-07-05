@@ -1,0 +1,13 @@
+-  name: 拖拽排序$csv{name}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      name-TableId-nodeType-sort: data/DataManagement/set_drag_sorting.csv
+   request:
+      url: /api/v1/dataconfig/node/sort/$csv{nodeType}/${get_extract_data($csv{TableId})}/$csv{sort}/${get_extract_data(Folder_ID)}
+      method: put
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

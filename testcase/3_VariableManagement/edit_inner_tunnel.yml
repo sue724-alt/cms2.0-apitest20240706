@@ -1,0 +1,12 @@
+-  name: 编辑内部通道
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(inner_tunnel_id)}
+      method: put
+      json:
+         {"type":3,"name":"编辑内部通道${get_random_number(1000,9999)}","description":"描述1","config":null}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id

@@ -1,0 +1,13 @@
+-  name: 创建工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node
+      method: post
+      data:
+         name: 工程${get_random_number(100,999)}
+         path: "C:\\Users\\Administrator\\Downloads"
+         type: 1
+   extract:
+      project_id: content
+   validate:
+   -  equals: {status_code: 200}

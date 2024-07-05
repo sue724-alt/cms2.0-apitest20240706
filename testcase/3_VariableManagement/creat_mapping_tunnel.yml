@@ -1,0 +1,14 @@
+-  name: 创建io映射通道
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel
+      method: post
+      json:
+        {"type":5,"name":"io映射","description":"","config":null}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      mapping_tunnel_id: id
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id

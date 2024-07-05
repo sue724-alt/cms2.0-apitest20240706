@@ -1,0 +1,18 @@
+-  name: 归档表实时缓存配置-缓存容量为空情况
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/node/cacheconfig/${get_extract_data(Sort_ID)}/${get_extract_data(Original_Table_ID)}
+      method: put
+      json:
+         enableCache: true
+         quantityLimit: 0
+         timeSpanLimit: 100
+         timeSpanLimitUnit: 1
+         clearCache: ""
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 400
+   -  contains: 请填写缓存容量上限(正整数)

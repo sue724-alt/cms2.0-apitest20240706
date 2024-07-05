@@ -1,0 +1,10 @@
+-  name: 下载图片
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery/${get_extract_data(imageName33)}?compress=true&maxWidth=80&maxHeight=80&group=${get_extract_data(groupKey)}
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

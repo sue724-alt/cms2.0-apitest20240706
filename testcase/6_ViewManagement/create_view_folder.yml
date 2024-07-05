@@ -1,0 +1,20 @@
+-  name: 创建文件夹
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/node?copyFrom=
+      method: post
+      json:
+        {
+          "name": "新建文件夹${get_random_number(1,1000)}",
+          "parentId": null,
+          "type": 0,
+          "sort": 2
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      view_folder_id: content
+   validate:
+   - equals:
+       status_code: 200

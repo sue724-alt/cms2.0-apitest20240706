@@ -1,0 +1,71 @@
+[2023-11-17 14:44:11,380] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-17 14:44:11,380] logger_util.py->write_log line:61 [INFO] 接口名称：创建语言列表
+[2023-11-17 14:44:11,380] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-17 14:44:11,381] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/multiplelanguage/languagelist
+[2023-11-17 14:44:11,381] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-17 14:44:11,381] logger_util.py->write_log line:61 [INFO] 请求参数：{'languageType': 'zh-CN'}
+[2023-11-17 14:44:11,381] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-17 14:44:11,405] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-17 14:44:11,405] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 10, 'languageType': 'zh-CN', 'name': '中文（中国）', 'enable': True, 'createDateTime': '2023-11-17T14:44:11.3874052+08:00'}
+[2023-11-17 14:44:11,405] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-17 14:44:11,405] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-17 14:44:11,411] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-17 14:44:11,411] logger_util.py->write_log line:61 [INFO] 接口名称：获取语言列表
+[2023-11-17 14:44:11,411] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-17 14:44:11,411] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/multiplelanguage/languagelist
+[2023-11-17 14:44:11,411] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-17 14:44:11,412] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-17 14:44:11,430] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-17 14:44:11,430] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 10, 'languageType': 'zh-CN', 'name': '中文（中国）', 'enable': True, 'createDateTime': '2023-11-17T14:44:11.3874052'}]
+[2023-11-17 14:44:11,430] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-17 14:44:11,430] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-17 14:44:11,435] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-17 14:44:11,435] logger_util.py->write_log line:61 [INFO] 接口名称：获取所有语言列表类型
+[2023-11-17 14:44:11,435] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-17 14:44:11,435] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/multiplelanguage/languagelist/languagetype
+[2023-11-17 14:44:11,435] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-17 14:44:11,435] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-17 14:44:11,454] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-17 14:44:11,454] logger_util.py->write_log line:61 [INFO] 实际结果：[{'languageType': 'en-US', 'name': 'English (United States)'}, {'languageType': 'zh-CN', 'name': '中文（中国）'}]
+[2023-11-17 14:44:11,454] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-17 14:44:11,454] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-17 14:44:11,465] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 130, in replace_load
+    for i in range(1, str_data.count('${') + 1):
+AttributeError: 'bool' object has no attribute 'count'
+
+[2023-11-17 14:44:11,465] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 130, in replace_load
+    for i in range(1, str_data.count('${') + 1):
+AttributeError: 'bool' object has no attribute 'count'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 185, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 130, in replace_load
+    for i in range(1, str_data.count('${') + 1):
+AttributeError: 'bool' object has no attribute 'count'
+
+

@@ -1,0 +1,19 @@
+-  name: 创建报警组
+   base_url: ${get_base_url(base_url)}
+   request:
+      url: /api/v1/alarmfolder/add
+      method: post
+      json:
+         {"name":"报警组${get_random_number(1,1000)}","nodeType":1,"parentId":null}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      Alarm_Group_ID: id
+      Alarm_Group_Name: name
+   validate:
+   - equals:
+       status_code: 200
+   - equals:
+        nodeType: 1
+   - contains: id

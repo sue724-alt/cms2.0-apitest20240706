@@ -1,0 +1,16 @@
+-  name: 创建工程副本
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/copyprojectnode
+      method: post
+      data:
+         parentId: ${get_extract_data(folder_id)}
+         path: C:\自动化工程
+         name: 工程副本${get_time_stamp()}
+         type: 1
+         rawProjectNodeID: ${get_extract_data(project_id)}
+         copyType: 0
+   extract:
+      copy_project_id: content
+   validate:
+      -  equals: {status_code: 200}

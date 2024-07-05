@@ -1,0 +1,27 @@
+-  name: 校验io变量必填项-$csv{title}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      title-name-description-typeName-address-interval-stringLength-msg: data/VariableManagement/check_io_variable.csv
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(io_tunnel_id)}/tag
+      method: post
+      json:
+         -  archiveSetting: null
+            groupId: ${get_extract_data(io_group_id)}
+            name: $csv{name}
+            description: $csv{description}
+            typeName: $csv{typeName}
+            config:
+               readWriteMode: 0
+               address: $csv{address}
+               interval: ddt{{$csv{interval}}}
+            stringLength: $csv{stringLength}
+            zoom: 1
+            digit: null
+            readWriteRule: 1
+            index: 1
+      headers:
+        X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 400}
+      -  contains: $csv{msg}

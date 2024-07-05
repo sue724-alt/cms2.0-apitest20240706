@@ -1,0 +1,11 @@
+-  name: 删除归档表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/filingtable/${get_extract_data(Original_Table_ID)}
+      method: delete
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

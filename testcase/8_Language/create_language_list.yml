@@ -1,0 +1,15 @@
+-  name: 创建语言列表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/multiplelanguage/languagelist
+      method: post
+      json:
+        {
+          "languageType": "zh-CN"
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      language_id: id
+   validate:
+      -  equals: {status_code: 200}

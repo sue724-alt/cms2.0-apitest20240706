@@ -1,0 +1,42 @@
+[2022-10-17 19:45:43,140] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2022-10-17 19:45:43,140] logger_util.py->write_log line:61 [INFO] 接口名称：变量下发
+[2022-10-17 19:45:43,141] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2022-10-17 19:45:43,141] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2022-10-17 19:45:43,141] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '6d0bfa768fc349f89dbb089d07b03350', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY2NjA5MjkyNiwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.jxXGOWyQYjUIZQLw0Tdu2qLEU8cdfg7kRAuIKbY7Bks'}
+[2022-10-17 19:45:43,142] logger_util.py->write_log line:61 [INFO] 请求参数：{'G1': '1'}
+[2022-10-17 19:45:43,142] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2022-10-17 19:45:43,298] logger_util.py->error_log line:65 [INFO] 断言失败:value不等于$csv{value}
+[2022-10-17 19:45:43,298] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2022-10-17 19:45:43,299] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2022-10-17 19:45:43,299] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 401, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:value不等于$csv{value}
+
+[2022-10-17 19:45:43,300] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 401, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:value不等于$csv{value}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 260, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 429, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 401, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:value不等于$csv{value}
+
+

@@ -1,0 +1,20 @@
+-  name: 变量是否已绑定历史组(true)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/historicarchive/var/bindinggroup
+      method: post
+      json:
+         [
+            19,
+            20,
+            28,
+            30,
+            32,
+            33,
+            41,
+            47
+         ]
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

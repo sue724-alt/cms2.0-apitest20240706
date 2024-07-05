@@ -1,0 +1,104 @@
+[2023-08-17 15:00:36,108] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 15:00:36,108] logger_util.py->write_log line:61 [INFO] 接口名称：检查本地工程id是否冲突
+[2023-08-17 15:00:36,108] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 15:00:36,108] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/checklocalprojectfileidconflict
+[2023-08-17 15:00:36,109] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 15:00:36,109] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\rc9回归组件.cmsproj'}
+[2023-08-17 15:00:36,109] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 15:00:36,124] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'result': False}}]
+[2023-08-17 15:00:36,124] logger_util.py->write_log line:61 [INFO] 实际结果：{'result': False, 'conflictProjectID': -1}
+[2023-08-17 15:00:36,124] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 15:00:36,124] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 15:00:36,129] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    data = json.loads(str_data)
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid \escape: line 1 column 22 (char 21)
+
+[2023-08-17 15:00:36,129] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    data = json.loads(str_data)
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid \escape: line 1 column 22 (char 21)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 181, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 319, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    data = json.loads(str_data)
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid \escape: line 1 column 22 (char 21)
+
+
+[2023-08-17 15:00:36,242] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 136, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+[2023-08-17 15:00:36,243] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 136, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 181, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 319, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 136, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+

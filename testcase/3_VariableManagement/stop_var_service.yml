@@ -1,0 +1,10 @@
+-  name: 关闭变量服务
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/service/var/stop
+      method: post
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: ${get_extract_data(Authorization)}
+   validate:
+      -  equals: {status_code: 200}

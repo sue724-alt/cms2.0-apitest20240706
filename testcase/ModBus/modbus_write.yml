@@ -1,0 +1,18 @@
+-  name: modbus协议下发-$csv{name}
+   base_url: ${get_base_url(siot_url)}
+   parameters:
+      name-tagname-tagvalue: data/modbus/modbus_write.csv
+   request:
+      url: /v1/cms/io/write
+      method: post
+      json:
+        {
+           "tagDatas": {
+              "$csv{tagname}": "$csv{tagvalue}"
+           }
+        }
+      headers:
+         Content-Type: application/json
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {msg: All write successfully}

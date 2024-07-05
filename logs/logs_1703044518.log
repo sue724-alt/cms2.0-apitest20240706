@@ -1,0 +1,220 @@
+[2023-12-20 11:55:18,507] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-12-20 11:55:18,508] logger_util.py->write_log line:61 [INFO] 接口名称：读取系统变量-系统当前日期
+[2023-12-20 11:55:18,508] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-12-20 11:55:18,508] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-12-20 11:55:18,508] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'eb10e818cd43425c85bde0f47fff6e40', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwMzY0MTQyMCwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.tosu5g-YxcmLg3pmHXB3O09tgJieqvLmYecr3L0KEW0'}
+[2023-12-20 11:55:18,509] logger_util.py->write_log line:61 [INFO] 请求参数：['System_Date']
+[2023-12-20 11:55:18,509] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-12-20 11:55:18,512] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：System_Date
+[2023-12-20 11:55:18,513] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-12-20 11:55:18,513] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-12-20 11:55:18,513] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-12-20 11:55:18,514] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_Date
+
+[2023-12-20 11:55:18,514] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_Date
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_Date
+
+
+[2023-12-20 11:55:18,631] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-12-20 11:55:18,632] logger_util.py->write_log line:61 [INFO] 接口名称：读取系统变量-系统当前时间
+[2023-12-20 11:55:18,632] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-12-20 11:55:18,632] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-12-20 11:55:18,632] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'eb10e818cd43425c85bde0f47fff6e40', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwMzY0MTQyMCwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.tosu5g-YxcmLg3pmHXB3O09tgJieqvLmYecr3L0KEW0'}
+[2023-12-20 11:55:18,632] logger_util.py->write_log line:61 [INFO] 请求参数：['System_Time']
+[2023-12-20 11:55:18,632] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-12-20 11:55:18,635] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：System_Time
+[2023-12-20 11:55:18,635] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-12-20 11:55:18,635] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-12-20 11:55:18,635] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-12-20 11:55:18,635] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_Time
+
+[2023-12-20 11:55:18,635] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_Time
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_Time
+
+
+[2023-12-20 11:55:18,669] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-12-20 11:55:18,669] logger_util.py->write_log line:61 [INFO] 接口名称：读取系统变量-系统当前日期时间
+[2023-12-20 11:55:18,669] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-12-20 11:55:18,669] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-12-20 11:55:18,669] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'eb10e818cd43425c85bde0f47fff6e40', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwMzY0MTQyMCwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.tosu5g-YxcmLg3pmHXB3O09tgJieqvLmYecr3L0KEW0'}
+[2023-12-20 11:55:18,669] logger_util.py->write_log line:61 [INFO] 请求参数：['System_DateTime']
+[2023-12-20 11:55:18,669] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-12-20 11:55:18,671] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：System_DateTime
+[2023-12-20 11:55:18,672] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-12-20 11:55:18,672] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-12-20 11:55:18,672] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-12-20 11:55:18,672] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_DateTime
+
+[2023-12-20 11:55:18,672] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_DateTime
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_DateTime
+
+
+[2023-12-20 11:55:18,705] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-12-20 11:55:18,706] logger_util.py->write_log line:61 [INFO] 接口名称：读取系统变量-系统当前班次
+[2023-12-20 11:55:18,706] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-12-20 11:55:18,706] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-12-20 11:55:18,706] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'eb10e818cd43425c85bde0f47fff6e40', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwMzY0MTQyMCwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.tosu5g-YxcmLg3pmHXB3O09tgJieqvLmYecr3L0KEW0'}
+[2023-12-20 11:55:18,706] logger_util.py->write_log line:61 [INFO] 请求参数：['System_Shift']
+[2023-12-20 11:55:18,706] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-12-20 11:55:18,708] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：System_Shift
+[2023-12-20 11:55:18,708] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-12-20 11:55:18,708] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-12-20 11:55:18,709] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-12-20 11:55:18,709] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_Shift
+
+[2023-12-20 11:55:18,709] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_Shift
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_Shift
+
+
+[2023-12-20 11:55:18,742] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-12-20 11:55:18,742] logger_util.py->write_log line:61 [INFO] 接口名称：读取系统变量-系统当前班次日期
+[2023-12-20 11:55:18,742] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-12-20 11:55:18,742] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-12-20 11:55:18,743] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'eb10e818cd43425c85bde0f47fff6e40', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwMzY0MTQyMCwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.tosu5g-YxcmLg3pmHXB3O09tgJieqvLmYecr3L0KEW0'}
+[2023-12-20 11:55:18,743] logger_util.py->write_log line:61 [INFO] 请求参数：['System_ShiftDate']
+[2023-12-20 11:55:18,743] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-12-20 11:55:18,745] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：System_ShiftDate
+[2023-12-20 11:55:18,745] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-12-20 11:55:18,745] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-12-20 11:55:18,745] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-12-20 11:55:18,745] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_ShiftDate
+
+[2023-12-20 11:55:18,746] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_ShiftDate
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 433, in validate_result
+    error_log("断言失败：返回结果中不存在：" + assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：System_ShiftDate
+
+

@@ -1,0 +1,15 @@
+-  name: 创建归档表文件夹
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/folder
+      method: post
+      json:
+        {"parentId":"00000000-0000-0000-0000-000000000000","name":"归档表${get_random_number(1,1000)}","sort":2}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      Folder_ID: id
+   validate:
+   - equals:
+       status_code: 200

@@ -1,0 +1,34 @@
+[2023-08-08 20:33:20,496] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-08 20:33:20,496] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-08 20:33:20,496] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-08 20:33:20,496] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-08 20:33:20,496] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-08 20:33:20,496] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程958', 'path': 'C:\\Users\\Administrator\\Downloads', 'type': 1}
+[2023-08-08 20:33:20,497] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-08 20:33:20,853] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-08 20:33:20,853] logger_util.py->write_log line:61 [INFO] 实际结果：31
+[2023-08-08 20:33:20,853] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-08 20:33:20,853] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-08 20:33:20,861] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-08 20:33:20,861] logger_util.py->write_log line:61 [INFO] 接口名称：工程信息
+[2023-08-08 20:33:20,861] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-08 20:33:20,861] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/31/info
+[2023-08-08 20:33:20,862] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-08 20:33:20,862] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-08 20:33:23,747] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-08 20:33:23,747] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 31, 'name': '工程958', 'identifier': 'ea5e661af250407ba3a5ae82dcb7cbc6', 'path': 'C:\\Users\\Administrator\\Downloads\\工程958.cmsproj', 'createTime': '2023-08-08T20:33:20.8114839', 'updateTime': '2023-08-08T20:33:20.8114839'}
+[2023-08-08 20:33:23,747] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-08 20:33:23,747] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-08 20:33:23,758] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-08 20:33:23,758] logger_util.py->write_log line:61 [INFO] 接口名称：上传jpg图片
+[2023-08-08 20:33:23,758] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-08 20:33:23,758] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/image/gallery?group=%E6%88%91%E7%9A%84\Default
+[2023-08-08 20:33:23,758] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'ea5e661af250407ba3a5ae82dcb7cbc6'}
+[2023-08-08 20:33:23,759] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-08 20:33:23,828] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-08 20:33:23,828] logger_util.py->write_log line:61 [INFO] 实际结果：[{'groupKey': '我的\\Default', 'groupName': 'Default', 'imageKey': '11 (20).png', 'imageName': '11 (20).png'}]
+[2023-08-08 20:33:23,828] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-08 20:33:23,828] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

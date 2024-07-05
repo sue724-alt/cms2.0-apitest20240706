@@ -1,0 +1,21 @@
+-  name: 修改互联配置
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/${get_extract_data(intn_id)}/config
+      method: put
+      json:
+           id: ddt{{${get_extract_data(intn_id)}}}
+           name: "改配_mysql${get_random_number(1,999)}"
+           connectionType: 1
+           databaseType: 1
+           authenticationType: 0
+           server: "${get_config(mysql,host)}"
+           port: "${get_config(mysql,port)}"
+           database: "${get_config(mysql,database2)}"
+           databasePath: ""
+           userName: "${get_config(mysql,user)}"
+           password: "${get_config(mysql,password)}"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

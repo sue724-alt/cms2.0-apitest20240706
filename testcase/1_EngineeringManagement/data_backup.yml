@@ -1,0 +1,18 @@
+-  name: 备份工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/${get_extract_data(import_remoteproject_id)}/export
+      method: get
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 删除工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/deletenodes
+      method: put
+      data:
+         ids: ${get_extract_data(import_remoteproject_id)}
+         isDeleteFile: true
+   validate:
+      -  equals: {status_code: 200}

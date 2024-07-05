@@ -1,0 +1,7 @@
+-  name: 启动数据服务
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/service/data/start
+      method: post
+   validate:
+      -  equals: {status_code: 200}

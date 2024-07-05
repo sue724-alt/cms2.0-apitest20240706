@@ -1,0 +1,22 @@
+-  name: 创建文件夹
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node
+      method: post
+      data:
+         name: 文件夹${get_random_number(1000,9999)}
+         type: 0
+   extract:
+      folder_id1: content
+   validate:
+      -  equals: {status_code: 200}
+-  name: 删除文件夹
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/deletenodes
+      method: put
+      data:
+         ids: ${get_extract_data(folder_id1)}
+         isDeleteFile: true
+   validate:
+      -  equals: {status_code: 200}

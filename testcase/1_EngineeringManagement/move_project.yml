@@ -1,0 +1,10 @@
+-  name: 移动工程节点
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/moveprojectnodes
+      method: put
+      data:
+         destNodeID: ${get_extract_data(folder_id)}
+         selectNodeIDs: ${get_extract_data(project_id)}
+   validate:
+      -  equals: {status_code: 200}

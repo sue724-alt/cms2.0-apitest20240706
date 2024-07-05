@@ -1,0 +1,43 @@
+[2023-08-22 11:31:14,314] logger_util.py->error_log line:65 [INFO] 分析parameters参数化异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\parameters_util.py", line 64, in analysis_parameters
+    new_caseinfo.append(json.loads(temp_caseinfo))
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid control character at: line 1 column 373 (char 372)
+
+[2023-08-22 11:31:14,315] logger_util.py->error_log line:65 [INFO] 读取用例文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\parameters_util.py", line 64, in analysis_parameters
+    new_caseinfo.append(json.loads(temp_caseinfo))
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid control character at: line 1 column 373 (char 372)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\parameters_util.py", line 30, in read_testcase_file
+    new_caseinfo = analysis_parameters(*caseinfo)
+  File "E:\Project_python\api_cms\common\parameters_util.py", line 71, in analysis_parameters
+    error_log("分析parameters参数化异常：异常信息: %s" %str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 分析parameters参数化异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\parameters_util.py", line 64, in analysis_parameters
+    new_caseinfo.append(json.loads(temp_caseinfo))
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid control character at: line 1 column 373 (char 372)
+
+

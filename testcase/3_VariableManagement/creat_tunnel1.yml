@@ -1,0 +1,13 @@
+-  name: 创建通道-后续删除
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel
+      method: post
+      json:
+         {"id":5,"parentId":null,"sort":2,"name":"设备2","description":"","type":1,"typeTag":"TCP","config":{"suppiler":"ModBus","model":"Modbus_TCP","protocol":"Modbus_TCP","parameters":{"ServerName":"127.0.0.1","DeviceID":"1","Port":"502","HeadAddress":"1","ConnectTimeOut":"3","ResponseTimeout":"1000","Int32ByteOrder":"2143","Int64ByteOrder":"2143","UInt32ByteOrder":"2143","UInt64ByteOrder":"2143","F32ByteOrder":"3412","F64ByteOrder":"3412","StrByteOrder":"2143","EnableIndependentLink":"禁用","EnablePduDiagnosis":"启用","PduLength":"220","ChannelStatus":"启用","PacketCommitStatus":"禁用","isStaticSimulation":"禁用"}},"enable":true,"createTime":"2024-01-02T17:58:57.3894443+08:00","updateTime":"2024-01-02T17:58:57.3894445+08:00"}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      io_tunnel_id1: id
+   validate:
+      -  equals: {status_code: 200}

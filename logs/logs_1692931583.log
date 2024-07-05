@@ -1,0 +1,704 @@
+[2023-08-25 10:46:23,710] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:23,711] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa1-二进制
+[2023-08-25 10:46:23,711] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:23,711] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:23,711] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:23,712] logger_util.py->write_log line:61 [INFO] 请求参数：['aa1']
+[2023-08-25 10:46:23,712] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:23,725] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa1
+[2023-08-25 10:46:23,725] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:23,725] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:23,725] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:23,726] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa1
+
+[2023-08-25 10:46:23,726] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa1
+
+
+[2023-08-25 10:46:23,836] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:23,836] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa2-有符号8位整型
+[2023-08-25 10:46:23,836] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:23,837] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:23,837] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:23,837] logger_util.py->write_log line:61 [INFO] 请求参数：['aa2']
+[2023-08-25 10:46:23,837] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:23,839] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa2
+[2023-08-25 10:46:23,839] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:23,840] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:23,840] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:23,840] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa2
+
+[2023-08-25 10:46:23,840] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa2
+
+
+[2023-08-25 10:46:23,870] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:23,870] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa3-无符号8位整型
+[2023-08-25 10:46:23,870] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:23,870] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:23,871] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:23,871] logger_util.py->write_log line:61 [INFO] 请求参数：['aa3']
+[2023-08-25 10:46:23,871] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:23,874] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa3
+[2023-08-25 10:46:23,874] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:23,874] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:23,874] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:23,874] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa3
+
+[2023-08-25 10:46:23,874] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa3
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa3
+
+
+[2023-08-25 10:46:23,903] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:23,903] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa4-有符号16位整型
+[2023-08-25 10:46:23,903] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:23,903] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:23,904] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:23,904] logger_util.py->write_log line:61 [INFO] 请求参数：['aa4']
+[2023-08-25 10:46:23,904] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:23,906] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa4
+[2023-08-25 10:46:23,907] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:23,907] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:23,907] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:23,907] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa4
+
+[2023-08-25 10:46:23,907] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa4
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa4
+
+
+[2023-08-25 10:46:23,936] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:23,936] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa5-无符号16位整型
+[2023-08-25 10:46:23,936] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:23,936] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:23,936] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:23,936] logger_util.py->write_log line:61 [INFO] 请求参数：['aa5']
+[2023-08-25 10:46:23,936] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:23,939] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa5
+[2023-08-25 10:46:23,939] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:23,939] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:23,939] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:23,940] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa5
+
+[2023-08-25 10:46:23,940] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa5
+
+
+[2023-08-25 10:46:23,969] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:23,969] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa6-有符号32位整型
+[2023-08-25 10:46:23,970] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:23,970] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:23,970] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:23,970] logger_util.py->write_log line:61 [INFO] 请求参数：['aa6']
+[2023-08-25 10:46:23,970] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:23,972] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa6
+[2023-08-25 10:46:23,973] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:23,973] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:23,973] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:23,973] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa6
+
+[2023-08-25 10:46:23,973] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa6
+
+
+[2023-08-25 10:46:24,002] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,002] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa7-无符号32位整型
+[2023-08-25 10:46:24,002] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,002] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,002] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,003] logger_util.py->write_log line:61 [INFO] 请求参数：['aa7']
+[2023-08-25 10:46:24,003] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,005] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa7
+[2023-08-25 10:46:24,005] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,005] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,005] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,006] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa7
+
+[2023-08-25 10:46:24,006] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa7
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa7
+
+
+[2023-08-25 10:46:24,036] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,036] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa8-有符号64位整型
+[2023-08-25 10:46:24,036] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,036] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,036] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,036] logger_util.py->write_log line:61 [INFO] 请求参数：['aa8']
+[2023-08-25 10:46:24,037] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,039] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa8
+[2023-08-25 10:46:24,039] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,039] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,039] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,039] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa8
+
+[2023-08-25 10:46:24,040] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa8
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa8
+
+
+[2023-08-25 10:46:24,069] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,069] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa9-无符号64位整型
+[2023-08-25 10:46:24,070] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,070] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,070] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,070] logger_util.py->write_log line:61 [INFO] 请求参数：['aa9']
+[2023-08-25 10:46:24,070] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,072] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa9
+[2023-08-25 10:46:24,072] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,072] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,072] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,073] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa9
+
+[2023-08-25 10:46:24,073] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa9
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa9
+
+
+[2023-08-25 10:46:24,105] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,105] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa10-F32位浮点数IEEE754
+[2023-08-25 10:46:24,105] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,105] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,105] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,106] logger_util.py->write_log line:61 [INFO] 请求参数：['aa10']
+[2023-08-25 10:46:24,106] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,108] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa10
+[2023-08-25 10:46:24,108] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,108] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,108] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,109] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa10
+
+[2023-08-25 10:46:24,109] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa10
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa10
+
+
+[2023-08-25 10:46:24,139] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,139] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa11-F64位浮点数IEEE754
+[2023-08-25 10:46:24,139] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,139] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,139] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,139] logger_util.py->write_log line:61 [INFO] 请求参数：['aa11']
+[2023-08-25 10:46:24,139] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,142] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa11
+[2023-08-25 10:46:24,142] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,142] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,142] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,142] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa11
+
+[2023-08-25 10:46:24,143] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa11
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa11
+
+
+[2023-08-25 10:46:24,172] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,172] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa12-字符串
+[2023-08-25 10:46:24,172] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,172] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,172] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,172] logger_util.py->write_log line:61 [INFO] 请求参数：['aa12']
+[2023-08-25 10:46:24,172] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,174] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa12
+[2023-08-25 10:46:24,175] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,175] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,175] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,175] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa12
+
+[2023-08-25 10:46:24,175] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa12
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa12
+
+
+[2023-08-25 10:46:24,204] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,205] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa13-宽字符串
+[2023-08-25 10:46:24,205] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,205] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,205] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,205] logger_util.py->write_log line:61 [INFO] 请求参数：['aa13']
+[2023-08-25 10:46:24,205] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,208] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa13
+[2023-08-25 10:46:24,208] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,208] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,208] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,208] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa13
+
+[2023-08-25 10:46:24,208] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa13
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa13
+
+
+[2023-08-25 10:46:24,238] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,238] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa14-日期
+[2023-08-25 10:46:24,238] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,238] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,239] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,239] logger_util.py->write_log line:61 [INFO] 请求参数：['aa14']
+[2023-08-25 10:46:24,239] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,241] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa14
+[2023-08-25 10:46:24,242] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,242] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,242] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,242] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa14
+
+[2023-08-25 10:46:24,242] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa14
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa14
+
+
+[2023-08-25 10:46:24,273] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,273] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa15-时间
+[2023-08-25 10:46:24,274] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,274] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,274] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,274] logger_util.py->write_log line:61 [INFO] 请求参数：['aa15']
+[2023-08-25 10:46:24,274] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,276] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa15
+[2023-08-25 10:46:24,276] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,276] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,276] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,277] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa15
+
+[2023-08-25 10:46:24,277] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa15
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa15
+
+
+[2023-08-25 10:46:24,307] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-25 10:46:24,307] logger_util.py->write_log line:61 [INFO] 接口名称：读取内部变量-aa16-日期时间
+[2023-08-25 10:46:24,307] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-25 10:46:24,307] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/getvalues
+[2023-08-25 10:46:24,307] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzQ1MTIxNSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.gj3Q5rVSuyTzguP8vMuwVhc3w3UHSBpckDQcczgjy6s'}
+[2023-08-25 10:46:24,307] logger_util.py->write_log line:61 [INFO] 请求参数：['aa16']
+[2023-08-25 10:46:24,307] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-25 10:46:24,311] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：aa16
+[2023-08-25 10:46:24,311] logger_util.py->write_log line:61 [INFO] 实际结果：{}
+[2023-08-25 10:46:24,311] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-25 10:46:24,311] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-25 10:46:24,311] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa16
+
+[2023-08-25 10:46:24,311] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa16
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 371, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：aa16
+
+

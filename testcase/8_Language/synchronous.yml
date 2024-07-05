@@ -1,0 +1,17 @@
+-  name: 同步
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/multiplelanguage/sync
+      method: put
+      json:
+        {
+           "mappingType": 0,
+           "pageId": "9",
+           "originalTexts": [
+              "静态文本123"
+           ]
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

@@ -1,0 +1,77 @@
+[2023-08-17 16:16:30,000] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:16:30,001] logger_util.py->write_log line:61 [INFO] 接口名称：检查远程工程id是否冲突
+[2023-08-17 16:16:30,001] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 16:16:30,001] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/checkremoteprojectfileidconflict
+[2023-08-17 16:16:30,001] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:16:30,001] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:16:30,023] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'result': False}}]
+[2023-08-17 16:16:30,024] logger_util.py->write_log line:61 [INFO] 实际结果：{'result': False, 'conflictProjectID': -1}
+[2023-08-17 16:16:30,024] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:16:30,024] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 16:16:30,028] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:16:30,028] logger_util.py->write_log line:61 [INFO] 接口名称：远程导入工程文件
+[2023-08-17 16:16:30,028] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 16:16:30,028] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/importremoteproject
+[2023-08-17 16:16:30,028] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:16:30,029] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:16:30,121] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 16:16:30,121] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 317, 'parentId': None, 'name': 'RC8-2', 'path': 'E:\\CMS\\2.0.3RC9\\CMS Editor\\host\\data\\projects\\RC8-2.cmsproj', 'type': 1, 'createTime': '2023-08-17T16:16:30.0379224+08:00', 'updateTime': '2023-08-17T16:16:30.0379225+08:00'}
+[2023-08-17 16:16:30,121] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:16:30,121] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 16:16:30,130] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:16:30,130] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-17 16:16:30,130] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 16:16:30,130] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 16:16:30,130] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:16:30,130] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '317', 'isDeleteFile': False}
+[2023-08-17 16:16:30,130] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:16:30,169] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 16:16:30,170] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 16:16:30,170] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:16:30,170] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 16:16:30,186] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 136, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'project_id'
+
+[2023-08-17 16:16:30,187] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 136, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'project_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 181, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 319, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 136, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'project_id'
+
+

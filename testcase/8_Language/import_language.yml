@@ -1,0 +1,11 @@
+-  name: 导入语言
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/multiplelanguage/import/
+      method: put
+      files:
+         files: "${get_project_path()}\\data\\Language\\多语言翻译列表.xls"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

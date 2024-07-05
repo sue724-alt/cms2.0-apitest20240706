@@ -1,0 +1,11 @@
+-  name: 删除内部变量
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(inner_tunnel_id)}/tag
+      method: delete
+      json:
+         - ${get_extract_data(inner_variable_id)}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

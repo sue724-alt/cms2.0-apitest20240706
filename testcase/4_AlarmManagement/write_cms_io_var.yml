@@ -1,0 +1,31 @@
+-  name: 下发A1=false
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/setvalues
+      method: post
+      json:
+         A1: "false"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - equals:
+            allSuccess: true
+
+-  name: 下发A1=true
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/setvalues
+      method: post
+      json:
+         A1: "true"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - equals:
+            allSuccess: true

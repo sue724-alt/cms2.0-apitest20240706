@@ -1,0 +1,24 @@
+-  name: 创建工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node
+      method: post
+      data:
+         name: 删除工程保留路径下的文件${get_time_stamp()}
+         path: C:\自动化工程
+         type: 1
+   extract:
+      project_id1: content
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 删除工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/deletenodes
+      method: put
+      data:
+         ids: ${get_extract_data(project_id1)}
+         isDeleteFile: false
+   validate:
+      -  equals: {status_code: 200}

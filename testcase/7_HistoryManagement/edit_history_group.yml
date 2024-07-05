@@ -1,0 +1,15 @@
+-  name: 编辑历史组
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/historicarchive/group/${get_extract_data(history_group_id)}
+      method: put
+      json:
+        {
+          "name": "编辑历史组${get_random_number(1,1000)}"
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

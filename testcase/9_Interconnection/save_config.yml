@@ -1,0 +1,11 @@
+-  name: 保存配置-插入
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(maptable_id)}/save
+      method: put
+      json:
+        {"actionType":2,"filters":[],"sorts":[{"field":"id","sortType":2}],"mappings":[{"field":"time","relativeVariable":"aa16","dataType":"日期时间","order":1},{"field":"name","relativeVariable":"A12","dataType":"字符串","order":2},{"field":"age","relativeVariable":"A2","dataType":"有符号8位整型","order":3},{"field":"money","relativeVariable":"A10","dataType":"F32位浮点数IEEE754","order":4}]}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

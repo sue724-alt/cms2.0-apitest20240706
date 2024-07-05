@@ -1,0 +1,11 @@
+-  name: 获取通道下所有变量信息
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/2/tag/query
+      method: post
+      json:
+         {"groupId":null,"dataTypes":[],"usedType":0,"keyword":""}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

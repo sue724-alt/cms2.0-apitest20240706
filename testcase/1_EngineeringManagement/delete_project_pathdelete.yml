@@ -1,0 +1,24 @@
+-  name: 创建工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node
+      method: post
+      data:
+         name: 工程${get_random_number(1000,9999)}
+         path: C:\自动化工程
+         type: 1
+   extract:
+      project_id2: content
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 删除工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/deletenodes
+      method: put
+      data:
+         ids: ${get_extract_data(project_id2)}
+         isDeleteFile: true
+   validate:
+      -  equals: {status_code: 200}

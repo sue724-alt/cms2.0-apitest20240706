@@ -1,0 +1,14 @@
+-  name: 查询历史数据（变化触发）
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/aggregate
+      method: post
+      json: {"dataSetId":"history","dimensions":[{"aliasName":"","fieldName":"0","sort":2,"timeFormat":"yyyy-MM-dd HH:mm:ss"}],"measures":[{"aliasName":"","fieldName":"19","mode":4,"dataFormat":0,"sort":0,"mergeType":0},{"aliasName":"","fieldName":"20","mode":4,"dataFormat":0,"sort":0,"mergeType":0},{"aliasName":"","fieldName":"28","mode":4,"dataFormat":0,"sort":0,"mergeType":0},{"aliasName":"","fieldName":"30","mode":4,"dataFormat":0,"sort":0,"mergeType":0},{"aliasName":"","fieldName":"32","mode":4,"dataFormat":0,"sort":0,"mergeType":0},{"aliasName":"","fieldName":"33","mode":4,"dataFormat":0,"sort":0,"mergeType":0},{"aliasName":"","fieldName":"41","mode":4,"dataFormat":0,"sort":0,"mergeType":0},{"aliasName":"","fieldName":"47","mode":4,"dataFormat":0,"sort":0,"mergeType":0}],"filters":[],"total":false,"pageSize":null,"pageIndex":null,"limit":10000,"noAggregation":false,"noDimensions":false,"whereJson":""}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: { A2(4): '21' }
+      -  equals: { A10(4): '20.283' }
+      - equals: { aa2(4): '21' }
+      - equals: { aa10(4): '20.283' }

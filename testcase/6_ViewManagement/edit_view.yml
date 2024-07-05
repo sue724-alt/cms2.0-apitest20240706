@@ -1,0 +1,17 @@
+-  name: 编辑画面节点
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/node/${get_extract_data(view_id)}
+      method: put
+      json:
+        {
+           "name": "重命名画面${get_random_number(1,1000)}",
+           "parentId": null,
+           "type": 1
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

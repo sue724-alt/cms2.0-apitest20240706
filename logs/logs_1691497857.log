@@ -1,0 +1,64 @@
+[2023-08-08 20:30:57,504] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-08 20:30:57,504] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-08 20:30:57,504] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-08 20:30:57,504] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-08 20:30:57,505] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-08 20:30:57,505] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程745', 'path': 'C:\\Users\\Administrator\\Downloads', 'type': 1}
+[2023-08-08 20:30:57,505] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-08 20:30:57,848] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-08 20:30:57,848] logger_util.py->write_log line:61 [INFO] 实际结果：29
+[2023-08-08 20:30:57,849] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-08 20:30:57,849] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-08 20:30:57,858] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-08 20:30:57,858] logger_util.py->write_log line:61 [INFO] 接口名称：工程信息
+[2023-08-08 20:30:57,858] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-08 20:30:57,858] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/29/info
+[2023-08-08 20:30:57,858] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-08 20:30:57,859] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-08 20:31:00,905] logger_util.py->error_log line:65 [INFO] 框架不支持该断言方式
+[2023-08-08 20:31:00,906] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-08 20:31:00,906] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-08 20:31:00,906] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_SIOT\common\requests_util.py", line 412, in validate_result
+    error_log("框架不支持该断言方式")
+  File "E:\Project_python\api_SIOT\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 框架不支持该断言方式
+
+[2023-08-08 20:31:00,907] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_SIOT\common\requests_util.py", line 412, in validate_result
+    error_log("框架不支持该断言方式")
+  File "E:\Project_python\api_SIOT\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 框架不支持该断言方式
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_SIOT\common\requests_util.py", line 256, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_SIOT\common\requests_util.py", line 424, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_SIOT\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_SIOT\common\requests_util.py", line 412, in validate_result
+    error_log("框架不支持该断言方式")
+  File "E:\Project_python\api_SIOT\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 框架不支持该断言方式
+
+
+[2023-08-08 20:31:01,013] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-08 20:31:01,013] logger_util.py->write_log line:61 [INFO] 接口名称：上传jpg图片
+[2023-08-08 20:31:01,013] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-08 20:31:01,013] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/view/image/gallery?group=%E6%88%91%E7%9A%84\Default
+[2023-08-08 20:31:01,013] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': '66ac0c439ed840779a4e1f4d8d96e224'}
+[2023-08-08 20:31:01,013] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-08 20:31:01,051] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-08 20:31:01,051] logger_util.py->write_log line:61 [INFO] 实际结果：[{'groupKey': '我的\\Default', 'groupName': 'Default', 'imageKey': '11 (18).png', 'imageName': '11 (18).png'}]
+[2023-08-08 20:31:01,052] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-08 20:31:01,052] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

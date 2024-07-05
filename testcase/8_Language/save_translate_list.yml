@@ -1,0 +1,17 @@
+-  name: 保存翻译文本列表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/multiplelanguage/${get_extract_data(language_id)}
+      method: put
+      json:
+        [
+           {
+              "originalId": 0,
+              "originalText": "原始文本1",
+              "translationText": "Original Text 1"
+           }
+        ]
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

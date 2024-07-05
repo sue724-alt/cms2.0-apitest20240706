@@ -1,0 +1,9 @@
+-  name: 删除互联项
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/1/${get_extract_data(intn_id)}
+      method: delete
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

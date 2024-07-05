@@ -1,0 +1,44 @@
+[2023-11-23 15:33:21,391] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-23 15:33:21,391] logger_util.py->write_log line:61 [INFO] 接口名称：同步
+[2023-11-23 15:33:21,391] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-11-23 15:33:21,391] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/multiplelanguage/sync
+[2023-11-23 15:33:21,391] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-23 15:33:21,392] logger_util.py->write_log line:61 [INFO] 请求参数：{'mappingType': 0, 'originalTexts': ['静态文本99']}
+[2023-11-23 15:33:21,392] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-23 15:33:21,401] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-11-23 15:33:21,402] logger_util.py->write_log line:61 [INFO] 实际结果：{'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-9cd8694221e1380a36d6c9d08cca0ccf-75bf4ad10a67355e-00', 'errors': {'PageId': ['The PageId field is required.']}}
+[2023-11-23 15:33:21,402] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-11-23 15:33:21,402] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-11-23 15:33:21,403] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-11-23 15:33:21,404] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 246, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 446, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+

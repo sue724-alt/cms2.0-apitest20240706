@@ -1,0 +1,41 @@
+INFO     log:logger_util.py:65 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 140, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'maptable_id'
+
+INFO     log:logger_util.py:65 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 140, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'maptable_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 185, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 335, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 140, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'maptable_id'

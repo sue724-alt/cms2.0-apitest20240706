@@ -1,0 +1,16 @@
+-  name: 重命名聚合表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/aggregatetable/${get_extract_data(Aggregation_Table_ID)}/name
+      method: put
+      json:
+        {
+           "name": "重命名聚合表${get_random_number(1,1000)}"
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200
+   - contains: id

@@ -1,0 +1,157 @@
+[2023-06-05 17:31:14,481] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 17:31:14,481] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警等级
+[2023-06-05 17:31:14,481] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-05 17:31:14,481] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmlevel/add
+[2023-06-05 17:31:14,482] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 17:31:14,482] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '报警等级89'}]
+[2023-06-05 17:31:14,482] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 17:31:14,597] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-05 17:31:14,597] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': '681772d0-521b-4992-b364-9b923ab7ebeb', 'name': '报警等级89'}]
+[2023-06-05 17:31:14,597] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-05 17:31:14,597] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-05 17:31:14,603] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 17:31:14,603] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警类别组
+[2023-06-05 17:31:14,603] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-05 17:31:14,604] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmtypegroup/add
+[2023-06-05 17:31:14,604] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 17:31:14,604] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '报警类别组88'}]
+[2023-06-05 17:31:14,604] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 17:31:14,612] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 242, in analysis_yaml
+    extract_data = {key: return_data[value]}
+KeyError: 'id.0'
+
+[2023-06-05 17:31:14,711] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Alarm_Category_ID'
+
+[2023-06-05 17:31:14,711] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Alarm_Category_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Alarm_Category_ID'
+
+
+[2023-06-05 17:31:14,744] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Alarm_Category_ID'
+
+[2023-06-05 17:31:14,744] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Alarm_Category_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Alarm_Category_ID'
+
+
+[2023-06-05 17:31:14,775] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 17:31:14,775] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警类别组
+[2023-06-05 17:31:14,775] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-05 17:31:14,775] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmtypegroup/add
+[2023-06-05 17:31:14,775] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 17:31:14,775] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '报警类别组30'}]
+[2023-06-05 17:31:14,775] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 17:31:15,595] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-05 17:31:15,596] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 'ead800a3-7698-41b0-a18a-1346a9aee1e1', 'name': '报警类别组30', 'sort': 20}]
+[2023-06-05 17:31:15,596] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-05 17:31:15,596] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-05 17:31:15,601] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 17:31:15,601] logger_util.py->write_log line:61 [INFO] 接口名称：查询报警类别组
+[2023-06-05 17:31:15,602] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-06-05 17:31:15,602] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmtypegroup/query
+[2023-06-05 17:31:15,602] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 17:31:15,602] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 17:31:15,605] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-05 17:31:15,606] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 'f8d1253c-0ee9-4de9-841f-e90c7991f5ad', 'name': '报警类别组88', 'sort': 5}, {'id': 'b43606d9-f064-4261-9bfe-bcb4ea692cfc', 'name': '报警类别组26', 'sort': 10}, {'id': '5c85a541-2656-4feb-9778-533a2bf1815d', 'name': '报警类别组94', 'sort': 15}, {'id': 'ead800a3-7698-41b0-a18a-1346a9aee1e1', 'name': '报警类别组30', 'sort': 20}]
+[2023-06-05 17:31:15,606] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-05 17:31:15,606] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-05 17:31:15,615] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 17:31:15,616] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警类别项
+[2023-06-05 17:31:15,616] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-05 17:31:15,616] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmtype/add
+[2023-06-05 17:31:15,616] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 17:31:15,616] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '类别项44', 'groupID': 'ead800a3-7698-41b0-a18a-1346a9aee1e1'}]
+[2023-06-05 17:31:15,616] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 17:31:15,748] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-05 17:31:15,748] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 'ce799a00-4b55-49ed-b4b9-f112aaf99d0d', 'groupID': 'ead800a3-7698-41b0-a18a-1346a9aee1e1', 'name': '类别项44', 'groupName': None}]
+[2023-06-05 17:31:15,749] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-05 17:31:15,749] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-05 17:31:15,765] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 17:31:15,766] logger_util.py->write_log line:61 [INFO] 接口名称：更新报警类别项
+[2023-06-05 17:31:15,766] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-06-05 17:31:15,766] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmtype/update
+[2023-06-05 17:31:15,766] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 17:31:15,766] logger_util.py->write_log line:61 [INFO] 请求参数：[{'id': 'ce799a00-4b55-49ed-b4b9-f112aaf99d0d', 'groupID': 'ead800a3-7698-41b0-a18a-1346a9aee1e1', 'name': '更新类别项1', 'groupName': '报警类别组30'}]
+[2023-06-05 17:31:15,766] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 17:31:15,871] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-05 17:31:15,872] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 'ce799a00-4b55-49ed-b4b9-f112aaf99d0d', 'groupID': 'ead800a3-7698-41b0-a18a-1346a9aee1e1', 'name': '更新类别项1', 'groupName': None}]
+[2023-06-05 17:31:15,872] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-05 17:31:15,872] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

@@ -1,0 +1,20 @@
+-  name: 设置归档配置
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/historicarchive/group/${get_extract_data(history_group_id)}/archivesetting
+      method: put
+      json:
+        {
+          "minIntervalValue": 1,
+          "minIntervalUnit": 1,
+          "archiveType": 0,
+          "deadZoneType": 0,
+          "deadZoneThreshold": 1,
+          "intervalUnit": 1,
+          "intervalValue": 1,
+          "enableArchive": true
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

@@ -1,0 +1,13 @@
+-  name: 获取token
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/auth/requesttoken
+      method: post
+      json:
+         ""
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      Authorization: content
+   validate:
+      -  equals: {status_code: 200}

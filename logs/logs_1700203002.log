@@ -1,0 +1,70 @@
+[2023-11-17 14:36:42,233] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-17 14:36:42,233] logger_util.py->write_log line:61 [INFO] 接口名称：创建语言列表
+[2023-11-17 14:36:42,233] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-17 14:36:42,233] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/multiplelanguage/languagelist
+[2023-11-17 14:36:42,233] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-17 14:36:42,234] logger_util.py->write_log line:61 [INFO] 请求参数：{'languageType': 'zh-CN'}
+[2023-11-17 14:36:42,234] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-17 14:36:42,240] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-11-17 14:36:42,241] logger_util.py->write_log line:61 [INFO] 实际结果：中文（中国）已存在
+[2023-11-17 14:36:42,241] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-11-17 14:36:42,241] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-11-17 14:36:42,242] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 358, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-11-17 14:36:42,242] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 358, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 255, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 438, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 358, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-11-17 14:36:42,359] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-17 14:36:42,360] logger_util.py->write_log line:61 [INFO] 接口名称：获取语言列表
+[2023-11-17 14:36:42,360] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-17 14:36:42,360] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/multiplelanguage/languagelist
+[2023-11-17 14:36:42,360] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-17 14:36:42,360] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-17 14:36:42,378] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-17 14:36:42,378] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 6, 'languageType': 'zh-CN', 'name': '中文（中国）', 'enable': True, 'createDateTime': '2023-11-17T14:36:26.1135157'}]
+[2023-11-17 14:36:42,378] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-17 14:36:42,379] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-17 14:36:42,383] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-17 14:36:42,383] logger_util.py->write_log line:61 [INFO] 接口名称：获取所有语言列表类型
+[2023-11-17 14:36:42,384] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-17 14:36:42,384] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/multiplelanguage/languagelist/languagetype
+[2023-11-17 14:36:42,384] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-17 14:36:42,384] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-17 14:36:42,403] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-17 14:36:42,403] logger_util.py->write_log line:61 [INFO] 实际结果：[{'languageType': 'en-US', 'name': 'English (United States)'}, {'languageType': 'zh-CN', 'name': '中文（中国）'}]
+[2023-11-17 14:36:42,403] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-17 14:36:42,403] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

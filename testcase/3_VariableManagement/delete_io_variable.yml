@@ -1,0 +1,9 @@
+-  name: 删除io变量
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(io_tunnel_id)}/tag/${get_extract_data(io_variable_id)}
+      method: delete
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

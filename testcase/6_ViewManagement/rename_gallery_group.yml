@@ -1,0 +1,14 @@
+-  name: 重命名图库组
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery/rename?group=${get_extract_data(groupKey)}
+      method: put
+      json: 重命名${get_random_number(1,1000)}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      groupKey: groupKey
+   validate:
+   - equals:
+       status_code: 200

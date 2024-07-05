@@ -1,0 +1,19 @@
+-  name: 创建归档表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/filingtable
+      method: post
+      json:
+        {"folderId":"00000000-0000-0000-0000-000000000000","name":"归档表${get_random_number(1,1000)}","sort":2}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      Original_Table_ID: id
+      Sort_ID: sort
+   validate:
+   - equals:
+       status_code: 200
+   - equals:
+        sort: 2
+   - contains: id

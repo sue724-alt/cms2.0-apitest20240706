@@ -1,0 +1,82 @@
+[2023-08-22 16:51:13,724] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:51:13,724] logger_util.py->write_log line:61 [INFO] 接口名称：获取通道信息
+[2023-08-22 16:51:13,724] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-22 16:51:13,724] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:51:13,725] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:51:13,725] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:51:13,741] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果不包含字符串：tree
+[2023-08-22 16:51:13,742] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-22 16:51:13,742] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-22 16:51:13,742] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败：返回结果不包含字符串：" + value)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果不包含字符串：tree
+
+[2023-08-22 16:51:13,743] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败：返回结果不包含字符串：" + value)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果不包含字符串：tree
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 232, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败：返回结果不包含字符串：" + value)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果不包含字符串：tree
+
+
+[2023-08-22 16:51:13,845] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:51:13,845] logger_util.py->write_log line:61 [INFO] 接口名称：创建通道
+[2023-08-22 16:51:13,845] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-22 16:51:13,845] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:51:13,845] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:51:13,845] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': None, 'type': 1, 'name': '通道3556', 'description': '', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '2143', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'copyConfig': None}
+[2023-08-22 16:51:13,846] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:51:13,869] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:51:13,869] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 9, 'parentId': None, 'sort': 4, 'name': '通道3556', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '2143', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'enable': True, 'createTime': '2023-08-22T16:51:13.862436+08:00', 'updateTime': '2023-08-22T16:51:13.8624368+08:00'}
+[2023-08-22 16:51:13,869] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:51:13,870] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:51:13,874] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:51:13,874] logger_util.py->write_log line:61 [INFO] 接口名称：获取所有通道
+[2023-08-22 16:51:13,874] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-22 16:51:13,874] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+[2023-08-22 16:51:13,874] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:51:13,874] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:51:13,880] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:51:13,880] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 1, 'parentId': None, 'sort': 0, 'name': '系统变量', 'description': None, 'type': 2, 'typeTag': None, 'config': None, 'enable': True, 'createTime': '0001-01-01T00:00:00', 'updateTime': '0001-01-01T00:00:00'}, {'id': 2, 'parentId': None, 'sort': 1, 'name': '保存寄存器502_1', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'protocol': 'Modbus_TCP', 'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'enable': True, 'createTime': '2023-08-22T10:44:58.1384666', 'updateTime': '2023-08-22T10:44:58.1384674'}, {'id': 6, 'parentId': None, 'sort': 2, 'name': '通道2525', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '2143', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'enable': True, 'createTime': '2023-08-22T16:41:00.2220933', 'updateTime': '2023-08-22T16:41:00.2220938'}, {'id': 8, 'parentId': None, 'sort': 3, 'name': '通道7528', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '2143', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'enable': True, 'createTime': '2023-08-22T16:50:31.4570365', 'updateTime': '2023-08-22T16:50:31.4570371'}, {'id': 9, 'parentId': None, 'sort': 4, 'name': '通道3556', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '2143', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'enable': True, 'createTime': '2023-08-22T16:51:13.862436', 'updateTime': '2023-08-22T16:51:13.8624368'}]
+[2023-08-22 16:51:13,880] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:51:13,880] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-22 16:51:13,890] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-22 16:51:13,890] logger_util.py->write_log line:61 [INFO] 接口名称：获取所有通道
+[2023-08-22 16:51:13,890] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-22 16:51:13,890] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/9
+[2023-08-22 16:51:13,890] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-22 16:51:13,890] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-22 16:51:13,896] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-22 16:51:13,897] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 9, 'parentId': None, 'sort': 4, 'name': '通道3556', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '127.0.0.1', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '3', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '2143', 'F64ByteOrder': '2143', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220'}}, 'enable': True, 'createTime': '2023-08-22T16:51:13.862436', 'updateTime': '2023-08-22T16:51:13.8624368'}
+[2023-08-22 16:51:13,897] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-22 16:51:13,897] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

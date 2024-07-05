@@ -1,0 +1,35 @@
+-  name: 检查本地工程id是否冲突
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/checklocalprojectfileidconflict
+      method: post
+      data:
+         localFilePath: ${get_project_path2()}\data\EngineeringManagement\RC8.cmsproj
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {result: False}
+
+-  name: 导入本地工程文件
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/importlocalproject
+      method: post
+      data:
+         localFilePath: ${get_project_path2()}\data\EngineeringManagement\RC8.cmsproj
+         importConflictHandleType: 1
+   extract:
+      import_project_id: id
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id
+
+-  name: 删除工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/deletenodes
+      method: put
+      data:
+         ids: ${get_extract_data(import_project_id)}
+         isDeleteFile: false
+   validate:
+      -  equals: {status_code: 200}

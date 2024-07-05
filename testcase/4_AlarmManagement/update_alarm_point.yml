@@ -1,0 +1,13 @@
+-  name: 更新报警点
+   base_url: ${get_base_url(base_url)}
+   request:
+      url: /api/v1/alarmpoint/update
+      method: put
+      json:
+         [{"id":"${get_extract_data(Alarm_Point_ID)}","groupID":"${get_extract_data(Alarm_Group_ID)}","groupName":"${get_extract_data(Alarm_Group_Name)}","name":"更新报警名称${get_random_number(1,1000)}","content": "更新报警信息${get_random_number(1,100)}","expression":"G1==false","levelID":"${get_extract_data(Alarm_Grade_ID)}","levelName":"${get_extract_data(Alarm_Grade_Name)}","typeIDs":["${get_extract_data(Alarm_Category_Item_ID)}"],"typeNames":["${get_extract_data(Alarm_Category_Item_Name)}"],"typeNameJoin":"${get_extract_data(Alarm_Category_Item_Name)}"}]
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

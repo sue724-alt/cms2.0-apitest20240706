@@ -1,0 +1,85 @@
+[2023-11-27 10:10:10,064] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-27 10:10:10,065] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-11-27 10:10:10,065] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-11-27 10:10:10,065] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-11-27 10:10:10,065] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-11-27 10:10:10,065] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程5469', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-11-27 10:10:10,066] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-27 10:10:11,019] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-27 10:10:11,019] logger_util.py->write_log line:61 [INFO] 实际结果：155
+[2023-11-27 10:10:11,019] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-27 10:10:11,020] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-27 10:10:11,029] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-27 10:10:11,029] logger_util.py->write_log line:61 [INFO] 接口名称：获取工程信息
+[2023-11-27 10:10:11,029] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-27 10:10:11,029] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/155/info
+[2023-11-27 10:10:11,030] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-11-27 10:10:11,030] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-27 10:10:30,125] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-11-27 10:10:30,125] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 155, 'name': '工程5469', 'identifier': '10411237d2ed435fb2b37fe80bc63890', 'path': 'C:\\自动化工程\\工程5469.cmsproj', 'createTime': '2023-11-27T10:10:10.9818831', 'updateTime': '2023-11-27T10:10:10.9818832'}
+[2023-11-27 10:10:30,126] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-27 10:10:30,126] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-11-27 10:10:30,137] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-27 10:10:30,137] logger_util.py->write_log line:61 [INFO] 接口名称：重命名工程名称
+[2023-11-27 10:10:30,137] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-11-27 10:10:30,137] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/updatenode
+[2023-11-27 10:10:30,137] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-11-27 10:10:30,138] logger_util.py->write_log line:61 [INFO] 请求参数：{'Name': '重命名工程2700', 'Path': 'C:\\\\自动化工程\\\\工程5469', 'Type': 1, 'Id': '155'}
+[2023-11-27 10:10:30,138] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-27 10:10:30,150] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-11-27 10:10:30,150] logger_util.py->write_log line:61 [INFO] 实际结果：{'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-e1ef90cdfc6fb3425768225eddd64538-e3ee41ec0ee61e0b-00', 'errors': {'Name': ['The Name field is required.']}}
+[2023-11-27 10:10:30,150] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-11-27 10:10:30,150] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-11-27 10:10:30,151] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-11-27 10:10:30,152] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 246, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 446, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 366, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-11-27 10:10:30,274] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-27 10:10:30,275] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-11-27 10:10:30,275] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-11-27 10:10:30,275] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-11-27 10:10:30,275] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-11-27 10:10:30,275] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '155', 'isDeleteFile': True}
+[2023-11-27 10:10:30,275] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-27 10:10:30,362] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-11-27 10:10:30,362] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-11-27 10:10:30,362] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-27 10:10:30,362] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

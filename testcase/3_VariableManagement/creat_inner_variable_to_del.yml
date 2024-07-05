@@ -1,0 +1,13 @@
+-  name: 新增临时内部变量-后续删除
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(inner_tunnel_id)}/tag
+      method: post
+      json:
+         [{"archiveSetting":null,"groupId":null,"name":"ee1","description":"","typeName":"有符号8位整型","config":{"initType":0,"setValue":null},"index":1}]
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      inner_variable_id: id.0
+   validate:
+      -  equals: {status_code: 200}

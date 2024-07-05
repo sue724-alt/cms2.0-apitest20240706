@@ -1,0 +1,11 @@
+-  name: 获取鉴权码
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/auth/requesttoken
+      method: post
+      json:
+         ""
+   extract:
+      Authorization: content
+   validate:
+   -  equals: {status_code: 200}

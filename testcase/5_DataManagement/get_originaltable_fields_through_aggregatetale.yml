@@ -1,0 +1,13 @@
+-  name: 通过聚合表获取归档表字段
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/filingtable/fields/${get_extract_data(Aggregation_Table_ID)}
+      method: get
+      headers:
+         Content-Type: application/json; =UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      time_id: id.0
+      A2_id: id.1
+   validate:
+   -  equals: {status_code: 200}

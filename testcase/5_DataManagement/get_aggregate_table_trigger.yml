@@ -1,0 +1,11 @@
+-  name: 获取聚合表触发配置
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/aggregatetable/${get_extract_data(Aggregation_Table_ID)}/triggers
+      method: get
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

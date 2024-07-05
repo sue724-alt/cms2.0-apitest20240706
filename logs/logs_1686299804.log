@@ -1,0 +1,588 @@
+[2023-06-09 16:36:44,170] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 16:36:44,170] logger_util.py->write_log line:61 [INFO] 接口名称：创建归档表文件夹
+[2023-06-09 16:36:44,171] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 16:36:44,171] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/folder
+[2023-06-09 16:36:44,171] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 16:36:44,171] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': '00000000-0000-0000-0000-000000000000', 'name': '归档表625', 'sort': 2}
+[2023-06-09 16:36:44,171] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 16:36:44,438] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 16:36:44,438] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '94f1b8de-6d64-48cf-91c8-868fa4120b48', 'name': '归档表625', 'parentId': '00000000-0000-0000-0000-000000000000', 'level': 0, 'sort': 2, 'createDateTime': '2023-06-09T16:36:44.3335657+08:00', 'operationTypes': [1, 4]}
+[2023-06-09 16:36:44,439] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 16:36:44,439] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 16:36:44,452] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+[2023-06-09 16:36:44,452] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+
+[2023-06-09 16:36:44,546] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+[2023-06-09 16:36:44,546] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+
+[2023-06-09 16:36:44,577] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+[2023-06-09 16:36:44,577] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+
+[2023-06-09 16:36:44,609] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+[2023-06-09 16:36:44,609] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+
+[2023-06-09 16:36:44,641] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+[2023-06-09 16:36:44,641] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+
+[2023-06-09 16:36:44,672] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+[2023-06-09 16:36:44,672] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+
+[2023-06-09 16:36:44,706] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+[2023-06-09 16:36:44,706] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+
+[2023-06-09 16:36:44,737] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+[2023-06-09 16:36:44,738] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+
+[2023-06-09 16:36:44,768] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+[2023-06-09 16:36:44,768] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+
+[2023-06-09 16:36:44,800] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 16:36:44,800] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警组
+[2023-06-09 16:36:44,800] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 16:36:44,800] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmfolder/add
+[2023-06-09 16:36:44,800] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 16:36:44,800] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '报警组886', 'nodeType': 1, 'parentId': None}
+[2023-06-09 16:36:44,800] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 16:36:44,941] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'nodeType': 1}}, {'contains': 'id'}]
+[2023-06-09 16:36:44,941] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '1adf6677-fdae-47b5-bcd4-1a17cf8b86cd', 'parentId': None, 'name': '报警组886', 'nodeType': 1, 'sort': 2, 'children': None}
+[2023-06-09 16:36:44,941] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 16:36:44,941] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 16:36:44,946] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 16:36:44,946] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警等级
+[2023-06-09 16:36:44,947] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 16:36:44,947] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmlevel/add
+[2023-06-09 16:36:44,947] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 16:36:44,947] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '报警等级88'}]
+[2023-06-09 16:36:44,947] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 16:36:45,064] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 16:36:45,064] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 'e0580812-c5e2-4c95-b935-e4f5bf0612d0', 'name': '报警等级88'}]
+[2023-06-09 16:36:45,064] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 16:36:45,065] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 16:36:45,070] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 16:36:45,070] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警类别组
+[2023-06-09 16:36:45,070] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 16:36:45,070] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmtypegroup/add
+[2023-06-09 16:36:45,070] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 16:36:45,070] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '报警类别组574'}]
+[2023-06-09 16:36:45,071] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 16:36:45,763] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 16:36:45,764] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 'fb88d847-1b39-49c7-932c-6b0371302d29', 'name': '报警类别组574', 'sort': 10}]
+[2023-06-09 16:36:45,764] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 16:36:45,764] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 16:36:45,774] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 16:36:45,774] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警类别项
+[2023-06-09 16:36:45,774] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 16:36:45,774] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmtype/add
+[2023-06-09 16:36:45,775] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 16:36:45,775] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '类别项902', 'groupID': 'fb88d847-1b39-49c7-932c-6b0371302d29'}]
+[2023-06-09 16:36:45,775] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 16:36:46,006] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 16:36:46,007] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': '075a5752-85ce-4a08-8d47-547c371e7099', 'groupID': 'fb88d847-1b39-49c7-932c-6b0371302d29', 'name': '类别项902', 'groupName': None}]
+[2023-06-09 16:36:46,007] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 16:36:46,007] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 16:36:46,021] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 16:36:46,021] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警点
+[2023-06-09 16:36:46,021] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 16:36:46,021] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmpoint/add
+[2023-06-09 16:36:46,021] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 16:36:46,021] logger_util.py->write_log line:61 [INFO] 请求参数：[{'groupID': '1adf6677-fdae-47b5-bcd4-1a17cf8b86cd', 'groupName': '报警组886', 'name': '报警名称318', 'content': '报警信息318', 'expression': 'G1==true', 'levelID': 'e0580812-c5e2-4c95-b935-e4f5bf0612d0', 'levelName': '报警等级88', 'typeIDs': ['075a5752-85ce-4a08-8d47-547c371e7099']}]
+[2023-06-09 16:36:46,022] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 16:36:46,427] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 16:36:46,427] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': '4cf3d738-44db-437b-89f1-47f232dbdd23', 'groupID': '1adf6677-fdae-47b5-bcd4-1a17cf8b86cd', 'groupName': None, 'name': '报警名称318', 'content': '报警信息318', 'expression': 'G1==true', 'levelID': 'e0580812-c5e2-4c95-b935-e4f5bf0612d0', 'levelName': None, 'typeIDs': [], 'typeNames': [], 'typeNameJoin': ''}]
+[2023-06-09 16:36:46,427] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 16:36:46,427] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 16:36:46,438] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+[2023-06-09 16:36:46,439] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 318, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Folder_ID'
+
+
+[2023-06-09 16:36:46,470] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+[2023-06-09 16:36:46,470] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+
+[2023-06-09 16:36:46,501] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+[2023-06-09 16:36:46,502] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 309, in send_request
+    self.base_url = self.replace_load(self.base_url) + self.replace_load(url)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 150, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\2TestCMS2.0\debug_talk.py", line 16, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\2TestCMS2.0\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'Original_Table_ID'
+
+

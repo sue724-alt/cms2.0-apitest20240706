@@ -1,0 +1,78 @@
+[2023-05-28 16:22:00,214] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-28 16:22:00,214] logger_util.py->write_log line:61 [INFO] 接口名称：创建归档表
+[2023-05-28 16:22:00,214] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-05-28 16:22:00,214] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable
+[2023-05-28 16:22:00,214] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-28 16:22:00,215] logger_util.py->write_log line:61 [INFO] 请求参数：{'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表69', 'sort': 2}
+[2023-05-28 16:22:00,215] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-28 16:22:00,484] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 2}}, {'contains': 'id'}]
+[2023-05-28 16:22:00,484] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 'b0d4069d-0fa7-4903-b304-5b856e69a55f', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表69', 'sort': 2, 'createDateTime': '2023-05-28T16:22:00.3756141+08:00', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}
+[2023-05-28 16:22:00,484] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-28 16:22:00,484] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-28 16:22:00,495] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-28 16:22:00,495] logger_util.py->write_log line:61 [INFO] 接口名称：设置归档表字段配置
+[2023-05-28 16:22:00,495] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-28 16:22:00,495] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/b0d4069d-0fa7-4903-b304-5b856e69a55f/fields
+[2023-05-28 16:22:00,495] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-28 16:22:00,495] logger_util.py->write_log line:61 [INFO] 请求参数：[{'fieldName': '系统时间', 'fieldType': 3, 'associatedVariable': 'DateTime', 'formula': None, 'id': None}, {'fieldName': '函数时间', 'fieldType': 3, 'associatedVariable': None, 'formula': 'NOW(  )', 'id': None}, {'fieldName': 'A1', 'fieldType': 1, 'associatedVariable': 'A1', 'formula': None, 'id': None}, {'fieldName': 'B1', 'fieldType': 1, 'associatedVariable': 'B1', 'formula': None, 'id': None}, {'fieldName': 'G1', 'fieldType': 1, 'associatedVariable': 'G1', 'formula': None, 'id': None}, {'fieldName': 'H1', 'fieldType': 2, 'associatedVariable': 'H1', 'formula': None, 'id': None}]
+[2023-05-28 16:22:00,495] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-28 16:22:01,302] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-05-28 16:22:01,302] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-05-28 16:22:01,303] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-28 16:22:01,303] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-28 16:22:01,309] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-28 16:22:01,309] logger_util.py->write_log line:61 [INFO] 接口名称：创建聚合表
+[2023-05-28 16:22:01,309] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-05-28 16:22:01,309] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/aggregatetable
+[2023-05-28 16:22:01,309] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-28 16:22:01,309] logger_util.py->write_log line:61 [INFO] 请求参数：{'folderId': '00000000-0000-0000-0000-000000000000', 'name': '聚合表39', 'sort': 3, 'tableId': 'b0d4069d-0fa7-4903-b304-5b856e69a55f', 'nodeType': 2}
+[2023-05-28 16:22:01,310] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-28 16:22:01,528] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 3}}, {'contains': 'id'}]
+[2023-05-28 16:22:01,528] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 'f2252f02-e348-4743-848a-9c28fb5f1bf5', 'folderId': '00000000-0000-0000-0000-000000000000', 'relativeTableId': 'b0d4069d-0fa7-4903-b304-5b856e69a55f', 'relativeType': 2, 'name': '聚合表39', 'sort': 3, 'createDateTime': '2023-05-28T16:22:01.4250376+08:00', 'preConditionType': 0, 'operationTypes': [1, 2, 3, 4], 'functionTypes': [2, 3, 4], 'extendedHeaders': ['记录时间'], 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}
+[2023-05-28 16:22:01,528] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-28 16:22:01,528] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-28 16:22:01,550] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-28 16:22:01,550] logger_util.py->write_log line:61 [INFO] 接口名称：设置聚合表字段配置
+[2023-05-28 16:22:01,550] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-28 16:22:01,551] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/aggregatetable/f2252f02-e348-4743-848a-9c28fb5f1bf5/fields
+[2023-05-28 16:22:01,551] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-28 16:22:01,551] logger_util.py->write_log line:61 [INFO] 请求参数：[{'id': 'RandomId_2023-05-28T08:14:21.542Z|r5lcis8', 'fieldName': '系统时间', 'fieldType': 3, 'filingTableFieldId': 'FTFf006c0b14e374120959aef1b410e985f', 'filingTableFieldName': '系统时间', 'formula': None, 'groupType': 1, 'handleType': 1, '_X_ROW_KEY': 'row_1573'}, {'id': 'RandomId_2023-05-28T08:14:21.543Z|rjudvi8', 'fieldName': '函数时间', 'fieldType': 3, 'filingTableFieldId': 'FTFbedf8350df974d2b9d707fae64f83d73', 'filingTableFieldName': '函数时间', 'formula': None, 'groupType': 1, 'handleType': 1, '_X_ROW_KEY': 'row_1574'}, {'id': 'RandomId_2023-05-28T08:14:21.543Z|ptduqqg', 'fieldName': 'A1', 'fieldType': 1, 'filingTableFieldId': 'FTF3f4cca54042846bcb9631dd2878e009d', 'filingTableFieldName': 'A1', 'formula': None, 'groupType': 2, 'handleType': 18, '_X_ROW_KEY': 'row_1575'}, {'id': 'RandomId_2023-05-28T08:14:21.543Z|rbvrmlo', 'fieldName': 'B1', 'fieldType': 1, 'filingTableFieldId': 'FTF9ce62ff1a43044f486a33997e9331cce', 'filingTableFieldName': 'B1', 'formula': None, 'groupType': 2, 'handleType': 18, '_X_ROW_KEY': 'row_1576'}, {'id': 'RandomId_2023-05-28T08:14:21.543Z|477rd1g', 'fieldName': 'G1', 'fieldType': 1, 'filingTableFieldId': 'FTFee465825dd5d487da215857437f99d97', 'filingTableFieldName': 'G1', 'formula': None, 'groupType': 2, 'handleType': 18, '_X_ROW_KEY': 'row_1577'}, {'id': 'RandomId_2023-05-28T08:14:21.543Z|d4oll5o', 'fieldName': 'H1', 'fieldType': 2, 'filingTableFieldId': 'FTF4ab623e24f534697afe25b06644e8f70', 'filingTableFieldName': 'H1', 'formula': None, 'groupType': 1, 'handleType': 9, '_X_ROW_KEY': 'row_1578'}]
+[2023-05-28 16:22:01,551] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-28 16:22:03,401] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-05-28 16:22:03,401] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-05-28 16:22:03,401] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-28 16:22:03,402] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 348, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-05-28 16:22:03,402] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 348, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 230, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 398, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 348, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+

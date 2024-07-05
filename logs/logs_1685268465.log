@@ -1,0 +1,56 @@
+[2023-05-28 18:07:45,390] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-28 18:07:45,390] logger_util.py->write_log line:61 [INFO] 接口名称：设置聚合表触发配置--定时触发
+[2023-05-28 18:07:45,390] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-28 18:07:45,390] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/aggregatetable/7d2eed40-8c19-453f-baa7-355007791f64/triggers
+[2023-05-28 18:07:45,390] logger_util.py->write_log line:61 [INFO] 请求头：{"Content-Type": "application/json;charset=UTF-8", "X-Project": "b32d81056e124620b809e92f49cdf3d4"}
+[2023-05-28 18:07:45,391] logger_util.py->write_log line:61 [INFO] 请求参数：{"realTime": false, "triggers": [{"effectiveDateTime": "2023-05-22T06:15:31.000Z", "frequencyValue": "ddt{{1}}", "frequencyUnit": 2, "matchAll": true, "condition": "A1==100", "conditionDetail": 1, "frequencyCheck": false, "triggerType": 1}]}
+[2023-05-28 18:07:45,391] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-28 18:07:45,433] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 423, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\models.py", line 369, in prepare
+    self.prepare_headers(headers)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\models.py", line 489, in prepare_headers
+    for header in headers.items():
+AttributeError: 'str' object has no attribute 'items'
+
+[2023-05-28 18:07:45,434] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 423, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\models.py", line 369, in prepare
+    self.prepare_headers(headers)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\models.py", line 489, in prepare_headers
+    for header in headers.items():
+AttributeError: 'str' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 285, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 426, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 423, in send_request
+    res = RequestUtil.session.request(method=self.last_method, url=self.base_url, headers=self.last_headers, **kwargs)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\models.py", line 369, in prepare
+    self.prepare_headers(headers)
+  File "D:\Pyhton\Pyton39\lib\site-packages\requests\models.py", line 489, in prepare_headers
+    for header in headers.items():
+AttributeError: 'str' object has no attribute 'items'
+
+

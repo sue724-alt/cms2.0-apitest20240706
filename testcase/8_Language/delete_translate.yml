@@ -1,0 +1,11 @@
+-  name: 删除翻译文本
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/multiplelanguage/
+      method: delete
+      json:
+      - ${get_extract_data(translate_id)}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

@@ -1,0 +1,15 @@
+-  name: 创建报警点
+   base_url: ${get_base_url(base_url)}
+   request:
+      url: /api/v1/alarmpoint/add
+      method: post
+      json:
+         [{"groupID":"${get_extract_data(Alarm_Group_ID)}","groupName":"${get_extract_data(Alarm_Group_Name)}","name":"报警名称${get_random_number(1,1000)}","content":"报警信息${get_random_number(1,1000)}","expression":"A1==true","levelID":"${get_extract_data(Alarm_Grade_ID)}","levelName":"${get_extract_data(Alarm_Grade_Name)}","typeIDs":["${get_extract_data(Alarm_Category_Item_ID)}"]}]
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      Alarm_Point_ID: id.0
+   validate:
+   - equals:
+       status_code: 200

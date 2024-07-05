@@ -1,0 +1,49 @@
+[2023-08-17 14:30:42,975] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    data = json.loads(str_data)
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid \escape: line 1 column 25 (char 24)
+
+[2023-08-17 14:30:42,976] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    data = json.loads(str_data)
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid \escape: line 1 column 25 (char 24)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 181, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 319, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 300, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    data = json.loads(str_data)
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid \escape: line 1 column 25 (char 24)
+
+

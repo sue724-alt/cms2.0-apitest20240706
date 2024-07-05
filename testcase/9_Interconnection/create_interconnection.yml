@@ -1,0 +1,32 @@
+-  name: 创建互联项
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection
+      method: post
+      json:
+        {
+          "id": null,
+          "name": "mysql${get_random_number(1000,9999)}",
+          "connectionType": 1,
+          "databaseType": 1,
+          "authenticationType": null,
+          "server": "${get_config(mysql,host)}",
+          "port": "${get_config(mysql,port)}",
+          "database": "${get_config(mysql,database2)}",
+          "databasePath": "",
+          "userName": "${get_config(mysql,user)}",
+          "password": "${get_config(mysql,password)}",
+          "changedPassword": true,
+          "mqttType": null,
+          "pushType": null,
+          "timingPeriod": null,
+          "changingPeriod": null,
+          "cloudDeviceId": "",
+          "originalSecret": ""
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+     intn_id: id
+   validate:
+      -  equals: {status_code: 200}

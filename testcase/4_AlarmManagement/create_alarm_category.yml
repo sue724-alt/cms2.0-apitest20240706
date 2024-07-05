@@ -1,0 +1,16 @@
+-  name: 创建报警类别组
+   base_url: ${get_base_url(base_url)}
+   request:
+      url: /api/v1/alarmtypegroup/add
+      method: post
+      json:
+         [{"name":"报警类别组${get_random_number(1,1000)}"}]
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      Alarm_Category_ID: id.0
+      GroupName: name.0
+   validate:
+   - equals:
+       status_code: 200

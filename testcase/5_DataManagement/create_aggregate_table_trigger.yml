@@ -1,0 +1,24 @@
+-  name: 设置聚合表触发配置--$csv{name}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      name-realTime-effectiveDateTime-frequencyValue-frequencyUnit-matchAll-condition-conditionDetail-frequencyCheck-triggerType: data/DataManagement/create_aggregate_table_trigger.csv
+   request:
+      url: /api/v1/dataconfig/aggregatetable/${get_extract_data(Aggregation_Table_ID)}/triggers
+      method: put
+      json:
+        realTime: ddt{{$csv{realTime}}}
+        triggers:
+        -  effectiveDateTime: $csv{effectiveDateTime}
+           frequencyValue: ddt{{$csv{frequencyValue}}}
+           frequencyUnit: ddt{{$csv{frequencyUnit}}}
+           matchAll: ddt{{$csv{matchAll}}}
+           condition: $csv{condition}
+           conditionDetail: ddt{{$csv{conditionDetail}}}
+           frequencyCheck: ddt{{$csv{frequencyCheck}}}
+           triggerType: ddt{{$csv{triggerType}}}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

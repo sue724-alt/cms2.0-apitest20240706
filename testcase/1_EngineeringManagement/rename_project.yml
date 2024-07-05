@@ -1,0 +1,49 @@
+-  name: 创建工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node
+      method: post
+      data:
+         name: 工程${get_random_number(1000,9999)}
+         path: C:\自动化工程
+         type: 1
+   extract:
+      project_id: content
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 获取工程信息
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/${get_extract_data(project_id)}/info
+      method: get
+   extract:
+      x_project: identifier
+      project_name: name
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id
+
+-  name: 重命名工程名称
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/updatenode
+      method: put
+      data:
+         Name: 重命名工程${get_random_number(1000,9999)}
+         Path: C:\自动化工程\${get_extract_data(project_name)}.cmsproj
+         Type: 1
+         Id: ${get_extract_data(project_id)}
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 删除工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/deletenodes
+      method: put
+      data:
+         ids: ${get_extract_data(project_id)}
+         isDeleteFile: true
+   validate:
+      -  equals: {status_code: 200}

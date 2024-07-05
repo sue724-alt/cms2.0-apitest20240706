@@ -1,0 +1,17 @@
+-  name: 存储设置
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/historicarchive/group/${get_extract_data(history_group_id)}/storagesetting
+      method: put
+      json:
+        {
+          "retentionUnit": 4,
+          "retentionValue": 1,
+          "enableClear": true,
+          "backupBeforeClear": true,
+          "backupPath": "C:\\数据备份\\历史数据"
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

@@ -1,0 +1,44 @@
+[2023-08-23 15:06:04,886] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 15:06:04,887] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量
+[2023-08-23 15:06:04,887] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 15:06:04,887] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 15:06:04,887] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 15:06:04,888] logger_util.py->write_log line:61 [INFO] 请求参数：{'A2': 22}
+[2023-08-23 15:06:04,888] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 15:06:04,902] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-23 15:06:04,902] logger_util.py->write_log line:61 [INFO] 实际结果：{'type': 'https://tools.ietf.org/html/rfc7231#section-6.5.1', 'title': 'One or more validation errors occurred.', 'status': 400, 'traceId': '00-f7ac871501c3f35a3384c386c1e2abdc-847578c1c6e88aea-00', 'errors': {'variableNames': ['The variableNames field is required.'], '$.A2': ['The JSON value could not be converted to System.Collections.Generic.Dictionary`2[System.String,System.String]. Path: $.A2 | LineNumber: 0 | BytePositionInLine: 9.']}}
+[2023-08-23 15:06:04,902] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-23 15:06:04,902] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-23 15:06:04,903] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 353, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-23 15:06:04,903] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 353, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 408, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 353, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+

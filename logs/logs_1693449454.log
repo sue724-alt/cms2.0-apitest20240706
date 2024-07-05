@@ -1,0 +1,616 @@
+[2023-08-31 10:37:34,927] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:34,927] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-31 10:37:34,927] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:34,927] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node
+[2023-08-31 10:37:34,928] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:34,928] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程9007', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-31 10:37:34,928] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:35,803] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:35,804] logger_util.py->write_log line:61 [INFO] 实际结果：19
+[2023-08-31 10:37:35,804] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:35,805] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:35,811] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:35,811] logger_util.py->write_log line:61 [INFO] 接口名称：创建文件夹
+[2023-08-31 10:37:35,811] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:35,811] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node
+[2023-08-31 10:37:35,811] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:35,811] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '文件夹8231', 'type': 0}
+[2023-08-31 10:37:35,811] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:35,821] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:35,821] logger_util.py->write_log line:61 [INFO] 实际结果：20
+[2023-08-31 10:37:35,821] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:35,821] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:35,829] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:35,829] logger_util.py->write_log line:61 [INFO] 接口名称：获取工程信息
+[2023-08-31 10:37:35,829] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-31 10:37:35,829] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/19/info
+[2023-08-31 10:37:35,830] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:35,830] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:43,323] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-31 10:37:43,324] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 19, 'name': '工程9007', 'identifier': 'fb282abf052c4a0893949ba8f871d705', 'path': 'C:\\自动化工程\\工程9007.cmsproj', 'createTime': '2023-08-31T10:37:41.292769', 'updateTime': '2023-08-31T10:37:41.2927692'}
+[2023-08-31 10:37:43,324] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:43,324] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:43,329] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:43,329] logger_util.py->write_log line:61 [INFO] 接口名称：获取工程树节点
+[2023-08-31 10:37:43,329] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-31 10:37:43,329] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/tree
+[2023-08-31 10:37:43,329] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:43,329] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:43,392] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:43,392] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [], 'fileAvailableState': False, 'version': None, 'id': 4, 'parentId': None, 'name': '文件夹6342', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:03:03.0416423'}, {'child': [], 'fileAvailableState': False, 'version': None, 'id': 20, 'parentId': None, 'name': '文件夹8231', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:37:41.3127622'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 10, 'parentId': 6, 'name': '工程副本1693448242.10357', 'path': 'C:\\自动化工程\\工程副本1693448242.10357.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:17:27.6486138'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 5, 'parentId': 6, 'name': '重命名3307', 'path': 'C:\\重命名3307.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:17:32.0959553'}], 'fileAvailableState': False, 'version': None, 'id': 6, 'parentId': None, 'name': '文件夹8604', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:17:18.5311715'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 17, 'parentId': 13, 'name': '工程副本1693449179.986246', 'path': 'C:\\自动化工程\\工程副本1693449179.986246.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:33:05.5073642'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 12, 'parentId': 13, 'name': '重命名6688', 'path': 'C:\\重命名6688.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:33:07.2329465'}], 'fileAvailableState': False, 'version': None, 'id': 13, 'parentId': None, 'name': '文件夹9264', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:32:55.9068017'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 1, 'parentId': None, 'name': '205beta1', 'path': 'D:\\工程\\2.0.5\\205beta1.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-25T15:36:22.5899613'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 2, 'parentId': None, 'name': '互联加报表-1', 'path': 'D:\\工程\\互联加报表-1.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-30T10:45:10.4867633'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 3, 'parentId': None, 'name': '工程5706', 'path': 'C:\\自动化工程\\工程5706.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:03:02.9553116'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 19, 'parentId': None, 'name': '工程9007', 'path': 'C:\\自动化工程\\工程9007.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:37:41.2833881'}]
+[2023-08-31 10:37:43,393] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:43,393] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:43,402] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:43,402] logger_util.py->write_log line:61 [INFO] 接口名称：移动工程节点
+[2023-08-31 10:37:43,402] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-31 10:37:43,403] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/moveprojectnodes
+[2023-08-31 10:37:43,403] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:43,403] logger_util.py->write_log line:61 [INFO] 请求参数：{'destNodeID': '20', 'selectNodeIDs': '19'}
+[2023-08-31 10:37:43,403] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:43,412] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:43,412] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 19, 'parentId': 20, 'name': '工程9007', 'path': 'C:\\自动化工程\\工程9007.cmsproj', 'type': 1, 'createTime': '2023-08-31T10:37:41.283386', 'updateTime': '2023-08-31T10:37:48.9045428+08:00'}]
+[2023-08-31 10:37:43,413] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:43,413] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:43,418] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:43,418] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-31 10:37:43,418] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:43,418] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node
+[2023-08-31 10:37:43,418] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:43,418] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '删除工程保留路径下的文件1693449463.418843', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-31 10:37:43,418] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:44,349] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:44,349] logger_util.py->write_log line:61 [INFO] 实际结果：21
+[2023-08-31 10:37:44,349] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:44,349] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:44,358] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:44,358] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-31 10:37:44,358] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-31 10:37:44,358] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/deletenodes
+[2023-08-31 10:37:44,358] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:44,358] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '21', 'isDeleteFile': False}
+[2023-08-31 10:37:44,358] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:44,373] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:44,373] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-31 10:37:44,373] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:44,373] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:44,378] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:44,378] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-31 10:37:44,378] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:44,378] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node
+[2023-08-31 10:37:44,378] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:44,378] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程1805', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-31 10:37:44,378] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:45,244] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:45,244] logger_util.py->write_log line:61 [INFO] 实际结果：22
+[2023-08-31 10:37:45,244] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:45,244] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:45,254] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:45,254] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-31 10:37:45,255] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-31 10:37:45,255] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/deletenodes
+[2023-08-31 10:37:45,255] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:45,255] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '22', 'isDeleteFile': True}
+[2023-08-31 10:37:45,255] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:45,271] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:45,271] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-31 10:37:45,271] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:45,271] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:45,276] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:45,276] logger_util.py->write_log line:61 [INFO] 接口名称：创建文件夹
+[2023-08-31 10:37:45,276] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:45,276] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node
+[2023-08-31 10:37:45,276] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:45,276] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '文件夹2991', 'type': 0}
+[2023-08-31 10:37:45,276] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:45,286] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:45,287] logger_util.py->write_log line:61 [INFO] 实际结果：23
+[2023-08-31 10:37:45,287] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:45,287] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:45,296] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:45,296] logger_util.py->write_log line:61 [INFO] 接口名称：删除文件夹
+[2023-08-31 10:37:45,296] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-31 10:37:45,296] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/deletenodes
+[2023-08-31 10:37:45,296] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:45,296] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '23', 'isDeleteFile': True}
+[2023-08-31 10:37:45,296] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:45,304] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:45,304] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-31 10:37:45,304] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:45,305] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:45,311] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:45,311] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程副本
+[2023-08-31 10:37:45,311] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:45,311] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/copyprojectnode
+[2023-08-31 10:37:45,311] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:45,311] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': '20', 'path': 'C:\\自动化工程', 'name': '工程副本1693449465.3102', 'type': 1, 'rawProjectNodeID': '19', 'copyType': 0}
+[2023-08-31 10:37:45,311] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:45,345] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:45,345] logger_util.py->write_log line:61 [INFO] 实际结果：24
+[2023-08-31 10:37:45,345] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:45,345] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:45,350] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:45,350] logger_util.py->write_log line:61 [INFO] 接口名称：查询
+[2023-08-31 10:37:45,350] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-31 10:37:45,350] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/tree?rootId=&isOrderByDesc=false&orderFieldName=name&keyWord=副本
+[2023-08-31 10:37:45,350] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:45,350] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:45,386] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:45,386] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 24, 'parentId': 20, 'name': '工程副本1693449465.3102', 'path': 'C:\\自动化工程\\工程副本1693449465.3102.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:37:50.8333335'}], 'fileAvailableState': False, 'version': None, 'id': 20, 'parentId': None, 'name': '文件夹8231', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:37:41.3127622'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 10, 'parentId': 6, 'name': '工程副本1693448242.10357', 'path': 'C:\\自动化工程\\工程副本1693448242.10357.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:17:27.6486138'}], 'fileAvailableState': False, 'version': None, 'id': 6, 'parentId': None, 'name': '文件夹8604', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:17:18.5311715'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 17, 'parentId': 13, 'name': '工程副本1693449179.986246', 'path': 'C:\\自动化工程\\工程副本1693449179.986246.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:33:05.5073642'}], 'fileAvailableState': False, 'version': None, 'id': 13, 'parentId': None, 'name': '文件夹9264', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:32:55.9068017'}]
+[2023-08-31 10:37:45,387] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:45,387] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:45,391] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:45,391] logger_util.py->write_log line:61 [INFO] 接口名称：刷新列表
+[2023-08-31 10:37:45,391] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-31 10:37:45,391] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/tree?rootId=&isOrderByDesc=false&orderFieldName=name&keyWord=
+[2023-08-31 10:37:45,392] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:45,392] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:45,428] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:45,428] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [], 'fileAvailableState': False, 'version': None, 'id': 4, 'parentId': None, 'name': '文件夹6342', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:03:03.0416423'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 19, 'parentId': 20, 'name': '工程9007', 'path': 'C:\\自动化工程\\工程9007.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:37:48.9045428'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 24, 'parentId': 20, 'name': '工程副本1693449465.3102', 'path': 'C:\\自动化工程\\工程副本1693449465.3102.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:37:50.8333335'}], 'fileAvailableState': False, 'version': None, 'id': 20, 'parentId': None, 'name': '文件夹8231', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:37:41.3127622'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 10, 'parentId': 6, 'name': '工程副本1693448242.10357', 'path': 'C:\\自动化工程\\工程副本1693448242.10357.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:17:27.6486138'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 5, 'parentId': 6, 'name': '重命名3307', 'path': 'C:\\重命名3307.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:17:32.0959553'}], 'fileAvailableState': False, 'version': None, 'id': 6, 'parentId': None, 'name': '文件夹8604', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:17:18.5311715'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 17, 'parentId': 13, 'name': '工程副本1693449179.986246', 'path': 'C:\\自动化工程\\工程副本1693449179.986246.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:33:05.5073642'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 12, 'parentId': 13, 'name': '重命名6688', 'path': 'C:\\重命名6688.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:33:07.2329465'}], 'fileAvailableState': False, 'version': None, 'id': 13, 'parentId': None, 'name': '文件夹9264', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:32:55.9068017'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 1, 'parentId': None, 'name': '205beta1', 'path': 'D:\\工程\\2.0.5\\205beta1.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-25T15:36:22.5899613'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 2, 'parentId': None, 'name': '互联加报表-1', 'path': 'D:\\工程\\互联加报表-1.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-30T10:45:10.4867633'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.5', 'id': 3, 'parentId': None, 'name': '工程5706', 'path': 'C:\\自动化工程\\工程5706.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-31T10:03:02.9553116'}]
+[2023-08-31 10:37:45,428] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:45,429] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:45,437] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:45,438] logger_util.py->write_log line:61 [INFO] 接口名称：备份工程
+[2023-08-31 10:37:45,438] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-31 10:37:45,438] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/19/export
+[2023-08-31 10:37:45,438] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:45,438] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:46,541] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-31 10:37:46,541] logger_util.py->write_log line:61 [INFO] 实际结果：{'exception': {'when': '2023-08-31T10:37:52.035532+08:00', 'message': "Unknown database 'fb282abf052c4a0893949ba8f871d705_project'", 'type': 'MySqlException', 'callStack': [{'assembly': 'System.Private.CoreLib', 'fileName': '/_/src/MySqlConnector/Core/ServerSession.cs', 'method': 'MoveNext', 'lineNumber': 760}, {'assembly': 'System.Private.CoreLib', 'fileName': '/_/src/MySqlConnector/Core/ServerSession.cs', 'method': 'MoveNext', 'lineNumber': 550}, {'assembly': 'System.Private.CoreLib', 'fileName': '/_/src/MySqlConnector/Core/ConnectionPool.cs', 'method': 'MoveNext', 'lineNumber': 422}, {'assembly': 'System.Private.CoreLib', 'fileName': '/_/src/MySqlConnector/Core/ConnectionPool.cs', 'method': 'MoveNext', 'lineNumber': 126}, {'assembly': 'System.Private.CoreLib', 'fileName': '/_/src/MySqlConnector/Core/ConnectionPool.cs', 'method': 'MoveNext', 'lineNumber': 126}, {'assembly': 'System.Private.CoreLib', 'fileName': '/_/src/MySqlConnector/MySqlConnection.cs', 'method': 'MoveNext', 'lineNumber': 944}, {'assembly': 'System.Private.CoreLib', 'fileName': '/_/src/MySqlConnector/MySqlConnection.cs', 'method': 'MoveNext', 'lineNumber': 451}, {'assembly': 'System.Private.CoreLib', 'fileName': '/_/src/MySqlConnector/MySqlConnection.cs', 'method': 'Open', 'lineNumber': 369}, {'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\Units\\Data\\CMS.Data.Stressing\\DataProjectWrapperFileUnit.cs', 'method': 'MoveNext', 'lineNumber': 78}, {'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\BuildingBlocks\\Project\\CMS.Project\\ProjectPacker.cs', 'method': 'MoveNext', 'lineNumber': 37}, {'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\Plugins\\CMS.Plugin.Project\\Controllers\\V1\\WrapperController.cs', 'method': 'MoveNext', 'lineNumber': 60}, {'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\Framework\\CMS.Framework.AspNetCore\\Middlewares\\ExceptionMonitorMiddleware.cs', 'method': 'MoveNext', 'lineNumber': 36}], 'innerException': None}, 'code': 500, 'msg': "Unknown database 'fb282abf052c4a0893949ba8f871d705_project'"}
+[2023-08-31 10:37:46,542] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-31 10:37:46,542] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-31 10:37:46,542] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-31 10:37:46,543] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-31 10:37:46,652] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:46,652] logger_util.py->write_log line:61 [INFO] 接口名称：比对工程id
+[2023-08-31 10:37:46,652] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:46,652] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/19/checkprojectidmatch
+[2023-08-31 10:37:46,652] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:46,652] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:46,739] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'content': False}}]
+[2023-08-31 10:37:46,740] logger_util.py->write_log line:61 [INFO] 实际结果：False
+[2023-08-31 10:37:46,740] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:46,740] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:46,746] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:46,746] logger_util.py->write_log line:61 [INFO] 接口名称：数据恢复
+[2023-08-31 10:37:46,746] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:46,746] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/19/import
+[2023-08-31 10:37:46,746] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:46,746] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:46,786] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-31 10:37:46,787] logger_util.py->write_log line:61 [INFO] 实际结果：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[a9b66e92-6f83-44e3-ba02-ccbdb0f149c1];
+CREATE TABLE [a9b66e92-6f83-44e3-ba02-c' at line 2
+[2023-08-31 10:37:46,787] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-31 10:37:46,787] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-31 10:37:46,787] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-31 10:37:46,787] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 255, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-31 10:37:46,816] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:46,816] logger_util.py->write_log line:61 [INFO] 接口名称：检查本地工程id是否冲突
+[2023-08-31 10:37:46,817] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:46,817] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/checklocalprojectfileidconflict
+[2023-08-31 10:37:46,817] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:46,817] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\RC8.cmsproj'}
+[2023-08-31 10:37:46,817] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:46,828] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-31 10:37:46,828] logger_util.py->write_log line:61 [INFO] 实际结果：{'exception': {'when': '2023-08-31T10:37:52.3203198+08:00', 'message': '无效工程文件:工程文件不存在:E:\\Project_python\\api_cms\\data\\EngineeringManagement\\RC8.cmsproj', 'type': 'Exception', 'callStack': [{'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\Plugins\\CMS.Plugin.Project\\Services\\ProjectManagerService.cs', 'method': 'MoveNext', 'lineNumber': 66}, {'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\Plugins\\CMS.Plugin.Project\\Controllers\\V1\\NodeController.cs', 'method': 'MoveNext', 'lineNumber': 86}, {'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\Framework\\CMS.Framework.AspNetCore\\Middlewares\\ExceptionMonitorMiddleware.cs', 'method': 'MoveNext', 'lineNumber': 36}], 'innerException': None}, 'code': 500, 'msg': '无效工程文件:工程文件不存在:E:\\Project_python\\api_cms\\data\\EngineeringManagement\\RC8.cmsproj'}
+[2023-08-31 10:37:46,828] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-31 10:37:46,828] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-31 10:37:46,829] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-31 10:37:46,829] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-31 10:37:46,859] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:46,859] logger_util.py->write_log line:61 [INFO] 接口名称：导入本地工程文件
+[2023-08-31 10:37:46,859] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:46,859] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/importlocalproject
+[2023-08-31 10:37:46,859] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:46,859] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\RC8.cmsproj', 'importConflictHandleType': 1}
+[2023-08-31 10:37:46,859] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:46,882] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 232, in analysis_yaml
+    extract_data = {key: return_data[value]}
+KeyError: 'id'
+
+[2023-08-31 10:37:46,903] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'import_project_id'
+
+[2023-08-31 10:37:46,903] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'import_project_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'import_project_id'
+
+
+[2023-08-31 10:37:46,937] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:46,937] logger_util.py->write_log line:61 [INFO] 接口名称：检查远程工程id是否冲突
+[2023-08-31 10:37:46,938] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:46,938] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/checkremoteprojectfileidconflict
+[2023-08-31 10:37:46,938] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:46,938] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:46,994] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'result': False}}]
+[2023-08-31 10:37:46,994] logger_util.py->write_log line:61 [INFO] 实际结果：{'result': False, 'conflictProjectID': -1}
+[2023-08-31 10:37:46,994] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:46,994] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:46,999] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:46,999] logger_util.py->write_log line:61 [INFO] 接口名称：远程导入工程文件
+[2023-08-31 10:37:46,999] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:47,000] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/importremoteproject
+[2023-08-31 10:37:47,000] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:47,000] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:47,021] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-31 10:37:47,021] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 25, 'parentId': None, 'name': 'RC8-2', 'path': 'D:\\软件\\2.0.5beta1\\CMS Editor\\host\\data\\projects\\RC8-2.cmsproj', 'type': 1, 'createTime': '2023-08-31T10:37:52.5092562+08:00', 'updateTime': '2023-08-31T10:37:52.5092566+08:00'}
+[2023-08-31 10:37:47,021] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:47,021] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:47,031] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:47,032] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-31 10:37:47,032] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-31 10:37:47,032] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/deletenodes
+[2023-08-31 10:37:47,032] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:47,032] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '25', 'isDeleteFile': False}
+[2023-08-31 10:37:47,032] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:47,044] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:47,044] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-31 10:37:47,045] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:47,045] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:47,051] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:47,051] logger_util.py->write_log line:61 [INFO] 接口名称：更新节点-重命名工程
+[2023-08-31 10:37:47,051] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-31 10:37:47,051] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/updatenode
+[2023-08-31 10:37:47,051] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:47,051] logger_util.py->write_log line:61 [INFO] 请求参数：{'ID': '19', 'Name': '重命名9796', 'Path': 'C:\\自动化工程', 'Type': 1}
+[2023-08-31 10:37:47,051] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:47,075] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}, {'contains': 'name'}]
+[2023-08-31 10:37:47,075] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 19, 'parentId': 20, 'name': '重命名9796', 'path': 'C:\\重命名9796.cmsproj', 'type': 1, 'createTime': '2023-08-31T10:37:41.283386', 'updateTime': '2023-08-31T10:37:52.5675291+08:00'}
+[2023-08-31 10:37:47,075] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:47,075] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:47,080] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:47,080] logger_util.py->write_log line:61 [INFO] 接口名称：获取当前软件版本
+[2023-08-31 10:37:47,080] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-31 10:37:47,080] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/getcurrentversion
+[2023-08-31 10:37:47,080] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:47,081] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:47,084] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:47,084] logger_util.py->write_log line:61 [INFO] 实际结果：2.0.5
+[2023-08-31 10:37:47,084] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:47,084] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-31 10:37:47,089] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:47,089] logger_util.py->write_log line:61 [INFO] 接口名称：检查本地工程id是否冲突
+[2023-08-31 10:37:47,089] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:47,089] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/checklocalprojectfileidconflict
+[2023-08-31 10:37:47,089] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:47,089] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj'}
+[2023-08-31 10:37:47,089] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:47,106] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-31 10:37:47,106] logger_util.py->write_log line:61 [INFO] 实际结果：{'exception': {'when': '2023-08-31T10:37:52.5963462+08:00', 'message': '无效工程文件:工程文件不存在:E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj', 'type': 'Exception', 'callStack': [{'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\Plugins\\CMS.Plugin.Project\\Services\\ProjectManagerService.cs', 'method': 'MoveNext', 'lineNumber': 66}, {'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\Plugins\\CMS.Plugin.Project\\Controllers\\V1\\NodeController.cs', 'method': 'MoveNext', 'lineNumber': 86}, {'assembly': 'System.Private.CoreLib', 'fileName': 'C:\\Users\\SYC\\Code\\cms\\src\\Framework\\CMS.Framework.AspNetCore\\Middlewares\\ExceptionMonitorMiddleware.cs', 'method': 'MoveNext', 'lineNumber': 36}], 'innerException': None}, 'code': 500, 'msg': '无效工程文件:工程文件不存在:E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj'}
+[2023-08-31 10:37:47,107] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-31 10:37:47,107] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-31 10:37:47,107] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-31 10:37:47,107] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-31 10:37:47,136] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:47,136] logger_util.py->write_log line:61 [INFO] 接口名称：导入本地低版本工程文件
+[2023-08-31 10:37:47,136] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:47,136] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/project/node/importlocalproject
+[2023-08-31 10:37:47,136] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-31 10:37:47,136] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj', 'importConflictHandleType': 1}
+[2023-08-31 10:37:47,136] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:47,159] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 232, in analysis_yaml
+    extract_data = {key: return_data[value]}
+KeyError: 'id'
+
+[2023-08-31 10:37:47,180] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'import_low_project_id'
+
+[2023-08-31 10:37:47,180] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'import_low_project_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'import_low_project_id'
+
+
+[2023-08-31 10:37:47,212] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'import_low_project_id'
+
+[2023-08-31 10:37:47,212] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'import_low_project_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+KeyError: 'import_low_project_id'
+
+
+[2023-08-31 10:37:47,247] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-31 10:37:47,247] logger_util.py->write_log line:61 [INFO] 接口名称：获取token
+[2023-08-31 10:37:47,247] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-31 10:37:47,247] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.1.64:18000/api/v1/auth/requesttoken
+[2023-08-31 10:37:47,247] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'fb282abf052c4a0893949ba8f871d705'}
+[2023-08-31 10:37:47,247] logger_util.py->write_log line:61 [INFO] 请求参数：
+[2023-08-31 10:37:47,247] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-31 10:37:47,253] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-31 10:37:47,253] logger_util.py->write_log line:61 [INFO] 实际结果：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5NDA1NDI3MiwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.oIvzh2YJp0pLTkST80C62LKwYq51mdEZn7EhNroXnTw
+[2023-08-31 10:37:47,253] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-31 10:37:47,253] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

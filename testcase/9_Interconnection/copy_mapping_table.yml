@@ -1,0 +1,15 @@
+-  name: 映射表创建副本
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(maptable_id)}/copy
+      method: post
+      json:
+        {
+           "name": "副本${get_random_number(1,999)}"
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      copy_maptable_id: id
+   validate:
+      -  equals: {status_code: 200}

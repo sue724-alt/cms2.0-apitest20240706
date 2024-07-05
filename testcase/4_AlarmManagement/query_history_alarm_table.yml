@@ -1,0 +1,34 @@
+-  name: 下发A1=false
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/setvalues
+      method: post
+      json:
+         A1: "false"
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - equals:
+            allSuccess: true
+
+-  name: 查询历史报警表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/original
+      method: post
+      json:
+        {
+          "dataSetId": "e342f0fa-977d-459a-97b2-f4fc4b36c7e4",
+          "tableName": "报警管理-历史表",
+          "limit": 500
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+     - equals: { status_code: 200 }
+     - equals: { 状态: "已恢复" }
+     - equals: { 记录值: "A1=True" }

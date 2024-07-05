@@ -1,0 +1,10 @@
+-  name: 比对工程id
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/${get_extract_data(project_id)}/checkprojectidmatch
+      method: post
+      files:
+         formFile: ${get_project_path()}\data\EngineeringManagement\205beta2备份.cmsbak
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {content: false}

@@ -1,0 +1,21 @@
+-  name: 关闭语言状态
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/multiplelanguage/languagelist/${get_extract_data(language_id)}/switch
+      method: put
+      json: ddt{{false}}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 开启语言状态
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/multiplelanguage/languagelist/${get_extract_data(language_id)}/switch
+      method: put
+      json: ddt{{true}}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

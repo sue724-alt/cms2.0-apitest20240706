@@ -1,0 +1,13 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：通道异常校验-连接超时为空
+INFO     log:logger_util.py:61 接口方式：post
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel
+INFO     log:logger_util.py:61 请求头：{'X-Project': '0b548e0c2d13469dbb6aca2b3ff1c6a5'}
+INFO     log:logger_util.py:61 请求参数：{'id': 5, 'parentId': None, 'sort': 2, 'name': '通道8', 'description': '', 'type': 1, 'typeTag': 'TCP', 'config': {'suppiler': 'ModBus', 'model': 'Modbus_TCP', 'protocol': 'Modbus_TCP', 'parameters': {'ServerName': '192.168.2.98', 'DeviceID': '1', 'Port': '502', 'HeadAddress': '1', 'ConnectTimeOut': '', 'ResponseTimeout': '1000', 'Int32ByteOrder': '2143', 'Int64ByteOrder': '2143', 'UInt32ByteOrder': '2143', 'UInt64ByteOrder': '2143', 'F32ByteOrder': '3412', 'F64ByteOrder': '3412', 'StrByteOrder': '2143', 'EnableIndependentLink': '禁用', 'EnablePduDiagnosis': '启用', 'PduLength': '220', 'ChannelStatus': '启用', 'PacketCommitStatus': '禁用', 'isStaticSimulation': '禁用'}}, 'enable': True, 'createTime': '2024-01-02T17:58:57.3894443+08:00', 'updateTime': '2024-01-02T17:58:57.3894445+08:00'}
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:61 预期结果：[{'equals': {'status_code': 400}}, {'contains': '通道配置错误：驱动配置中连接超时不能为空'}]
+INFO     log:logger_util.py:61 实际结果：通道配置错误：驱动配置中连接超时不能为空
+INFO     log:logger_util.py:61 接口请求成功！
+INFO     log:logger_util.py:61 
+-------------接口请求结束-----------

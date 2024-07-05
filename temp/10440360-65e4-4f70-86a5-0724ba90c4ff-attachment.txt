@@ -1,0 +1,42 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：查询历史数据(定时触发)
+INFO     log:logger_util.py:61 接口方式：post
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/data/aggregate
+INFO     log:logger_util.py:61 请求头：{'X-Project': '0b548e0c2d13469dbb6aca2b3ff1c6a5'}
+INFO     log:logger_util.py:61 请求参数：{'dataSetId': 'history', 'dimensions': [{'aliasName': '', 'fieldName': '0', 'sort': 2, 'timeFormat': 'yyyy-MM-dd HH:mm:ss'}], 'measures': [{'aliasName': '', 'fieldName': '19', 'mode': 4, 'dataFormat': 0, 'sort': 0, 'mergeType': 0}, {'aliasName': '', 'fieldName': '20', 'mode': 4, 'dataFormat': 0, 'sort': 0, 'mergeType': 0}, {'aliasName': '', 'fieldName': '28', 'mode': 4, 'dataFormat': 0, 'sort': 0, 'mergeType': 0}, {'aliasName': '', 'fieldName': '30', 'mode': 4, 'dataFormat': 0, 'sort': 0, 'mergeType': 0}, {'aliasName': '', 'fieldName': '32', 'mode': 4, 'dataFormat': 0, 'sort': 0, 'mergeType': 0}, {'aliasName': '', 'fieldName': '33', 'mode': 4, 'dataFormat': 0, 'sort': 0, 'mergeType': 0}, {'aliasName': '', 'fieldName': '41', 'mode': 4, 'dataFormat': 0, 'sort': 0, 'mergeType': 0}, {'aliasName': '', 'fieldName': '47', 'mode': 4, 'dataFormat': 0, 'sort': 0, 'mergeType': 0}], 'filters': [], 'total': False, 'pageSize': None, 'pageIndex': None, 'limit': 10000, 'noAggregation': False, 'noDimensions': False, 'whereJson': ''}
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:65 断言失败：返回结果中不存在：A1(4)
+INFO     log:logger_util.py:61 实际结果：{'values': [], 'mapping': [{'id': '19', 'name': 'A1(4)', 'aliasName': '', 'fieldName': 'A1', 'method': 4}, {'id': '20', 'name': 'A2(4)', 'aliasName': '', 'fieldName': 'A2', 'method': 4}, {'id': '28', 'name': 'A10(4)', 'aliasName': '', 'fieldName': 'A10', 'method': 4}, {'id': '30', 'name': 'A12(4)', 'aliasName': '', 'fieldName': 'A12', 'method': 4}, {'id': '32', 'name': 'aa1(4)', 'aliasName': '', 'fieldName': 'aa1', 'method': 4}, {'id': '33', 'name': 'aa2(4)', 'aliasName': '', 'fieldName': 'aa2', 'method': 4}, {'id': '41', 'name': 'aa10(4)', 'aliasName': '', 'fieldName': 'aa10', 'method': 4}, {'id': '47', 'name': 'aa16(4)', 'aliasName': '', 'fieldName': 'aa16', 'method': 4}, {'id': '_time', 'name': '_time', 'aliasName': '', 'fieldName': '_time', 'method': None}], 'queryTranslateResult': [{'queryString': '\r\na0 = from(bucket: "0b548e0c2d13469dbb6aca2b3ff1c6a5")\r\n  |> range(start: 0, stop: now())\r\n  |> filter(fn: (r) => r["_measurement"] == "variables" and r["_field"]=="lval" and r["variable"] == "19")\r\n\r\n  |> group(columns: ["_measurement"])\r\n\n  |> limit(n: 10000)\n  |> set(key: "_field", value: "val")\n  |> toString()\r\n\r\na1 = from(bucket: "0b548e0c2d13469dbb6aca2b3ff1c6a5")\r\n  |> range(start: 0, stop: now())\r\n  |> filter(fn: (r) => r["_measurement"] == "variables" and r["_field"]=="lval" and r["variable"] == "20")\r\n\r\n  |> group(columns: ["_measurement"])\r\n\n  |> limit(n: 10000)\n  |> set(key: "_field", value: "val")\n  |> toString()\r\n\r\na2 = from(bucket: "0b548e0c2d13469dbb6aca2b3ff1c6a5")\r\n  |> range(start: 0, stop: now())\r\n  |> filter(fn: (r) => r["_measurement"] == "variables" and r["_field"]=="fval" and r["variable"] == "28")\r\n\r\n  |> group(columns: ["_measurement"])\r\n\n  |> limit(n: 10000)\n  |> set(key: "_field", value: "val")\n  |> toString()\r\n\r\na3 = from(bucket: "0b548e0c2d13469dbb6aca2b3ff1c6a5")\r\n  |> range(start: 0, stop: now())\r\n  |> filter(fn: (r) => r["_measurement"] == "variables" and r["_field"]=="sval" and r["variable"] == "30")\r\n\r\n  |> group(columns: ["_measurement"])\r\n\n  |> limit(n: 10000)\n  |> set(key: "_field", value: "val")\n  |> toString()\r\n\r\na4 = from(bucket: "0b548e0c2d13469dbb6aca2b3ff1c6a5")\r\n  |> range(start: 0, stop: now())\r\n  |> filter(fn: (r) => r["_measurement"] == "variables" and r["_field"]=="lval" and r["variable"] == "32")\r\n\r\n  |> group(columns: ["_measurement"])\r\n\n  |> limit(n: 10000)\n  |> set(key: "_field", value: "val")\n  |> toString()\r\n\r\na5 = from(bucket: "0b548e0c2d13469dbb6aca2b3ff1c6a5")\r\n  |> range(start: 0, stop: now())\r\n  |> filter(fn: (r) => r["_measurement"] == "variables" and r["_field"]=="lval" and r["variable"] == "33")\r\n\r\n  |> group(columns: ["_measurement"])\r\n\n  |> limit(n: 10000)\n  |> set(key: "_field", value: "val")\n  |> toString()\r\n\r\na6 = from(bucket: "0b548e0c2d13469dbb6aca2b3ff1c6a5")\r\n  |> range(start: 0, stop: now())\r\n  |> filter(fn: (r) => r["_measurement"] == "variables" and r["_field"]=="fval" and r["variable"] == "41")\r\n\r\n  |> group(columns: ["_measurement"])\r\n\n  |> limit(n: 10000)\n  |> set(key: "_field", value: "val")\n  |> toString()\r\n\r\na7 = from(bucket: "0b548e0c2d13469dbb6aca2b3ff1c6a5")\r\n  |> range(start: 0, stop: now())\r\n  |> filter(fn: (r) => r["_measurement"] == "variables" and r["_field"]=="tval" and r["variable"] == "47")\r\n\r\n  |> group(columns: ["_measurement"])\r\n\n  |> limit(n: 10000)\n  |> set(key: "_field", value: "val")\n  |> toString()\r\n\r\nall = union(tables: [a0,a1,a2,a3,a4,a5,a6,a7])\r\n\r\n\r\nresult = all\r\n  |> pivot(rowKey:["_time"], columnKey: ["variable"], valueColumn: "_value")\r\n\r\n  |> sort(columns: ["_time"],desc:true)\r\n  |> rename(fn: (column) => if column=="19" then "M0" else if column=="20" then "M1" else if column=="28" then "M2" else if column=="30" then "M3" else if column=="32" then "M4" else if column=="33" then "M5" else if column=="41" then "M6" else if column=="47" then "M7" else column)\r\nresult\r\n', 'args': {}}], 'consuming': {'qcs': [120.4935]}, 'total': None}
+INFO     log:logger_util.py:61 接口请求失败！
+INFO     log:logger_util.py:61 -------------接口请求结束-----------
+
+INFO     log:logger_util.py:65 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：A1(4)
+
+INFO     log:logger_util.py:65 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：A1(4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 384, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：A1(4)

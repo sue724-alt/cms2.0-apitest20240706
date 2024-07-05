@@ -1,0 +1,84 @@
+[2023-08-17 13:45:38,354] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 13:45:38,355] logger_util.py->write_log line:61 [INFO] 接口名称：检查本地工程id是否冲突
+[2023-08-17 13:45:38,355] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 13:45:38,355] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/importlocalproject
+[2023-08-17 13:45:38,355] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 13:45:38,355] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\rc9回归组件.cmsproj'}
+[2023-08-17 13:45:38,356] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 13:45:38,435] logger_util.py->error_log line:65 [INFO] 断言失败：返回结果中不存在：result
+[2023-08-17 13:45:38,435] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-17 13:45:38,436] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 13:45:38,436] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 359, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：result
+
+[2023-08-17 13:45:38,436] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 359, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：result
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 231, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 400, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 359, in validate_result
+    error_log("断言失败：返回结果中不存在："+assert_key)
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败：返回结果中不存在：result
+
+
+[2023-08-17 13:45:38,547] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 13:45:38,547] logger_util.py->write_log line:61 [INFO] 接口名称：导入本地工程文件
+[2023-08-17 13:45:38,547] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 13:45:38,547] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/importlocalproject
+[2023-08-17 13:45:38,547] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 13:45:38,547] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\rc9回归组件.cmsproj', 'importConflictHandleType': 1}
+[2023-08-17 13:45:38,548] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 13:45:38,556] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-17 13:45:38,556] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-17 13:45:38,557] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 13:45:38,557] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 346, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-17 13:45:38,557] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 346, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 231, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 400, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 346, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+

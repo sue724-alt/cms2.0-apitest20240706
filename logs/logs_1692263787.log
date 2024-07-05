@@ -1,0 +1,376 @@
+[2023-08-17 17:16:27,061] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:27,061] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-17 17:16:27,061] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:27,061] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 17:16:27,061] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:27,062] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程8034', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-17 17:16:27,062] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:27,371] logger_util.py->write_log line:61 [INFO] 实际结果：353
+[2023-08-17 17:16:27,371] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:27,371] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:27,371] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:27,377] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:27,377] logger_util.py->write_log line:61 [INFO] 接口名称：创建文件夹
+[2023-08-17 17:16:27,377] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:27,377] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 17:16:27,377] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:27,377] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '文件夹6657', 'type': 0}
+[2023-08-17 17:16:27,377] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:27,415] logger_util.py->write_log line:61 [INFO] 实际结果：354
+[2023-08-17 17:16:27,415] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:27,415] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:27,415] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:27,432] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:27,432] logger_util.py->write_log line:61 [INFO] 接口名称：获取工程信息
+[2023-08-17 17:16:27,432] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 17:16:27,432] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/353/info
+[2023-08-17 17:16:27,432] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:27,432] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:28,754] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 353, 'name': '工程8034', 'identifier': '5be265880afa4872b7fa62e8f54bbdb0', 'path': 'C:\\自动化工程\\工程8034.cmsproj', 'createTime': '2023-08-17T17:16:27.3566976', 'updateTime': '2023-08-17T17:16:27.3566976'}
+[2023-08-17 17:16:28,754] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-17 17:16:28,754] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:28,754] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:28,758] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:28,759] logger_util.py->write_log line:61 [INFO] 接口名称：获取工程树节点
+[2023-08-17 17:16:28,759] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 17:16:28,759] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/tree
+[2023-08-17 17:16:28,759] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:28,759] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:28,775] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 349, 'parentId': 345, 'name': '工程副本1692263561.579318', 'path': 'C:\\自动化工程\\工程副本1692263561.579318.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:12:41.5938821'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 344, 'parentId': 345, 'name': '重命名1851', 'path': 'C:\\重命名1851.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:12:43.2943163'}], 'fileAvailableState': False, 'version': None, 'id': 345, 'parentId': None, 'name': '文件夹4850', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:12:37.967016'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 340, 'parentId': 336, 'name': '工程副本1692263460.445435', 'path': 'C:\\自动化工程\\工程副本1692263460.445435.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:11:00.4972186'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 335, 'parentId': 336, 'name': '重命名3284', 'path': 'C:\\重命名3284.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:11:02.3960331'}], 'fileAvailableState': False, 'version': None, 'id': 336, 'parentId': None, 'name': '文件夹5511', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:10:57.1670267'}, {'child': [], 'fileAvailableState': False, 'version': None, 'id': 354, 'parentId': None, 'name': '文件夹6657', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:16:27.380457'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 353, 'parentId': None, 'name': '工程8034', 'path': 'C:\\自动化工程\\工程8034.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:16:27.3289612'}]
+[2023-08-17 17:16:28,775] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:28,775] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:28,775] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:28,785] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:28,785] logger_util.py->write_log line:61 [INFO] 接口名称：移动工程节点
+[2023-08-17 17:16:28,785] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 17:16:28,785] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/moveprojectnodes
+[2023-08-17 17:16:28,785] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:28,785] logger_util.py->write_log line:61 [INFO] 请求参数：{'destNodeID': '354', 'selectNodeIDs': '353'}
+[2023-08-17 17:16:28,785] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:28,828] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 353, 'parentId': 354, 'name': '工程8034', 'path': 'C:\\自动化工程\\工程8034.cmsproj', 'type': 1, 'createTime': '2023-08-17T17:16:27.3289607', 'updateTime': '2023-08-17T17:16:28.7891893+08:00'}]
+[2023-08-17 17:16:28,829] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:28,829] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:28,829] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:28,847] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:28,848] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-17 17:16:28,849] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:28,849] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 17:16:28,849] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:28,850] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '删除工程保留路径下的文件1692263788.847067', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-17 17:16:28,850] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:29,155] logger_util.py->write_log line:61 [INFO] 实际结果：355
+[2023-08-17 17:16:29,155] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:29,155] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:29,155] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:29,164] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:29,164] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-17 17:16:29,164] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 17:16:29,164] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 17:16:29,164] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:29,164] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '355', 'isDeleteFile': False}
+[2023-08-17 17:16:29,164] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:29,223] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 17:16:29,223] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:29,223] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:29,223] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:29,228] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:29,228] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-17 17:16:29,228] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:29,228] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 17:16:29,228] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:29,228] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程1496', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-17 17:16:29,228] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:29,523] logger_util.py->write_log line:61 [INFO] 实际结果：356
+[2023-08-17 17:16:29,523] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:29,523] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:29,523] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:29,531] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:29,531] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-17 17:16:29,531] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 17:16:29,532] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 17:16:29,532] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:29,532] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '356', 'isDeleteFile': True}
+[2023-08-17 17:16:29,532] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:29,581] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 17:16:29,581] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:29,582] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:29,582] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:29,586] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:29,587] logger_util.py->write_log line:61 [INFO] 接口名称：创建文件夹
+[2023-08-17 17:16:29,587] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:29,587] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 17:16:29,587] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:29,587] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '文件夹7678', 'type': 0}
+[2023-08-17 17:16:29,587] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:29,623] logger_util.py->write_log line:61 [INFO] 实际结果：357
+[2023-08-17 17:16:29,623] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:29,624] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:29,624] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:29,634] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:29,634] logger_util.py->write_log line:61 [INFO] 接口名称：删除文件夹
+[2023-08-17 17:16:29,634] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 17:16:29,634] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 17:16:29,634] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:29,635] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '357', 'isDeleteFile': True}
+[2023-08-17 17:16:29,635] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:29,673] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 17:16:29,673] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:29,673] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:29,673] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:29,679] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:29,679] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程副本
+[2023-08-17 17:16:29,679] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:29,679] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/copyprojectnode
+[2023-08-17 17:16:29,679] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:29,679] logger_util.py->write_log line:61 [INFO] 请求参数：{'parentId': '354', 'path': 'C:\\自动化工程', 'name': '工程副本1692263789.678611', 'type': 1, 'rawProjectNodeID': '353', 'copyType': 0}
+[2023-08-17 17:16:29,680] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:29,740] logger_util.py->write_log line:61 [INFO] 实际结果：358
+[2023-08-17 17:16:29,740] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:29,740] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:29,740] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:29,745] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:29,745] logger_util.py->write_log line:61 [INFO] 接口名称：查询
+[2023-08-17 17:16:29,745] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 17:16:29,745] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/tree?rootId=&isOrderByDesc=false&orderFieldName=name&keyWord=副本
+[2023-08-17 17:16:29,745] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:29,745] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:29,760] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 349, 'parentId': 345, 'name': '工程副本1692263561.579318', 'path': 'C:\\自动化工程\\工程副本1692263561.579318.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:12:41.5938821'}], 'fileAvailableState': False, 'version': None, 'id': 345, 'parentId': None, 'name': '文件夹4850', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:12:37.967016'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 340, 'parentId': 336, 'name': '工程副本1692263460.445435', 'path': 'C:\\自动化工程\\工程副本1692263460.445435.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:11:00.4972186'}], 'fileAvailableState': False, 'version': None, 'id': 336, 'parentId': None, 'name': '文件夹5511', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:10:57.1670267'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 358, 'parentId': 354, 'name': '工程副本1692263789.678611', 'path': 'C:\\自动化工程\\工程副本1692263789.678611.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:16:29.6937524'}], 'fileAvailableState': False, 'version': None, 'id': 354, 'parentId': None, 'name': '文件夹6657', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:16:27.380457'}]
+[2023-08-17 17:16:29,760] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:29,760] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:29,760] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:29,764] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:29,764] logger_util.py->write_log line:61 [INFO] 接口名称：刷新列表
+[2023-08-17 17:16:29,764] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 17:16:29,764] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/tree?rootId=&isOrderByDesc=false&orderFieldName=name&keyWord=
+[2023-08-17 17:16:29,764] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:29,765] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:29,780] logger_util.py->write_log line:61 [INFO] 实际结果：[{'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 349, 'parentId': 345, 'name': '工程副本1692263561.579318', 'path': 'C:\\自动化工程\\工程副本1692263561.579318.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:12:41.5938821'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 344, 'parentId': 345, 'name': '重命名1851', 'path': 'C:\\重命名1851.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:12:43.2943163'}], 'fileAvailableState': False, 'version': None, 'id': 345, 'parentId': None, 'name': '文件夹4850', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:12:37.967016'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 340, 'parentId': 336, 'name': '工程副本1692263460.445435', 'path': 'C:\\自动化工程\\工程副本1692263460.445435.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:11:00.4972186'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 335, 'parentId': 336, 'name': '重命名3284', 'path': 'C:\\重命名3284.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:11:02.3960331'}], 'fileAvailableState': False, 'version': None, 'id': 336, 'parentId': None, 'name': '文件夹5511', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:10:57.1670267'}, {'child': [{'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 353, 'parentId': 354, 'name': '工程8034', 'path': 'C:\\自动化工程\\工程8034.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:16:28.7891893'}, {'child': [], 'fileAvailableState': True, 'version': '2.0.3', 'id': 358, 'parentId': 354, 'name': '工程副本1692263789.678611', 'path': 'C:\\自动化工程\\工程副本1692263789.678611.cmsproj', 'type': 1, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:16:29.6937524'}], 'fileAvailableState': False, 'version': None, 'id': 354, 'parentId': None, 'name': '文件夹6657', 'path': None, 'type': 0, 'createTime': '0001-01-01T00:00:00', 'updateTime': '2023-08-17T17:16:27.380457'}]
+[2023-08-17 17:16:29,780] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:29,780] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:29,780] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:29,789] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:29,789] logger_util.py->write_log line:61 [INFO] 接口名称：备份工程
+[2023-08-17 17:16:29,789] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 17:16:29,790] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/353/export
+[2023-08-17 17:16:29,790] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:29,790] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:30,878] logger_util.py->write_log line:61 [INFO] 实际结果：PK   �We�iM&   �    工程8034.cmsproj��}���}pb�%�����N��DqO^m$� �S��㮸��EZq�$�eH�\X\�@Y�ǭ���.7�����3n�9O�8M�d\�٭kg<S�x��Ùɸn�SO$]&Mg�N�4q;} � ��:����r��������� t�ܲ��BE��ر�12�x��w8����Z!/y}����Wexog�q�{�(y3껧o����7����;�=�����>3z�������_��9R�dJ��w�S���A�!���u�j��?�ה�6�]�%N,��+J�ZU���1�3{���}��	�ϖyS,(��{za=�ʤ����r��G��=~"P淄�?���񯮑���am�|f=�����W��$gחVR��g��6��^R8E�*��A(筒=sG�]��}vˬϓc���ٞ�������7��+TJyA�|�%l�m/��ﳀ�),�Т}�IU^�
+�U|3�$\J?�K���zW�\��Ԝ$�E��/��\tj�]6��co�nOL���Y��y�	ŒX.rz��<�iL�I����hZ�f��ף����2k�vƪ�4zo=2��q����v�I,���9e߮�<���\�^Ml(�����Ffmi��y%��i5�q:��o�)7��}[���S�k��ݚ�$\�	���A+�z��X+�=���r�_걎�*弨���M�Z�\^Px�4H�r�B�JwFU��n:�n����(�����GM�=�.W���V��@���X�����JN$��Wwd�:G���G��w���	}1<���Xf�:�9ys����A�m4_,JBQZm��3wLg�z�{�]l%��k�Y�Nk���-j���9J�^���B���X�#�Ά���1�g].���>� �j��ԡ���9J��n�u�'NP��Va���B6�6�]=���kg�y�B�n�;����Y�+�m�~kȧ�C$�Rj�R��7h��+�!"Qv��M'��sWm�T�>X��ӯCw���+�b�0p���N��	}��z�L��5���&_Ϋ#=3��3{\4�p����[����׶��Gs���(�樔��$���#G�o����[�$�op�P�Z�en�Y�ET�J��S�kd}�>�!m�4�/����ziY��9F/��γY�I�_���דȯ����������}�����������{�y���]�����$      �#>�}!&f�L��0�P�c���Yr��X3%FF��#�f�X�e�H2��LR�=��l��e�	��L#�T+3�dc�Xآd��y��9B^�)_�2d&)����,ð�D8ҝ�Y��q�y=s8̐?���̗��ʱf��;0�<���BL2�0z۱A)w�1��������i�v����q�sA��2a6�D#zY�����s��P(ΐrM���,kO+�d#�P$j���ǝ�\�i�HL������H;�R��1W���2犰	c���kB;�����}������})ߌo��S�kޗ��ޔ�}$      �y>�<G����ke�yM�����j�����u��V��W&��z];��u���j0���e{�`��jq��}��@��F�j��]m�[^��J��"�4�[]y̹0��*����c�[�       � ���.ϧ���%���[��o2       ^�5�wP�#ԑ�pصP��N-W�byC�{���;����>�ջ/|��+��x@�U�BF�z�q�O:�xP��3�q��b�֨>���\F�ߐa�;�>�4����w�}�w�|��w~�S�^���?|���|�_��yv�'��]n�6�C�6�=��uϪs&�.Sɩ�䈾L��L��Ɉ[�E����_����sn����6�/�Hcn�s������S�<��0,P���g����'�       oO����!�Y���p���_���_��̷�������[�/�n���6�       �ppL(p��3:���m���T��-�Z�E�;�W�Z�,��)��QJ拲�}.�1����Qgp,W!S���r�� ���<�5A�?��;��&
+k��������      ���      �w���o��W|����	ϟ{>�y|�S���&�5���1�    ����V6�Q%$�xD��B,	��DB�\8,���M�Ñ�"��
+&����H4���#���pl!���{񵻟����x[�21!��E�����I��l��$�B(�gC��|,�N����D8�����
+.,̟�g�Hr�m��|�CJ=���Of��f�9>Iĳ�xX�2q��岑|��Ի/~���}��wn��4E
+>��G�h�P��"��'��(*�P�e
+� �����������lV:�%�|4ʒ�"�x!���d��l!�c򃗭Vz��D��I���
+�
+�H8�K���XL(�O��֜#��[e�b�p,�Cy>���擱|T���<��ҭ�ǚe'BQ6Nfsl2�ƲI*�|"T��,(6L����n��	�P!'�Q�u��&H$�I^���Ձ�]�ҝ�m<t���j�'
+�h����H�)$�8i�P�@��e�����+���{L�r�Y6Y���(Y	�p$K&s!��'�,�j3� H����y�F�.�!eϐ��C�˱9&��#6�e�B�g�d��>Y6��������K�f�CL"I���X���i!�H�f/�ùxn�-�4�,�-ds��s�p<ac���(i!6�Dv%�q_��-�2dk��IT��x$����b��!!����[d�lQ}�;|����3�-�}3����O�oz_�~ԛ��=�H�     �m�q�J߫c>-S��]^5S�kW-S��PSj�~�&�L�.Mh��\�W3��\3�f�w�ŭf�wťf�w%dT����-S��N5S��#3Ε�����޷:^      �A���      �U��g/       x�vnP�<�`dֹ1>ȳ ����)�      �������ơ�����b,�̳�P0�ƒ�?&��`�4�-��7���W�r�iZ�2`�ڏ�a�k?�^V��O�~� ?       ��~�?�E|�      `����       ���      ?|�      0�<c�sL�~����x���/Ƴ���q��#���O�`��4��ْ���P�A�;���өLڟ���7��[g��k��1N,*r��L3oj~9���Þ	?���j&�Tzݿ���n,/��V�g�Sd�?P���;����Z��?���Omd֖V�<Vҫ���s��"���?���i�L�
+Җ(�b�,7sRkռ����1�g�()Zl���Ӌ�����i��dRY�QVĜq�sc�}����^��&�%N��v.ʆ��v4b;�܊�
+u6�q*C6�<O�/'p]�4ӕU�����|>/	rk�:R�I���X6�΋EQ1�iH�j�s��f��T�U����N��$V �!+�X.r%�\T6���Iz�"��x)�)^k��~C����=;K�:emA����=m�Ӝn!ӿ��d���t�MH�N��QϏ���\��
+��%�Fl%�Z4c�5K,�
+�;�,(d>��1��իJz�E_S����WK")��)m�+�%�bZ����9�b����q7S��g�,�&́c�c�c9�E���v�V ףC�}���\ɉ�_�jl���J�H[�o�[���^e�&�8>x>H�z�E�?6�^���v�y�i}j�]�XP�d���}.:��6l*�� ����ٻ}����n����G7��:�@���oNa��=���K���>�VO(�ؔ�� 7VȞ�Hr�E�t*e-�L;g].���~���,\�	�\���|����?J�榾M��'��q�#Wu�QHڌv���&��ˢ�]��Lπԏ���<6�m����>����9�~2�ɵ����a��a���u���Q�'�6��\�=m^z}d{a-B�3B��X(9ؕ�^;�����9r��}.i��ݝ�o��Ǐ�¾D'������_t�mʷ/���Y�?�Y��Ί��M^�ȖJ=�38�-����q�����XԷ?�G��hg�Ô��ǩ�g����j�92,�c��ԽM�\�8N(p��2�8<�\êR%_ˑ�>��2��#|�      0�p�      0�<S�:�������|r��;c�w�߹��������G7�<�\Q��>�V��~mO���ݼ���A��wq�������ǝ���׫��>p����bI,�e�D�l�y�|OPk�ξ�b���\��W\�h�"����Nι�C�[�W��~�|�/k|Q�J�$�<t̼��ĝ�@�}��5�~��Noa�����N��n�����N�]��]���ѯ=,�}a���l������1}��&Y�ϏSou�6�8t�~ ���)�q�i��G�mLj7��F�����Y�t��%�h��.z�	��UK����f��ޮQ��Mq�O<Aݼ�ߤڙ�k�\ǭ���;���bڝ�o>Ph��������+n��k��jW}�p]�����Фz����UC�I;n��d;k��m����x�����jtK_��i����e���/���d�x?��K~�E�߲�/R�+!����3���7��]�)�4�jޝU�c����ț���}��P������ W=:����S�C�,��H���![Z~!���*yu'��'�C���Xg�*J%W)�:��݋r�ZK���}zn;{P���s��7$ʤq��k���޸������BY'�M}��ٳ�T#{F�x�����K�����|q�������绞[κ'5�?�����;��木��o�)���� �����8>z����Qq��I�y��k�
+��T��^ls���_}�?r�4MݜԆ��ꋬ�b��i�v��nL�wW�~f���{ӣnS�}W�N̸�]��<�.� �8�:'���w���l|)������v}y��lx����%�_�U�/��:^ߔ�}       x�<��       Rx�      �����       ���      ?|�      0�p�      0�p�?      �����       ���       ���       ���       ���      ~��      `���      ����      �>�      ~��      `���      ����      ���      ���      ��g�g��S߬�3�7��M�2�����N��7��Ǽ_$ɟv8�/Rn�;A�/��p]���%^����4�+7��l/�mr���z:�I��VO�/�Zq��^:D�Y�Y4�-	ׄ��\9eQ���ڪ?`��t䙻��I7=3C�PS�lI0����W�ͤ���2�R�g�O�f�2��5��X^�/���Ϭ��V3�@���Q���K+����3�G�J��u�L.�[�MR�d����\��Ȑ�^8E��Q���ø��"[�T�.�k�饧V��h�Q+uο�^L��W��;T�0���M�=ƶ�,V�1۬�gb�_q��F)���ՒHZ��)m�1{I�U�<���bQ�X��'n�N��h���qC���X�;n��,;����-¸`�j3Ⱥ�I?�^�	��)�\nS�]�/�ApG/=�H&q�r�E�'z�M�Ƙ�IH�|6�O��n���+���Uu��qY�`I�a�������.�uwv:��&ݱ�:��:�&�O��3�s����q7}����3,�� �l`���F���J�e�&U�^�Y+e�탅��w��Yʛ{�3��z��z������g�-~�����^���1l
+�1�2k��D�c�,(�XV����h�J�M��R7��۔h��#ܔ��+>1�1�E�_�K5�0��0!�8N�K{˰�[|��Z��@�bi��z�ԃ>����#���L�63��.zi���ϴ{�Nn?ֶ}�&��R$�,�x�l%d������I�m_��Hgh��4D�?��Y[Z%�YI�f�=]�ĢX�����X�ė�5�(p%QVz�T���cw��*r�X�i���ͻ�Q�~���E��0g�����������-cҩA��[�5۳��6��tȭ.�M=2���e�k�m�΂�1I��oWخC{�劤tOH���      ?��      ������       |�      ���       �>�      ~��      `���      ����      �>�      ~��      `���      ����      ���      ���      ��gO��~��e�������O��O�'�~�&\㏍�s}i��V���N��R����WK�"p|M�h�\A,��"��ْ s�ip��ʒ��ǩ��c"�Hb�(H��ȥ��t*��gR��i�2O��3�'b>�_Zͤ�J��W�2�Ս�e������z����W8�"ή/���/�Ϥ/�S���U2��j�h�l��K[\�,�y2E&}A�C3G�R΋�X)�J����z6s
+���S�k��I+��,�#�iI�E��%	WkB9w��m
+�+�3ng��Ee�|��RM�ϸ�+�M�/�X�F�sʍ�EA�����5^� 2��Y���Y�33]�d�#y�.~n���a��Oh��[����1�f�cg�hY@�H4Le5���v�p�M�D���:���gb����n��I�Zk|�X����^�͈��1s��e�Y�ؗ�[�1����o��*Q愲�t[6=碗f����D�c���ս�a \κ����Y�$���3����p���;C�4�!�]�e����k���"	}�X���>�4O=��?>Km?�5��h�-�Z%�l�����|�D+�+
+���"uQ�Y��7M3�h��եsi�'��Hw��m�Ѳ�)I����4�:�T���Ċ[�q�<���fi��Yt�a�;�NtL��`Z�4���al�"y�E�PV��G�f�˅
+Y%L���~Hk�m�֎�D��S�v4��d���b�hld���䢛Q�O4�Z���\��M�9�J|�X#+We���By����5f�߮�������9��Ь�)��T������t�"�z�s�55g������>7C�S�z�{p5U6��R�V%�bH>ݨW�B}���dȤV�*�\}t�M?E���V� Ð�0@�����L+�\}n�M_�R�s�zHB�"�9�%/�E�
+����ԬgA�*�3Z���      ?��      ?��      ?��      ?��      ?��      ?y9}_p�~��}�       �D>�s?�� �b�:�qN�,�Y!�&_�#�x(/𱐐(D#�l>������6#n	!&2� ϰ��l�x(~��G��x��8�0���N�������       �<���T�*��圦��#�������޷��       � ��      `���      ��s����V�      �y�{�}�1"���8������t*9����`l1F"�pp>ń���E6�\`�a�ڏ�a�k?��3�&B�8K#�X8�L����L<��&bl,|��/���������^����߾���^���^V��Z}�U%�P�t8ZdS�d<~��T�͇���Ņ�|8�OGހ���3��r��M�IU�y�����A�d��HHo�����k��V�k?y�#����Q�ʐ��ɋ&�����u���ig�       ��vnP�\+�un�r���      ?������      ��g�G��>2���=�������~0���QWG~h?%��T�>r��u@�%aS���$渢T�U�����t*��gR��i�����~�QS�Þ	?�&}!�_]#���e������zji5�T�p]S�]_ZI�_��I_<�(�P)���*��^淄f�a4/�6�k'�"��9�Y��^9r������_�؞M����Sv�烔C,���ՒHr�5���O_�c;ǜ�g�u�� ��������6-�H�Mӷ&�h{����.�����.�+k����PԲ��r��y�:�w�XݓZ,V���&�:�����*弨��2�ܨ�������]y%��+��#��^�R�SZ��׹k��5�x��VI���H1o��L�7V��m���N�/��YN����Xe mh�!�92Ks�j�{Vͼ6����F-�T����5��N*MIt4J=Gi�`5�ո�9mfh��n�H�Q�Omd֖�U`%��iFE�,�KM�TdN�R�hF���m9c��*Y�O~�E�;�wc�o��B}����Kڦ��ǵ#�OY�i�)hK���;�3yg��=u�"K�)�1����l��,/[mu�I\�W6{���C��/��H������II1�i܍
+�5A��O��p{%�s�^t�33��ZGk��f7�=c�^C��z�4a�N��8!��#vm\�R^�hQ�H�9�I�d�ݗZ�m��Wk�t�#k�U4�v�xm,��x�&�׬��
+'HRE�d��%C��]���G��5�nN������r��̑�:���DG�p�$���b��.fZ9v;��Ɛa�^1�(���*
+jБM�U���MH,�s7�ަTk��\�M��R/Mk5*�%��n�.��͔��C��鬎��ܦv\T�\�J�6�n�3f�Z�6��ng��\��d����J▨8��\���3W+��t��O}�{��uE ��<�)��!|w`�9�-�����U=6��� �='��;�5��ބY>w�zd�BE=xV�c��w��'hFӎ�"	����ݽ��VN�td����      ���      0���?      �����       ��3~�1����#�=��Ο�<L����'���䑉k����қ\�1�����>x��5�z�������=ݏ˲z
+� ɲx��Vz?V��+�Z�,�z>���h�O�U{<��̦��v���x8�?&�c���f�覓I��!���5rY����z�L��^� ���tf���Z���F�z?�P��j%ަ�if�K���yŔ���Xp�2�}�		���7}�u�	�~,)�dё����I-���6�B�?��*��c�8���D�O}��])5Y�l�{�����9,�ĝ��O��3?;@ٵv���>��t��΁�y�m�p�w�Év�ξ���׳8<i��"%s.ze�n]3=q�cM����o�ǟ�)��s]�=׵�r�Q�u}��\���%��\�[;z��Co���.���b��#^��au�r��@���V���ZK6޺�����vkMط���D6��%���rN�6����VS�zn��p�o	�v��y�q��G����R�W�=��+��wԢ���]t�6U�G`�?�j�ۦ_m;O}k�����?��      0�p�      ���������D~      �c�=#�����鍇��Ԙ:�GB��b*���O#Ѥ�n>\�,.D�ñ�x:�0�~�s\�y��b,�̳�P0�ƒd�X8�L����L<��&bl,�l������׾r���{�v��K�����_�곗Gꓔ�>���q�>��|,�N����D8�����
+.,̟�g�Hr��}}:���߾��״ꨟ�������	�       o��� W.Ff��\R���      ���      0���?      ����?      �����       ���PK    �W��D(   &      data/data.design�VrI,I�/-JN(�/�LI-�K�MU�R*.�)N-*K-R� PK    �WLK�d{   T     data/data/data/.data.sql��=
+1�^���@6y&��B�n��l����O���fP5�s=89Zu�ڠ5�X�D�M���Js�%��#�5^���л:��~Y^�ꖌh��o�Cx'6�Fl]�,��_O���PK    �Wp%i�       data/data/data/.struct.sql�_k�P����)�@���WY��줤����4aC]����x!��nd׊�Qw!���t~�gbN��Q/�����=y���y}пCϿ����j�ʨ�����e�{E���QIQ��(�� G�0�7�h�ӄ��{]궡9ƅ�O%
+�( t��^6�ML��A촥�Z� �r�l��ڂ;w:��,>>�~�������X�\�Z|�����%���������w򠞷����G��v�F�0�z0��0�c��N
+�t�e Ű��t(�a ]�e E���4�M�z�mͮ��l��J��V�����,~4��M??�:�NON��o_�����%>�L��Y%D�04�t���4]��E����g���ty���l�xK�۰i�AZ�꼉�s1��"us�9k���hA�-�
+�H[��F�?;D�^XV�yH��zH���7_F��_��Pa���r�q��r�_�^<~1yy��I��I��I��T-f�'���U����O��/�����#����U��R�s)� PK    �W�K��  �     data/data/runtime/.data.sql�V[s�:~�L�o�3�#��6��$攒� �d4�$����6=ɯ?���M�������J{3������\�I�Egyj�NO��=kǳ��ݫ��wwq�cZ�w�V&����Z����[7�˹?m�kSL-�b���gQ6Lt�ytn�U��v>��i��TH�q�v��fF%��W����tz�PK�+2e�����T��XN�ia���d��=.��l8[����J�}�j��`0غ��,(2��,cTtHuz�՟���I��A%⸟
+��y��\*s\�B����r+�ZŢt���p�IU�J'L���\U�c(��Сw�C���vj�<��e?���,��;5�!wMX�o�����Ac���X�bT��#l���e/�\��$51����l�i���O,�y���¡�=̑p�@���)�W�á��"�峴00e`��N��\�0��Fv5�Ng�#��t½��lJ=#j[JA�
+q5)vS�`���لU�,�e�d;z���GU�Ǿ�U�/��.��x���R7I�QS\�ʕA�BmbUr�e�R#��6�dT�U>_�1(=��bI��M�a<������0�� *�Q*�"N���\��h�pr�I^/+KZX8�@�=�lH�m�FA�i�n��v;�}�+��iwh��0!�!ⶈ��8�W74�_^��pmߦP���u- ۳-�a�C� B�%���VW���|	�:ؖ���rh�z��H�D�z���	��J���u�O����[W�ο����o�q�v��������'�>��������׍�W��r�����*AQ<����p~��_��s',F��E��g�g�t2����nF���dz����µ&�+�f��^��s�Ȇ���A�����Mф&�PK    �W`_	b  �!     data/data/runtime/.struct.sql�Y�N�8}G��X$�vЮ�O���h�̖���e�X$q�N��|�:N�؉o�B��/���>�ؾ�=:rf��N�#� �^\��e��DE��zo�����ӳK��.�λ�o�/V����{�w��  ��7��s�/qA4|p�O矦gr|����_������PAS��<���B�ѿ�8��ށ\���w�kp���s~=��So���Bd�6���~^xW�Ž�{�L�e��G�A,P.GA�i�B��	-�A�����Кۂ�۹�׭��ܹ�]x����D'���Tc��d�Tb|o~_��
+����G�����ߺ�h*���g�e�<qFPF�%�$�w�L~���&�4�&{%Kɴ\�����F����]��;)�781*%���-uR
+U��2Y�_h�"h1���n����&�����}����,O�Q��6Sq��YXĸqλ��ЈT)�Y%�e-k��QaC���[�'C6{��V��g���14!B�?���
+-,��6���2���d��
+$u�*u�<`s���8�p��p��L��V��Mm�@su�����b
+9�nc�6a��D�В��#Q.�ac�8AW��L����j��$��{�����̀ "xdn
+�~/���-\�_�\�q�Z>��5���Ў�HH�����B�{����`n+�B�B�"���j]����Ι�ǐ@�ȡJ���@�ly� \HD�������Z&��U��`��I ���`)�_l�m�/�h*�L���Jl��nR c�EM���,4�3-'�4�s��5\��o?Q�f�6u��+��d�j�$'M,��G��A�芣ŶT��L�Ç���Q*\M���gW���=�J{4)���ҏ3�+���X�,�c�&1�;�H�I�!k���L�{p�c�}�)�9L�ۺ'z.��"���*�dU��P���:Q<�n����A�vу[���S��F�����Bv�k�k��O7�Q����46�o�XKU~�a�+�U��O7�lI����@���+�r��$���G��j-��8��Iة?����DV��k$2�m`
+�;1�к�e��h�4� ]���O?�j1[�T}6i����R��-'U�n��Ҹ��Ъ6�W�� jV�ZM�T���$��4�P�L���:�.-���4�k��D�V�X�M�¿E)D�-�  R��p,���3�g����v"��8��3�Z	X��?�j��m�J ��D���X��8����T��1��($��;}��[i4��� #4IzP*�䛾�<��)�k�M�	�'{AdM@3�"Y8T�=���$���TC,=����no{=b�3�3���Z�닋�o�$8��I��P�y��m���l'o��6�Q��:�F��/PK    �We�iM&   �                  工程8034.cmsprojPK     �W��D(   &                }&  data/data.designPK     �WLK�d{   T               �&  data/data/data/.data.sqlPK     �Wp%i�                 �'  data/data/data/.struct.sqlPK     �W�K��  �               �)  data/data/runtime/.data.sqlPK     �W`_	b  �!               �-  data/data/runtime/.struct.sqlPK      �  73    
+[2023-08-17 17:16:30,893] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:30,894] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:30,894] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:30,900] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:30,900] logger_util.py->write_log line:61 [INFO] 接口名称：比对工程id
+[2023-08-17 17:16:30,900] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:30,900] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/353/checkprojectidmatch
+[2023-08-17 17:16:30,900] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:30,900] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:30,919] logger_util.py->write_log line:61 [INFO] 实际结果：False
+[2023-08-17 17:16:30,919] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'content': False}}]
+[2023-08-17 17:16:30,919] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:30,919] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:30,924] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:30,924] logger_util.py->write_log line:61 [INFO] 接口名称：数据恢复
+[2023-08-17 17:16:30,924] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:30,924] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/353/import
+[2023-08-17 17:16:30,924] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:30,925] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,022] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 17:16:31,022] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:31,022] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,022] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,027] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,027] logger_util.py->write_log line:61 [INFO] 接口名称：检查本地工程id是否冲突
+[2023-08-17 17:16:31,027] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:31,027] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/checklocalprojectfileidconflict
+[2023-08-17 17:16:31,027] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,027] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\RC8.cmsproj'}
+[2023-08-17 17:16:31,027] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,031] logger_util.py->write_log line:61 [INFO] 实际结果：{'result': False, 'conflictProjectID': -1}
+[2023-08-17 17:16:31,032] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'result': False}}]
+[2023-08-17 17:16:31,032] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,032] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,036] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,036] logger_util.py->write_log line:61 [INFO] 接口名称：导入本地工程文件
+[2023-08-17 17:16:31,037] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:31,037] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/importlocalproject
+[2023-08-17 17:16:31,037] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,037] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\RC8.cmsproj', 'importConflictHandleType': 1}
+[2023-08-17 17:16:31,037] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,115] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 359, 'parentId': None, 'name': 'RC8', 'path': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\RC8.cmsproj', 'type': 1, 'createTime': '2023-08-17T17:16:31.0415367+08:00', 'updateTime': '2023-08-17T17:16:31.0415369+08:00'}
+[2023-08-17 17:16:31,115] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-17 17:16:31,115] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,115] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,124] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,124] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-17 17:16:31,124] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 17:16:31,124] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 17:16:31,124] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,125] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '359', 'isDeleteFile': False}
+[2023-08-17 17:16:31,125] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,165] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 17:16:31,165] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:31,165] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,165] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,170] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,170] logger_util.py->write_log line:61 [INFO] 接口名称：检查远程工程id是否冲突
+[2023-08-17 17:16:31,170] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:31,170] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/checkremoteprojectfileidconflict
+[2023-08-17 17:16:31,170] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,170] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,188] logger_util.py->write_log line:61 [INFO] 实际结果：{'result': False, 'conflictProjectID': -1}
+[2023-08-17 17:16:31,188] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'result': False}}]
+[2023-08-17 17:16:31,188] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,188] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,193] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,193] logger_util.py->write_log line:61 [INFO] 接口名称：远程导入工程文件
+[2023-08-17 17:16:31,194] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:31,194] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/importremoteproject
+[2023-08-17 17:16:31,194] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,194] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,278] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 360, 'parentId': None, 'name': 'RC8-6', 'path': 'E:\\CMS\\2.0.3RC9\\CMS Editor\\host\\data\\projects\\RC8-6.cmsproj', 'type': 1, 'createTime': '2023-08-17T17:16:31.2039187+08:00', 'updateTime': '2023-08-17T17:16:31.2039189+08:00'}
+[2023-08-17 17:16:31,279] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}]
+[2023-08-17 17:16:31,279] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,279] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,291] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,291] logger_util.py->write_log line:61 [INFO] 接口名称：删除工程
+[2023-08-17 17:16:31,291] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 17:16:31,291] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 17:16:31,291] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,292] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '360', 'isDeleteFile': False}
+[2023-08-17 17:16:31,292] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,335] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 17:16:31,335] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:31,335] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,335] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,341] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,341] logger_util.py->write_log line:61 [INFO] 接口名称：更新节点-重命名工程
+[2023-08-17 17:16:31,341] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 17:16:31,341] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/updatenode
+[2023-08-17 17:16:31,342] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,342] logger_util.py->write_log line:61 [INFO] 请求参数：{'ID': '353', 'Name': '重命名1350', 'Path': 'C:\\自动化工程', 'Type': 1}
+[2023-08-17 17:16:31,342] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,386] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 353, 'parentId': 354, 'name': '重命名1350', 'path': 'C:\\重命名1350.cmsproj', 'type': 1, 'createTime': '2023-08-17T17:16:27.3289607', 'updateTime': '2023-08-17T17:16:31.3666025+08:00'}
+[2023-08-17 17:16:31,386] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'contains': 'id'}, {'contains': 'name'}]
+[2023-08-17 17:16:31,386] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,386] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,391] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,392] logger_util.py->write_log line:61 [INFO] 接口名称：获取当前软件版本
+[2023-08-17 17:16:31,392] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 17:16:31,392] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/getcurrentversion
+[2023-08-17 17:16:31,392] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,392] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,395] logger_util.py->write_log line:61 [INFO] 实际结果：2.0.3
+[2023-08-17 17:16:31,395] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:31,395] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,395] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,400] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,401] logger_util.py->write_log line:61 [INFO] 接口名称：检查本地工程id是否冲突
+[2023-08-17 17:16:31,401] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:31,401] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/checklocalprojectfileidconflict
+[2023-08-17 17:16:31,401] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,401] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj'}
+[2023-08-17 17:16:31,401] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,405] logger_util.py->write_log line:61 [INFO] 实际结果：{'result': False, 'conflictProjectID': -1}
+[2023-08-17 17:16:31,406] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'result': False}}]
+[2023-08-17 17:16:31,406] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,406] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,411] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,411] logger_util.py->write_log line:61 [INFO] 接口名称：导入本地低版本工程文件
+[2023-08-17 17:16:31,411] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 17:16:31,411] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/importlocalproject
+[2023-08-17 17:16:31,411] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,411] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj', 'importConflictHandleType': 1}
+[2023-08-17 17:16:31,411] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:31,478] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 361, 'parentId': None, 'name': '2.0.2测试兼容性', 'path': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj', 'type': 1, 'createTime': '2023-08-17T17:16:31.4155527+08:00', 'updateTime': '2023-08-17T17:16:31.415553+08:00'}
+[2023-08-17 17:16:31,478] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:31,478] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:31,478] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:31,487] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:31,488] logger_util.py->write_log line:61 [INFO] 接口名称：升级工程
+[2023-08-17 17:16:31,488] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 17:16:31,488] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/updateprojectfile
+[2023-08-17 17:16:31,488] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:31,488] logger_util.py->write_log line:61 [INFO] 请求参数：{'id': '361', 'isKeepOldFile': True}
+[2023-08-17 17:16:31,488] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:32,331] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 361, 'parentId': None, 'name': '2.0.2测试兼容性', 'path': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性-4.cmsproj', 'type': 1, 'createTime': '2023-08-17T17:16:31.4155527', 'updateTime': '2023-08-17T17:16:32.2855708+08:00'}
+[2023-08-17 17:16:32,331] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:32,331] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:32,331] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 17:16:32,346] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 17:16:32,347] logger_util.py->write_log line:61 [INFO] 接口名称：删除升级后的工程
+[2023-08-17 17:16:32,347] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 17:16:32,347] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 17:16:32,347] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 17:16:32,347] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '361', 'isDeleteFile': False}
+[2023-08-17 17:16:32,347] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 17:16:32,406] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 17:16:32,406] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 17:16:32,407] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 17:16:32,407] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

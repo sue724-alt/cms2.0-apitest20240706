@@ -1,0 +1,13 @@
+-  name: 更新报警类别组
+   base_url: ${get_base_url(base_url)}
+   request:
+      url: /api/v1/alarmtypegroup/update
+      method: put
+      json:
+         [{"id":"${get_extract_data(Alarm_Category_ID)}","name":"更新报警类别组${get_random_number(1,1000)}","sort":1}]
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

@@ -1,0 +1,328 @@
+[2023-08-23 10:43:13,237] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:43:13,237] logger_util.py->write_log line:61 [INFO] 接口名称：新增io变量
+[2023-08-23 10:43:13,238] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 10:43:13,238] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag
+[2023-08-23 10:43:13,238] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:43:13,238] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': '51', 'name': 'E1', 'description': '', 'typeName': '有符号8位整型', 'config': {'readWriteMode': 0, 'address': '400001', 'interval': 1000, 'stringLength': None, 'zoom': 1, 'digit': None, 'readWriteRule': 1}, 'index': 1}]
+[2023-08-23 10:43:13,239] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:43:13,268] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-23 10:43:13,269] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 110, 'tunnelId': 58, 'groupId': 51, 'sort': 0, 'name': 'E1', 'description': '', 'tunnelType': 1, 'config': {'address': '400001', 'readWriteMode': 0, 'interval': 1000, 'stringLength': None, 'zoom': 1, 'digit': None, 'readWriteRule': 1}, 'type': 1, 'typeName': '有符号8位整型', 'historicGroupId': '00000000-0000-0000-0000-000000000000', 'historicGroupName': None, 'archiveSetting': None, 'historicBriefMsg': None, 'createTime': '2023-08-23T10:43:13.2587271+08:00', 'updateTime': '2023-08-23T10:43:13.2587277+08:00'}]
+[2023-08-23 10:43:13,269] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:43:13,269] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 10:43:13,292] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+[2023-08-23 10:43:13,292] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+
+[2023-08-23 10:43:13,404] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+[2023-08-23 10:43:13,404] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+
+[2023-08-23 10:43:13,440] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+[2023-08-23 10:43:13,440] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+
+[2023-08-23 10:43:13,475] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+[2023-08-23 10:43:13,475] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+
+[2023-08-23 10:43:13,509] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+[2023-08-23 10:43:13,509] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+
+[2023-08-23 10:43:13,544] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+[2023-08-23 10:43:13,544] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+
+[2023-08-23 10:43:13,579] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+[2023-08-23 10:43:13,579] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 152, in replace_load
+    data = self.int_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 115, in int_load
+    data = self.list_load(data)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 54, in list_load
+    elif isinstance(dict,value):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+
+[2023-08-23 10:43:13,618] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 10:43:13,618] logger_util.py->write_log line:61 [INFO] 接口名称：删除io变量
+[2023-08-23 10:43:13,618] logger_util.py->write_log line:61 [INFO] 接口方式：delete
+[2023-08-23 10:43:13,618] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/58/tag/110
+[2023-08-23 10:43:13,618] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-23 10:43:13,618] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 10:43:13,632] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-23 10:43:13,632] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-23 10:43:13,632] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 10:43:13,633] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

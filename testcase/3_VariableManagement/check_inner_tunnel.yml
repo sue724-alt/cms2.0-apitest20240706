@@ -1,0 +1,56 @@
+-  name: 创建内部通道1
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel
+      method: post
+      json:
+         {"type":3,"name":"内部通道1","description":"","config":null}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+      inner_tunnel_id: id
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id
+
+-  name: 校验内部通道必填项-通道名为空
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel
+      method: post
+      json:
+         type: 3
+         name: ""
+         description: ""
+         config: null
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 400}
+      -  equals: {content: 通道名称不能为空}
+
+-  name: 校验内部通道必填项-通道名重复
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel
+      method: post
+      json:
+         type: 3
+         name: "内部通道1"
+         description: ""
+         config: null
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 400}
+      -  equals: {content: 通道名称不能重复}
+
+-  name: 删除通道1
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(inner_tunnel_id)}
+      method: delete
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

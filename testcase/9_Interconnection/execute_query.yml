@@ -1,0 +1,46 @@
+-  name: 创建映射表-查询
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/${get_extract_data(intn_id)}/table
+      method: post
+      json:
+        {
+          "isBasic": true,
+          "databaseTableName": "student",
+          "querySql": "",
+          "name": "student_${get_random_number(1000,9999)}"
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+     query_maptable_id: id
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 保存配置-查询
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(query_maptable_id)}/save
+      method: put
+      json:
+        {"actionType":1,"filters":[],"sorts":[{"field":"id","sortType":2}],"mappings":[{"field":"time","relativeVariable":"aa16","dataType":"日期时间","order":1},{"field":"name","relativeVariable":"A12","dataType":"字符串","order":2},{"field":"age","relativeVariable":"A2","dataType":"有符号8位整型","order":3},{"field":"money","relativeVariable":"A10","dataType":"F32位浮点数IEEE754","order":4}]}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 执行查询语句
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(query_maptable_id)}/executetest
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {action: 查询}
+      -  equals: {status: 成功}
+      -  equals: {A12: '中文1'}
+      -  equals: {A2: '10'}
+      -  equals: {A10: '10.456'}
+      -  equals: {aa16: '2023/10/20 18:40:55'}

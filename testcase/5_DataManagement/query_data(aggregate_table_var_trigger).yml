@@ -1,0 +1,69 @@
+-  name: 查询数据(变量触发聚合表)
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/original
+      method: post
+      json:
+        {
+           "dataSetId": "${get_extract_data(Aggregation_Table_var_Trigger_ID)}",
+           "tableName": "变量触发聚合表",
+           "limit": 500
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+     - equals: {status_code: 200}
+     - equals: { COUNT1: 2 }
+     - equals: { COUNTA1: 2 }
+     - equals: { 差值3年: 3 }
+     - equals: { 差值5月: 5 }
+     - equals: { 差值177天: 177 }
+     - equals: { 差值4249时: 4249 }
+     - equals: { 差值254955分: 254955 }
+     - equals: { 差值15297325秒: 15297325 }
+     - equals: { DATE1: "2023-06-19 00:00:00" }
+     - equals: { DAYS1: "18" }
+     - equals: { H1: "Abcf" }
+     - equals: { CHAR1: "\\" }
+     - equals: { CONCATENATE1: "Abcf123" }
+     - equals: { LEFT2: "Ab" }
+     - equals: { LEN1: "4" }
+     - equals: { LOWER1: "abcf" }
+     - equals: { MID12: "Ab" }
+     - equals: { REPLACE1: "替换cf" }
+     - equals: { RIGHT1: "cf" }
+     - equals: { TODATE1: "2023-06-19 00:00:00" }
+     - equals: { TRIM1: "Abcf" }
+     - equals: { UPPER1: "ABCF" }
+     - equals: { 去空格后长度: "4" }
+     - equals: { AND1: "0" }
+     - equals: { FALSE1: "0" }
+     - equals: { TRUE1: "1" }
+     - equals: { IF1: "及格" }
+     - equals: { NOT_true1: "0" }
+     - equals: { NOT_false1: "1" }
+     - equals: { OR1: "0" }
+     - greater_than: {A1: 10}
+     - greater_than: {B1: 10}
+     - greater_than: {G1: 1}
+     - greater_than: {ROUND1: 10}
+     - greater_than: {ROUNDUP1: 10}
+     - greater_than: {ROUNDDOWN1: 10}
+     - greater_than: {SUM1: 10}
+     - greater_than: {AVERAGE1: 10}
+     - greater_than: {MAX1: 10}
+     - greater_than: {MEDIAN1: 10}
+     - greater_than: {MIN1: 10}
+     - greater_than: {ABS1: 10}
+     - greater_than: {max_B1: 10}
+     - greater_than: {min_B1: 10}
+     - length_greater_than: {HOUR1: 0}
+     - length_greater_than: {MINUTE1: 0}
+     - length_greater_than: {MONTH1: 0}
+     - length_greater_than: {NOW1: 0}
+     - length_greater_than: {SECOND1: 0}
+     - length_greater_than: {YEAR1: 0}
+     - length_greater_than: {系统时间: 0}
+     - length_greater_than: {DATE1: 0}
+     - length_greater_than: {TODAY1: 0}

@@ -1,0 +1,52 @@
+[2023-05-23 09:39:11,547] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-23 09:39:11,548] logger_util.py->write_log line:61 [INFO] 接口名称：获取数据管理配置树
+[2023-05-23 09:39:11,548] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-05-23 09:39:11,548] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/tree
+[2023-05-23 09:39:11,548] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': '6364a6c7fe574785b89a324f099d6612'}
+[2023-05-23 09:39:11,548] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-23 09:39:11,598] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'name': '报警管理'}}]
+[2023-05-23 09:39:11,598] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': 'f620b182-7169-4563-98af-9d076c186163', 'parentId': '00000000-0000-0000-0000-000000000000', 'name': '报警管理', 'nodeType': 1, 'children': [{'id': 'a9b66e92-6f83-44e3-ba02-ccbdb0f149c1', 'parentId': 'f620b182-7169-4563-98af-9d076c186163', 'name': '报警管理-实时表', 'nodeType': 2, 'children': [], 'sort': 1, 'operations': [], 'functions': []}, {'id': 'e342f0fa-977d-459a-97b2-f4fc4b36c7e4', 'parentId': 'f620b182-7169-4563-98af-9d076c186163', 'name': '报警管理-历史表', 'nodeType': 2, 'children': [], 'sort': 2, 'operations': [], 'functions': [2]}], 'sort': 1, 'operations': [], 'functions': None}, {'id': '60fbceae-9dfa-4efd-b17e-3701a2e7a275', 'parentId': '00000000-0000-0000-0000-000000000000', 'name': '归档表', 'nodeType': 1, 'children': [{'id': '2e2e7288-8c97-4391-b255-df1d3e0ba973', 'parentId': '60fbceae-9dfa-4efd-b17e-3701a2e7a275', 'name': '定时触发', 'nodeType': 2, 'children': [], 'sort': 1, 'operations': [1, 2, 3, 4], 'functions': [1, 2, 3, 4]}, {'id': 'be9c9df3-b731-467f-8d41-74f7ca76e264', 'parentId': '60fbceae-9dfa-4efd-b17e-3701a2e7a275', 'name': '变量触发', 'nodeType': 2, 'children': [], 'sort': 2, 'operations': [1, 2, 3, 4], 'functions': [1, 2, 3, 4]}, {'id': '12bc74cb-c8a5-4dde-8a7a-6ea542982cf5', 'parentId': '60fbceae-9dfa-4efd-b17e-3701a2e7a275', 'name': '字段触发', 'nodeType': 2, 'children': [], 'sort': 3, 'operations': [1, 2, 3, 4], 'functions': [1, 2, 3, 4]}, {'id': '13064263-523b-4018-b0a4-71b7535822a4', 'parentId': '60fbceae-9dfa-4efd-b17e-3701a2e7a275', 'name': '报警触发', 'nodeType': 2, 'children': [], 'sort': 4, 'operations': [1, 2, 3, 4], 'functions': [1, 2, 3, 4]}], 'sort': 8, 'operations': [1, 4], 'functions': None}, {'id': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'parentId': '00000000-0000-0000-0000-000000000000', 'name': '聚合表', 'nodeType': 1, 'children': [{'id': '3d9f7010-e4d3-4172-a186-5bcd1785c094', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按年聚合', 'nodeType': 3, 'children': [], 'sort': 1, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '4f175c33-9ede-4513-9777-05d0ebc5b960', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按年聚合-实时', 'nodeType': 3, 'children': [], 'sort': 4, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '3c3fdf2c-6f87-40ca-8cc6-defb48a49785', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按季度聚合', 'nodeType': 3, 'children': [], 'sort': 6, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': 'c38d14e2-f759-4415-ba3f-3876f3529095', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按季度聚合-实时', 'nodeType': 3, 'children': [], 'sort': 7, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '82aa3281-be39-40fd-bb5a-dfcab5e01b28', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按月聚合', 'nodeType': 3, 'children': [], 'sort': 8, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '6f98c880-880f-44a0-8b13-3bafb230d30d', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按月聚合-实时', 'nodeType': 3, 'children': [], 'sort': 9, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '7c841060-8b5a-4ca4-ada2-f97599572d6a', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按周聚合', 'nodeType': 3, 'children': [], 'sort': 10, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': 'e5ea3fa7-34ed-478c-9017-8662275e3438', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按周聚合-实时', 'nodeType': 3, 'children': [], 'sort': 11, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '4a56ad3a-3214-47b5-9a95-87c24818d3c3', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按天聚合', 'nodeType': 3, 'children': [], 'sort': 12, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': 'bc527fd2-cec9-4537-b83d-db813bea274f', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按天聚合-实时', 'nodeType': 3, 'children': [], 'sort': 13, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': 'ecfa6b51-2e9b-4d96-a0f4-11ccec8b2c71', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按小时聚合', 'nodeType': 3, 'children': [], 'sort': 14, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': 'c1d6d061-2a42-429b-96f1-e169034a8eaf', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按小时聚合-实时', 'nodeType': 3, 'children': [], 'sort': 15, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '76468ba4-3cad-43aa-83c4-15d757acdabf', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按分钟聚合', 'nodeType': 3, 'children': [], 'sort': 16, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '64debb59-8aad-43a3-883c-19f5fb5bae5e', 'parentId': '9cfd1873-fe1e-402d-ba7f-c0bea43d900c', 'name': '按分钟聚合-实时', 'nodeType': 3, 'children': [], 'sort': 17, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}], 'sort': 9, 'operations': [1, 4], 'functions': None}, {'id': '68365836-703e-4261-9782-a8eea9a51211', 'parentId': '00000000-0000-0000-0000-000000000000', 'name': '嵌套聚合表', 'nodeType': 1, 'children': [{'id': '707a0c80-0af5-4217-9907-f74284a7ef84', 'parentId': '68365836-703e-4261-9782-a8eea9a51211', 'name': '聚合表分钟', 'nodeType': 3, 'children': [], 'sort': 1, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': 'f38bf500-5983-432d-93f3-bbb0ddd142de', 'parentId': '68365836-703e-4261-9782-a8eea9a51211', 'name': '聚合表按小时', 'nodeType': 3, 'children': [], 'sort': 3, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '0650518a-cde3-44a7-8497-6d925ec3003e', 'parentId': '68365836-703e-4261-9782-a8eea9a51211', 'name': '聚合表按天', 'nodeType': 3, 'children': [], 'sort': 4, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': 'f327449e-aed2-4172-9ec1-811911aeb00b', 'parentId': '68365836-703e-4261-9782-a8eea9a51211', 'name': '聚合表按周', 'nodeType': 3, 'children': [], 'sort': 5, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '482ad582-ad8e-487b-8733-10c46d9c26ec', 'parentId': '68365836-703e-4261-9782-a8eea9a51211', 'name': '聚合表按月', 'nodeType': 3, 'children': [], 'sort': 6, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': '202814b8-c560-4093-ab03-d9d371c26b2e', 'parentId': '68365836-703e-4261-9782-a8eea9a51211', 'name': '聚合表按季度', 'nodeType': 3, 'children': [], 'sort': 7, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}, {'id': 'cc247715-1d3b-4a15-85fe-1d31d75058e7', 'parentId': '68365836-703e-4261-9782-a8eea9a51211', 'name': '聚合表按年', 'nodeType': 3, 'children': [], 'sort': 8, 'operations': [1, 2, 3, 4], 'functions': [2, 3, 4]}], 'sort': 10, 'operations': [1, 4], 'functions': None}]
+[2023-05-23 09:39:11,612] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-23 09:39:11,613] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-23 09:39:11,622] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-23 09:39:11,623] logger_util.py->write_log line:61 [INFO] 接口名称：通过聚合表获取归档表字段配置
+[2023-05-23 09:39:11,623] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-05-23 09:39:11,623] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable/fields/be59259f-1e43-4308-93fa-0caca8b4afbf
+[2023-05-23 09:39:11,623] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+[2023-05-23 09:39:11,623] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-23 09:39:11,628] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-05-23 09:39:11,628] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-05-23 09:39:11,628] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-23 09:39:11,629] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 333, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-05-23 09:39:11,630] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 333, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 233, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 383, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 333, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+

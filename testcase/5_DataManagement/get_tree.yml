@@ -1,0 +1,13 @@
+-  name: 获取数据管理配置树
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/tree
+      method: get
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200
+   - equals:
+        name: 报警管理

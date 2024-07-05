@@ -1,0 +1,85 @@
+[2023-06-05 15:32:33,487] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 15:32:33,487] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警文件夹
+[2023-06-05 15:32:33,487] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-05 15:32:33,488] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmfolder/add
+[2023-06-05 15:32:33,488] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 15:32:33,488] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '报警文件夹16', 'nodeType': 0}
+[2023-06-05 15:32:33,488] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 15:32:33,648] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'nodeType': 0}}, {'contains': 'id'}]
+[2023-06-05 15:32:33,648] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 'dca57a7f-f8c4-425d-80b9-5d611f66a547', 'parentId': None, 'name': '报警文件夹16', 'nodeType': 0, 'sort': 9, 'children': None}
+[2023-06-05 15:32:33,648] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-05 15:32:33,648] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-05 15:32:33,654] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 15:32:33,654] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警组
+[2023-06-05 15:32:33,654] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-05 15:32:33,654] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmfolder/add
+[2023-06-05 15:32:33,654] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 15:32:33,654] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '报警组64', 'nodeType': 1, 'parentId': None}
+[2023-06-05 15:32:33,654] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 15:32:33,811] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'nodeType': 1}}, {'contains': 'id'}]
+[2023-06-05 15:32:33,811] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '6bf91730-c958-44ca-a480-00f6477b9d97', 'parentId': None, 'name': '报警组64', 'nodeType': 1, 'sort': 10, 'children': None}
+[2023-06-05 15:32:33,811] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-05 15:32:33,811] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-05 15:32:33,818] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 313, in send_request
+    self.last_headers = self.replace_load(headers)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 156, in replace_load
+    data = json.loads(str_data)
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 65 (char 64)
+
+[2023-06-05 15:32:33,818] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 313, in send_request
+    self.last_headers = self.replace_load(headers)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 156, in replace_load
+    data = json.loads(str_data)
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 65 (char 64)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 197, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 338, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 313, in send_request
+    self.last_headers = self.replace_load(headers)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 156, in replace_load
+    data = json.loads(str_data)
+  File "D:\Pyhton\Pyton39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Pyhton\Pyton39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 65 (char 64)
+
+
+[2023-06-05 15:32:33,939] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-05 15:32:33,939] logger_util.py->write_log line:61 [INFO] 接口名称：更新报警组
+[2023-06-05 15:32:33,939] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-06-05 15:32:33,939] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmfolder/update
+[2023-06-05 15:32:33,939] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'da1746c3d0814e3da3c463b17bf73d6f'}
+[2023-06-05 15:32:33,939] logger_util.py->write_log line:61 [INFO] 请求参数：{'id': '6bf91730-c958-44ca-a480-00f6477b9d97', 'parentId': 'dca57a7f-f8c4-425d-80b9-5d611f66a547', 'name': '修改报警组82', 'nodeType': 1, 'sort': 1, 'children': []}
+[2023-06-05 15:32:33,939] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-05 15:32:34,060] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'nodeType': 1}}, {'contains': 'id'}]
+[2023-06-05 15:32:34,060] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '6bf91730-c958-44ca-a480-00f6477b9d97', 'parentId': None, 'name': '修改报警组82', 'nodeType': 1, 'sort': 10, 'children': None}
+[2023-06-05 15:32:34,060] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-05 15:32:34,061] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

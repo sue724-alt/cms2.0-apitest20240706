@@ -1,0 +1,168 @@
+[2023-06-09 14:41:53,374] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:53,374] logger_util.py->write_log line:61 [INFO] 接口名称：创建归档表
+[2023-06-09 14:41:53,374] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 14:41:53,374] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable
+[2023-06-09 14:41:53,374] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:53,375] logger_util.py->write_log line:61 [INFO] 请求参数：{'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表430', 'sort': 2}
+[2023-06-09 14:41:53,375] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:53,773] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 2}}, {'contains': 'id'}]
+[2023-06-09 14:41:53,774] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '65698ac3-976a-41a7-a3a9-13b915926fba', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表430', 'sort': 2, 'createDateTime': '2023-06-09T14:41:53.5635372+08:00', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}
+[2023-06-09 14:41:53,774] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:53,774] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:53,784] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:53,785] logger_util.py->write_log line:61 [INFO] 接口名称：设置归档表字段配置
+[2023-06-09 14:41:53,785] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-06-09 14:41:53,785] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable/65698ac3-976a-41a7-a3a9-13b915926fba/fields
+[2023-06-09 14:41:53,785] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:53,785] logger_util.py->write_log line:61 [INFO] 请求参数：[{'fieldName': '系统时间', 'fieldType': 3, 'associatedVariable': 'DateTime', 'formula': '', 'id': ''}, {'fieldName': '函数时间', 'fieldType': 3, 'associatedVariable': '', 'formula': 'NOW(  )', 'id': ''}, {'fieldName': 'A1', 'fieldType': 1, 'associatedVariable': 'A1', 'formula': '', 'id': ''}, {'fieldName': 'B1', 'fieldType': 1, 'associatedVariable': 'B1', 'formula': '', 'id': ''}, {'fieldName': 'G1', 'fieldType': 1, 'associatedVariable': 'G1', 'formula': '', 'id': ''}, {'fieldName': 'H1', 'fieldType': 2, 'associatedVariable': 'H1', 'formula': '', 'id': ''}]
+[2023-06-09 14:41:53,785] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:54,025] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:54,025] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-06-09 14:41:54,026] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:54,026] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:54,032] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:54,032] logger_util.py->write_log line:61 [INFO] 接口名称：归档表-定时触发
+[2023-06-09 14:41:54,032] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-06-09 14:41:54,032] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable/65698ac3-976a-41a7-a3a9-13b915926fba/triggers
+[2023-06-09 14:41:54,032] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:54,032] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': '2023-06-09T05:59:44.000Z', 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': False, 'condition': '', 'conditionDetail': 1, 'frequencyCheck': False, 'alarmPointIds': [], 'triggerType': 1}]
+[2023-06-09 14:41:54,032] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:54,141] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:54,141] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-06-09 14:41:54,141] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:54,141] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:54,148] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:54,148] logger_util.py->write_log line:61 [INFO] 接口名称：创建归档表
+[2023-06-09 14:41:54,148] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 14:41:54,148] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable
+[2023-06-09 14:41:54,148] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:54,148] logger_util.py->write_log line:61 [INFO] 请求参数：{'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表220', 'sort': 2}
+[2023-06-09 14:41:54,148] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:54,386] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 2}}, {'contains': 'id'}]
+[2023-06-09 14:41:54,386] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '7388b7ed-ea25-462d-8e26-00e8ec1717cf', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表220', 'sort': 2, 'createDateTime': '2023-06-09T14:41:54.2566076+08:00', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}
+[2023-06-09 14:41:54,386] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:54,386] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:54,396] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:54,396] logger_util.py->write_log line:61 [INFO] 接口名称：设置归档表字段配置
+[2023-06-09 14:41:54,396] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-06-09 14:41:54,396] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable/7388b7ed-ea25-462d-8e26-00e8ec1717cf/fields
+[2023-06-09 14:41:54,397] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:54,397] logger_util.py->write_log line:61 [INFO] 请求参数：[{'fieldName': '系统时间', 'fieldType': 3, 'associatedVariable': 'DateTime', 'formula': '', 'id': ''}, {'fieldName': '函数时间', 'fieldType': 3, 'associatedVariable': '', 'formula': 'NOW(  )', 'id': ''}, {'fieldName': 'A1', 'fieldType': 1, 'associatedVariable': 'A1', 'formula': '', 'id': ''}, {'fieldName': 'B1', 'fieldType': 1, 'associatedVariable': 'B1', 'formula': '', 'id': ''}, {'fieldName': 'G1', 'fieldType': 1, 'associatedVariable': 'G1', 'formula': '', 'id': ''}, {'fieldName': 'H1', 'fieldType': 2, 'associatedVariable': 'H1', 'formula': '', 'id': ''}]
+[2023-06-09 14:41:54,397] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:54,604] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:54,605] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-06-09 14:41:54,605] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:54,605] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:54,611] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:54,611] logger_util.py->write_log line:61 [INFO] 接口名称：归档表-变量触发
+[2023-06-09 14:41:54,611] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-06-09 14:41:54,611] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable/7388b7ed-ea25-462d-8e26-00e8ec1717cf/triggers
+[2023-06-09 14:41:54,612] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:54,612] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': '', 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': False, 'condition': 'G1', 'conditionDetail': 3, 'frequencyCheck': False, 'alarmPointIds': [], 'triggerType': 2}]
+[2023-06-09 14:41:54,612] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:54,716] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:54,716] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-06-09 14:41:54,716] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:54,716] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:54,722] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:54,722] logger_util.py->write_log line:61 [INFO] 接口名称：创建归档表
+[2023-06-09 14:41:54,722] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 14:41:54,723] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable
+[2023-06-09 14:41:54,723] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:54,723] logger_util.py->write_log line:61 [INFO] 请求参数：{'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表223', 'sort': 2}
+[2023-06-09 14:41:54,723] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:55,135] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'sort': 2}}, {'contains': 'id'}]
+[2023-06-09 14:41:55,136] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '08967257-914b-48e3-a5ee-093259c04ec4', 'folderId': '00000000-0000-0000-0000-000000000000', 'name': '归档表223', 'sort': 2, 'createDateTime': '2023-06-09T14:41:54.8195128+08:00', 'operationTypes': [1, 2, 3, 4], 'functionTypes': [1, 2, 3, 4], 'extendedHeaders': ['记录时间'], 'cacheConfig_EnableCache': False, 'cacheConfig_QuantityLimit': 0, 'cacheConfig_TimeSpanLimit': 0, 'cacheConfig_TimeSpanLimitUnit': 0, 'cacheConfig_ClearCache': '', 'storageConfig_ScheduledClear': False, 'storageConfig_ClearTriggerTime': None, 'storageConfig_ClearFrequency': 0, 'storageConfig_ClearFrequencyUnit': 0, 'storageConfig_ClearRetain': 0, 'storageConfig_ClearRetainUnit': 0, 'storageConfig_ScheduledBackup': False, 'storageConfig_BackupTriggerTime': None, 'storageConfig_BackupFrequency': 0, 'storageConfig_BackupFrequencyUnit': 0, 'storageConfig_BackupPath': ''}
+[2023-06-09 14:41:55,136] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:55,136] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:55,145] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:55,146] logger_util.py->write_log line:61 [INFO] 接口名称：归档表-字段触发
+[2023-06-09 14:41:55,146] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-06-09 14:41:55,146] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable/08967257-914b-48e3-a5ee-093259c04ec4/triggers
+[2023-06-09 14:41:55,146] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:55,146] logger_util.py->write_log line:61 [INFO] 请求参数：[{'effectiveDateTime': '', 'frequencyValue': 1, 'frequencyUnit': 1, 'matchAll': False, 'condition': '', 'conditionDetail': 1, 'frequencyCheck': False, 'alarmPointIds': [], 'triggerType': 3}]
+[2023-06-09 14:41:55,146] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:55,266] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:55,266] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-06-09 14:41:55,267] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:55,267] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:55,282] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:55,282] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警组
+[2023-06-09 14:41:55,283] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 14:41:55,283] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmfolder/add
+[2023-06-09 14:41:55,283] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:55,283] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '报警组717', 'nodeType': 1, 'parentId': None}
+[2023-06-09 14:41:55,283] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:55,406] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'nodeType': 1}}, {'contains': 'id'}]
+[2023-06-09 14:41:55,406] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': '5578df75-175d-4183-8435-db846fb0318b', 'parentId': None, 'name': '报警组717', 'nodeType': 1, 'sort': 1, 'children': None}
+[2023-06-09 14:41:55,406] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:55,406] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:55,411] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:55,412] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警等级
+[2023-06-09 14:41:55,412] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 14:41:55,412] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmlevel/add
+[2023-06-09 14:41:55,412] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:55,412] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '报警等级409'}]
+[2023-06-09 14:41:55,412] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:55,515] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:55,516] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': '7f047a65-dbec-4add-ba2b-20871387095d', 'name': '报警等级409'}]
+[2023-06-09 14:41:55,516] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:55,516] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:55,521] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:55,521] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警类别组
+[2023-06-09 14:41:55,522] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 14:41:55,522] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmtypegroup/add
+[2023-06-09 14:41:55,522] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:55,522] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '报警类别组836'}]
+[2023-06-09 14:41:55,522] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:56,314] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:56,314] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': '03a82fd8-f9f0-4a02-a2de-ba5db3abfef3', 'name': '报警类别组836', 'sort': 5}]
+[2023-06-09 14:41:56,314] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:56,314] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:56,326] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:56,326] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警类别项
+[2023-06-09 14:41:56,326] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 14:41:56,326] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmtype/add
+[2023-06-09 14:41:56,326] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:56,326] logger_util.py->write_log line:61 [INFO] 请求参数：[{'name': '类别项841', 'groupID': '03a82fd8-f9f0-4a02-a2de-ba5db3abfef3'}]
+[2023-06-09 14:41:56,326] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:56,466] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:56,466] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': '14a56dd5-fe9d-4036-a998-1eb06e0e22c1', 'groupID': '03a82fd8-f9f0-4a02-a2de-ba5db3abfef3', 'name': '类别项841', 'groupName': None}]
+[2023-06-09 14:41:56,466] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:56,467] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:56,483] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:56,483] logger_util.py->write_log line:61 [INFO] 接口名称：创建报警点
+[2023-06-09 14:41:56,484] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-06-09 14:41:56,484] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/alarmpoint/add
+[2023-06-09 14:41:56,484] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json;charset=UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:56,484] logger_util.py->write_log line:61 [INFO] 请求参数：[{'groupID': '5578df75-175d-4183-8435-db846fb0318b', 'groupName': '报警组717', 'name': '报警名称312', 'content': '报警信息312', 'expression': 'G1==true', 'levelID': '7f047a65-dbec-4add-ba2b-20871387095d', 'levelName': '报警等级409', 'typeIDs': ['14a56dd5-fe9d-4036-a998-1eb06e0e22c1']}]
+[2023-06-09 14:41:56,484] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:56,750] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:56,750] logger_util.py->write_log line:61 [INFO] 实际结果：[{'id': '43e6b117-2665-4f36-bb91-404f822c4b94', 'groupID': '5578df75-175d-4183-8435-db846fb0318b', 'groupName': None, 'name': '报警名称312', 'content': '报警信息312', 'expression': 'G1==true', 'levelID': '7f047a65-dbec-4add-ba2b-20871387095d', 'levelName': None, 'typeIDs': [], 'typeNames': [], 'typeNameJoin': ''}]
+[2023-06-09 14:41:56,750] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:56,750] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-06-09 14:41:56,761] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-06-09 14:41:56,761] logger_util.py->write_log line:61 [INFO] 接口名称：设置归档表字段配置
+[2023-06-09 14:41:56,762] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-06-09 14:41:56,762] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/dataconfig/filingtable/08967257-914b-48e3-a5ee-093259c04ec4/fields
+[2023-06-09 14:41:56,762] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'db9de0e1e7f942b38ff71a16de047b19'}
+[2023-06-09 14:41:56,762] logger_util.py->write_log line:61 [INFO] 请求参数：[{'fieldName': '系统时间', 'fieldType': 3, 'associatedVariable': 'DateTime', 'formula': '', 'id': ''}, {'fieldName': '函数时间', 'fieldType': 3, 'associatedVariable': '', 'formula': 'NOW(  )', 'id': ''}, {'fieldName': 'A1', 'fieldType': 1, 'associatedVariable': 'A1', 'formula': '', 'id': ''}, {'fieldName': 'B1', 'fieldType': 1, 'associatedVariable': 'B1', 'formula': '', 'id': ''}, {'fieldName': 'G1', 'fieldType': 1, 'associatedVariable': 'G1', 'formula': '', 'id': ''}, {'fieldName': 'H1', 'fieldType': 2, 'associatedVariable': 'H1', 'formula': '', 'id': ''}]
+[2023-06-09 14:41:56,762] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-06-09 14:41:56,976] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-06-09 14:41:56,976] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-06-09 14:41:56,976] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-06-09 14:41:56,976] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

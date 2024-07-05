@@ -1,0 +1,13 @@
+-  name: 刷新-修改
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(modify_maptable_id)}/preview
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {age: 70}
+      -  equals: {money: 70.456}
+      -  equals: {name: '中文1'}
+      -  equals: {time: '2022-11-28 09:05:01'}

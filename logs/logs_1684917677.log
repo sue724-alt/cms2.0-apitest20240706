@@ -1,0 +1,54 @@
+[2023-05-24 16:41:17,328] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-24 16:41:17,328] logger_util.py->write_log line:61 [INFO] 接口名称：设置归档表字段配置
+[2023-05-24 16:41:17,328] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-24 16:41:17,328] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/dca1449f-f379-4316-9dcf-cf6c76a1e552/fields
+[2023-05-24 16:41:17,328] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-24 16:41:17,330] logger_util.py->write_log line:61 [INFO] 请求参数：[{'fieldName': 'A1', 'fieldType': 1, 'associatedVariable': 'A1', 'formula': 'A1', 'id': ' '}]
+[2023-05-24 16:41:17,330] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-24 16:41:17,822] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-05-24 16:41:17,822] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-05-24 16:41:17,823] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-05-24 16:41:17,825] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 346, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-05-24 16:41:17,826] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 346, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 228, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 396, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\2TestCMS2.0\common\requests_util.py", line 346, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\2TestCMS2.0\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-05-24 16:41:17,926] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-05-24 16:41:17,926] logger_util.py->write_log line:61 [INFO] 接口名称：设置归档表字段配置
+[2023-05-24 16:41:17,926] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-05-24 16:41:17,926] logger_util.py->write_log line:61 [INFO] 接口路径：http://192.168.4.12:18000/api/v1/dataconfig/filingtable/dca1449f-f379-4316-9dcf-cf6c76a1e552/fields
+[2023-05-24 16:41:17,926] logger_util.py->write_log line:61 [INFO] 请求头：{'Content-Type': 'application/json; =UTF-8', 'X-Project': 'b32d81056e124620b809e92f49cdf3d4'}
+[2023-05-24 16:41:17,926] logger_util.py->write_log line:61 [INFO] 请求参数：[{'fieldName': 'B1', 'fieldType': 1, 'associatedVariable': 'B1', 'formula': 'B1', 'id': ' '}]
+[2023-05-24 16:41:17,926] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-05-24 16:41:18,992] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-05-24 16:41:18,993] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-05-24 16:41:18,994] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-05-24 16:41:18,994] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

@@ -1,0 +1,10 @@
+-  name: 下载图库组
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/view/image/gallery/export?group=${get_extract_data(groupKey)}
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

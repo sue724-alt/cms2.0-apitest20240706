@@ -1,0 +1,17 @@
+-  name: 读取系统变量-$csv{title}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      title-name-value: data/VariableManagement/read_system_var.csv
+   request:
+      url: /api/v1/variable/getvalues
+      method: post
+      json:
+         - $csv{name}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+         Authorization: Bearer ${get_extract_data(Authorization)}
+   validate:
+      -  equals:
+            status_code: 200
+      - length_greater_than:
+           $csv{name}: 1

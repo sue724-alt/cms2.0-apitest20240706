@@ -1,0 +1,7 @@
+-  name: 刷新列表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/tree?rootId=&isOrderByDesc=false&orderFieldName=name&keyWord=
+      method: get
+   validate:
+      -  equals: {status_code: 200}

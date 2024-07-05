@@ -1,0 +1,13 @@
+-  name: 设置聚合表字段配置
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/dataconfig/aggregatetable/${get_extract_data(Aggregation_Table_ID)}/fields
+      method: put
+      json:
+         [{"id":"RandomId_2023-09-11T05:49:18.742Z|1k63vpo","fieldName":"按年分组","fieldType":3,"filingTableFieldId":"记录时间","filingTableFieldName":"记录时间","formula":"","groupType":1,"handleType":1,"_X_ROW_KEY":"row_1844"},{"id":"RandomId_2023-09-11T05:49:18.742Z|46fhtko","fieldName":"A2求和","fieldType":1,"filingTableFieldId":"${get_extract_data(A2_id)}","filingTableFieldName":"A2","formula":"","groupType":2,"handleType":18,"_X_ROW_KEY":"row_1845"},{"id":"RandomId_2023-09-11T05:49:39.224Z|r60rni","fieldName":"A2平均","fieldType":1,"filingTableFieldId":"${get_extract_data(A2_id)}","filingTableFieldName":"A2","formula":"","groupType":2,"handleType":19,"_X_ROW_KEY":"row_1846"},{"id":"RandomId_2023-09-11T05:49:39.478Z|5tmgjfo","fieldName":"A2最大","fieldType":1,"filingTableFieldId":"${get_extract_data(A2_id)}","filingTableFieldName":"A2","formula":"","groupType":2,"handleType":20,"_X_ROW_KEY":"row_1847"},{"id":"RandomId_2023-09-11T05:49:39.718Z|63fvhig","fieldName":"A2最小","fieldType":1,"filingTableFieldId":"${get_extract_data(A2_id)}","filingTableFieldName":"A2","formula":"","groupType":2,"handleType":21,"_X_ROW_KEY":"row_1848"},{"id":"RandomId_2023-09-11T05:49:39.958Z|lntpfrg","fieldName":"A2去重","fieldType":1,"filingTableFieldId":"${get_extract_data(A2_id)}","filingTableFieldName":"A2","formula":"","groupType":2,"handleType":13,"_X_ROW_KEY":"row_1849"},{"id":"RandomId_2023-09-11T05:49:40.174Z|ufujv","fieldName":"A2计数","fieldType":1,"filingTableFieldId":"${get_extract_data(A2_id)}","filingTableFieldName":"A2","formula":"","groupType":2,"handleType":14,"_X_ROW_KEY":"row_1850"}]
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

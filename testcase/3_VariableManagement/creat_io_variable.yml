@@ -1,0 +1,28 @@
+-  name: 新增io变量-$csv{title}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+     title-index-name-description-typeName-address-interval-stringLength-zoom-digit-readWriteRule-io_id: data/VariableManagement/creat_io_variable.csv
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(io_tunnel_id)}/tag
+      method: post
+      json:
+         -  archiveSetting: null
+            groupId: null
+            name: $csv{name}
+            description: $csv{description}
+            typeName: $csv{typeName}
+            config:
+               readWriteMode: 0
+               address: $csv{address}
+               interval: ddt{{$csv{interval}}}
+               stringLength: ddt{{$csv{stringLength}}}
+               zoom: ddt{{$csv{zoom}}}
+               digit: ddt{{$csv{digit}}}
+               readWriteRule: ddt{{$csv{readWriteRule}}}
+            index: ddt{{$csv{index}}}
+      headers:
+        X-Project: ${get_extract_data(x_project)}
+   extract:
+      $csv{io_id}: id.0
+   validate:
+      -  equals: {status_code: 200}

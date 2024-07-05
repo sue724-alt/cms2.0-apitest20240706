@@ -1,0 +1,7 @@
+-  name: 获取工程树节点
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/tree
+      method: get
+   validate:
+      -  equals: {status_code: 200}

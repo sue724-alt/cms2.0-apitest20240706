@@ -1,0 +1,9 @@
+-  name: 重命名映射表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/rename/2/${get_extract_data(maptable_id)}/student_插入${get_random_number(1,999)}
+      method: put
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

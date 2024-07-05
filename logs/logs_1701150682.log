@@ -1,0 +1,13 @@
+[2023-11-28 13:51:22,783] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-11-28 13:51:22,783] logger_util.py->write_log line:61 [INFO] 接口名称：执行插入语句
+[2023-11-28 13:51:22,783] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-11-28 13:51:22,784] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/connection/table/25/executetest
+[2023-11-28 13:51:22,784] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'd800d1a6d0be4623aaa824c28dc71981'}
+[2023-11-28 13:51:22,784] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-11-28 13:51:23,321] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'action': '插入'}}, {'equals': {'status': '成功'}}, {'equals': {'A12': '中文1'}}, {'equals': {'A2': '10'}}, {'equals': {'A10': '100.16'}}, {'equals': {'aa16': '2023/11/12 12:15:30'}}]
+[2023-11-28 13:51:23,321] logger_util.py->write_log line:61 [INFO] 实际结果：{'record': {'dateTime': '2023/11/28 13:51:23', 'action': '插入', 'status': '成功', 'data': {'A12': '中文1', 'A2': '10', 'A10': '100.16', 'aa16': '2023/11/12 12:15:30'}}, 'info': '测试时间: 2023/11/28 13:51:22\r\n动作: 插入\r\n\r\n数据库:\r\n执行结果: OK\r\n插入时间: 0.01s\r\n', 'status': 1, 'lastErrorMsg': None}
+[2023-11-28 13:51:23,321] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-11-28 13:51:23,321] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

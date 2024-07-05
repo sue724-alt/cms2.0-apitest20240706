@@ -1,0 +1,13 @@
+-  name: 删除报警等级
+   base_url: ${get_base_url(base_url)}
+   request:
+      url: /api/v1/alarmlevel/delete
+      method: delete
+      json:
+         ["${get_extract_data(Alarm_Grade_ID)}"]
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

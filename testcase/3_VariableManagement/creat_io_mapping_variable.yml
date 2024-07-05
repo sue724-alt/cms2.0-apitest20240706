@@ -1,0 +1,11 @@
+-  name: 新增io映射变量
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(mapping_tunnel_id)}/tag
+      method: post
+      json:
+         [{"archiveSetting":null,"groupId":null,"name":"io_A1","description":"","typeName":"二进制变量","config":{"readWriteMode":0,"mappingVariable":"A1"},"index":1},{"archiveSetting":null,"groupId":null,"name":"io_A2","description":"","typeName":"有符号8位整型","config":{"readWriteMode":0,"mappingVariable":"A2"},"index":2},{"archiveSetting":null,"groupId":null,"name":"io_A10","description":"","typeName":"F32位浮点数IEEE754","config":{"readWriteMode":0,"mappingVariable":"A10"},"index":3},{"archiveSetting":null,"groupId":null,"name":"io_A12","description":"","typeName":"字符串","config":{"readWriteMode":0,"mappingVariable":"A12"},"index":4}]
+      headers:
+        X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}

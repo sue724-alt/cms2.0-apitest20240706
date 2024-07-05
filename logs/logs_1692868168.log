@@ -1,0 +1,829 @@
+[2023-08-24 17:09:28,836] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:28,836] logger_util.py->write_log line:61 [INFO] 接口名称：新增临时内部变量-后续删除
+[2023-08-24 17:09:28,836] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:28,836] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:28,836] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:28,837] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee1', 'description': '', 'typeName': '有符号8位整型', 'config': {'initType': 0, 'setValue': None}, 'index': 1}]
+[2023-08-24 17:09:28,837] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:28,856] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-24 17:09:28,857] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：变量名<ee1>已存在，请重新输入
+[2023-08-24 17:09:28,857] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-24 17:09:28,857] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-24 17:09:28,857] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-24 17:09:28,858] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 255, in analysis_yaml
+    self.validate_result(yq_result, return_text, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 356, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-24 17:09:28,967] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:28,967] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-校验变量名为空
+[2023-08-24 17:09:28,967] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:28,967] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:28,967] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:28,967] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': '', 'description': '校验变量名为空', 'typeName': '有符号8位整型', 'config': {'initType': 0, 'setValue': 'null'}, 'index': 1}]
+[2023-08-24 17:09:28,967] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:28,977] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:28,977] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：变量名不可为空，请重新输入
+[2023-08-24 17:09:28,977] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:28,977] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:28,983] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:28,983] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-校验变量名重复
+[2023-08-24 17:09:28,983] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:28,983] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:28,983] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:28,983] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee1', 'description': '校验变量名重复', 'typeName': '有符号8位整型', 'config': {'initType': 0, 'setValue': 'null'}, 'index': 1}]
+[2023-08-24 17:09:28,983] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:28,993] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:28,994] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：变量名<ee1>已存在，请重新输入
+[2023-08-24 17:09:28,994] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:28,994] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:28,999] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:28,999] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-设定值为空
+[2023-08-24 17:09:28,999] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:28,999] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,000] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,000] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '有符号8位整型', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,000] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,010] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,010] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,010] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,010] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,015] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,015] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-二进制-设定值为空
+[2023-08-24 17:09:29,015] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,015] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,015] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,015] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '二进制变量', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,016] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,025] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,025] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,025] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,025] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,031] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,031] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-二进制-设定值非法
+[2023-08-24 17:09:29,031] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,031] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,031] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,031] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '二进制变量', 'config': {'initType': 1, 'setValue': '2'}, 'index': 1}]
+[2023-08-24 17:09:29,031] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,040] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,041] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<2>错误
+[2023-08-24 17:09:29,041] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,041] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,046] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,046] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int8-设定值为空
+[2023-08-24 17:09:29,046] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,046] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,046] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,047] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '有符号8位整型', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,047] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,055] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,055] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,055] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,055] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,060] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,060] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int8-设定值非法
+[2023-08-24 17:09:29,060] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,060] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,060] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,061] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号8位整型', 'config': {'initType': 1, 'setValue': '128'}, 'index': 1}]
+[2023-08-24 17:09:29,061] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,069] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,069] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<128>错误
+[2023-08-24 17:09:29,069] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,069] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,074] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,074] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int8-设定值非法
+[2023-08-24 17:09:29,074] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,074] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,074] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,074] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号8位整型', 'config': {'initType': 1, 'setValue': '-129'}, 'index': 1}]
+[2023-08-24 17:09:29,074] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,082] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,083] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-129>错误
+[2023-08-24 17:09:29,083] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,083] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,088] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,088] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int8-设定值非法
+[2023-08-24 17:09:29,088] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,088] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,088] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,088] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号8位整型', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,088] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,097] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,097] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,097] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,097] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,102] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,102] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint8-设定值为空
+[2023-08-24 17:09:29,102] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,102] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,103] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,103] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '无符号8位整型', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,103] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,112] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,112] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,112] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,113] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,117] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,117] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint8-设定值非法
+[2023-08-24 17:09:29,118] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,118] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,118] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,118] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号8位整型', 'config': {'initType': 1, 'setValue': '256'}, 'index': 1}]
+[2023-08-24 17:09:29,118] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,127] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,127] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<256>错误
+[2023-08-24 17:09:29,127] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,127] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,132] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,132] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint8-设定值非法
+[2023-08-24 17:09:29,132] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,132] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,132] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,132] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号8位整型', 'config': {'initType': 1, 'setValue': '-1'}, 'index': 1}]
+[2023-08-24 17:09:29,132] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,142] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,142] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-1>错误
+[2023-08-24 17:09:29,142] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,142] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,147] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,147] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint8-设定值非法
+[2023-08-24 17:09:29,147] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,148] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,148] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,148] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号8位整型', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,148] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,156] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,157] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,157] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,157] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,161] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,161] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int16-设定值为空
+[2023-08-24 17:09:29,161] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,161] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,161] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,161] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '有符号16位整型', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,161] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,170] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,170] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,170] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,170] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,177] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,177] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int16-设定值非法
+[2023-08-24 17:09:29,177] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,177] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,177] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,177] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号16位整型', 'config': {'initType': 1, 'setValue': '32768'}, 'index': 1}]
+[2023-08-24 17:09:29,177] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,186] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,186] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<32768>错误
+[2023-08-24 17:09:29,186] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,186] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,192] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,192] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int16-设定值非法
+[2023-08-24 17:09:29,192] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,192] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,193] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,193] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号16位整型', 'config': {'initType': 1, 'setValue': '-32769'}, 'index': 1}]
+[2023-08-24 17:09:29,193] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,203] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,203] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-32769>错误
+[2023-08-24 17:09:29,203] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,203] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,209] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,209] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int16-设定值非法
+[2023-08-24 17:09:29,209] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,209] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,210] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,210] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号16位整型', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,210] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,220] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,221] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,221] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,221] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,227] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,227] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint16-设定值为空
+[2023-08-24 17:09:29,227] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,227] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,227] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,227] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '无符号16位整型', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,227] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,236] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,236] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,236] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,236] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,241] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,242] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint16-设定值非法
+[2023-08-24 17:09:29,242] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,242] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,242] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,242] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号16位整型', 'config': {'initType': 1, 'setValue': '65536'}, 'index': 1}]
+[2023-08-24 17:09:29,242] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,251] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,251] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<65536>错误
+[2023-08-24 17:09:29,251] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,251] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,256] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,256] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint16-设定值非法
+[2023-08-24 17:09:29,256] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,257] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,257] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,257] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号16位整型', 'config': {'initType': 1, 'setValue': '-1'}, 'index': 1}]
+[2023-08-24 17:09:29,257] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,266] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,266] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-1>错误
+[2023-08-24 17:09:29,266] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,266] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,271] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,271] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint16-设定值非法
+[2023-08-24 17:09:29,271] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,271] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,271] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,271] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号16位整型', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,271] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,280] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,280] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,280] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,280] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,285] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,285] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int32-设定值为空
+[2023-08-24 17:09:29,286] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,286] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,286] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,286] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '有符号32位整型', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,286] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,295] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,295] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,295] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,295] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,300] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,300] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int32-设定值非法
+[2023-08-24 17:09:29,301] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,301] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,301] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,301] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号32位整型', 'config': {'initType': 1, 'setValue': '2147483648'}, 'index': 1}]
+[2023-08-24 17:09:29,301] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,309] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,309] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<2147483648>错误
+[2023-08-24 17:09:29,309] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,309] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,314] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,315] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int32-设定值非法
+[2023-08-24 17:09:29,315] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,315] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,315] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,315] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号32位整型', 'config': {'initType': 1, 'setValue': '-2147483649'}, 'index': 1}]
+[2023-08-24 17:09:29,315] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,324] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,324] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-2147483649>错误
+[2023-08-24 17:09:29,324] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,324] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,330] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,330] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int32-设定值非法
+[2023-08-24 17:09:29,330] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,330] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,330] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,330] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号32位整型', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,330] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,340] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,340] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,340] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,340] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,345] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,345] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint32-设定值为空
+[2023-08-24 17:09:29,346] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,346] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,346] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,346] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '无符号32位整型', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,346] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,354] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,355] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,355] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,355] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,360] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,360] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint32-设定值非法
+[2023-08-24 17:09:29,360] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,360] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,361] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,361] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号32位整型', 'config': {'initType': 1, 'setValue': '4294967296'}, 'index': 1}]
+[2023-08-24 17:09:29,361] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,369] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,369] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<4294967296>错误
+[2023-08-24 17:09:29,369] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,370] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,375] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,375] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint32-设定值非法
+[2023-08-24 17:09:29,375] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,375] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,376] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,376] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号32位整型', 'config': {'initType': 1, 'setValue': '-1'}, 'index': 1}]
+[2023-08-24 17:09:29,376] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,384] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,385] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-1>错误
+[2023-08-24 17:09:29,385] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,385] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,390] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,390] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint32-设定值非法
+[2023-08-24 17:09:29,390] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,390] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,390] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,391] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号32位整型', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,391] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,399] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,399] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,399] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,399] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,404] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,404] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int64-设定值为空
+[2023-08-24 17:09:29,404] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,404] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,404] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,404] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '有符号64位整型', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,404] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,413] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,413] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,413] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,413] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,418] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,418] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int64-设定值非法
+[2023-08-24 17:09:29,418] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,418] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,418] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,419] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号64位整型', 'config': {'initType': 1, 'setValue': '9223372036854775808'}, 'index': 1}]
+[2023-08-24 17:09:29,419] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,427] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,427] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<9223372036854775808>错误
+[2023-08-24 17:09:29,427] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,427] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,433] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,433] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int64-设定值非法
+[2023-08-24 17:09:29,433] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,433] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,433] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,433] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号64位整型', 'config': {'initType': 1, 'setValue': '-9223372036854775809'}, 'index': 1}]
+[2023-08-24 17:09:29,433] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,442] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,442] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-9223372036854775809>错误
+[2023-08-24 17:09:29,442] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,442] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,447] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,447] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-int64-设定值非法
+[2023-08-24 17:09:29,447] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,447] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,447] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,447] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '有符号64位整型', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,447] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,455] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,456] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,456] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,456] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,461] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,461] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint64-设定值为空
+[2023-08-24 17:09:29,461] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,461] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,461] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,461] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '无符号64位整型', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,462] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,470] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,470] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,470] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,470] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,475] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,475] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint64-设定值非法
+[2023-08-24 17:09:29,475] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,476] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,476] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,476] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号64位整型', 'config': {'initType': 1, 'setValue': '18446744073709551616'}, 'index': 1}]
+[2023-08-24 17:09:29,476] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,484] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,484] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<18446744073709551616>错误
+[2023-08-24 17:09:29,484] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,484] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,489] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,490] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint64-设定值非法
+[2023-08-24 17:09:29,490] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,490] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,490] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,490] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号64位整型', 'config': {'initType': 1, 'setValue': '-1'}, 'index': 1}]
+[2023-08-24 17:09:29,490] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,500] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,500] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-1>错误
+[2023-08-24 17:09:29,500] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,500] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,505] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,506] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-unint64-设定值非法
+[2023-08-24 17:09:29,506] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,506] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,506] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,506] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '无符号64位整型', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,506] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,515] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,515] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,515] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,515] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,520] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,521] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-float32-设定值为空
+[2023-08-24 17:09:29,521] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,521] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,521] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,521] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': 'F32位浮点数IEEE754', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,521] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,529] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,529] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,529] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,529] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,534] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,534] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-float32-设定值非法
+[2023-08-24 17:09:29,534] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,534] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,534] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,534] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': 'F32位浮点数IEEE754', 'config': {'initType': 1, 'setValue': '3.40282346638528E+39'}, 'index': 1}]
+[2023-08-24 17:09:29,534] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,542] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,542] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<3.40282346638528E+39>错误
+[2023-08-24 17:09:29,542] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,543] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,547] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,548] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-float32-设定值非法
+[2023-08-24 17:09:29,548] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,548] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,548] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,548] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': 'F32位浮点数IEEE754', 'config': {'initType': 1, 'setValue': '-3.40282346638528E+39'}, 'index': 1}]
+[2023-08-24 17:09:29,548] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,557] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,557] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-3.40282346638528E+39>错误
+[2023-08-24 17:09:29,557] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,557] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,562] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,562] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-float32-设定值非法
+[2023-08-24 17:09:29,562] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,562] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,562] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,562] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': 'F32位浮点数IEEE754', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,562] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,571] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,571] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,571] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,571] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,576] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,576] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-float64-设定值为空
+[2023-08-24 17:09:29,576] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,576] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,576] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,576] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': 'F64位浮点数IEEE754', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,576] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,585] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,586] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,586] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,586] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,591] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,591] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-float64-设定值非法
+[2023-08-24 17:09:29,591] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,591] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,591] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,591] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': 'F64位浮点数IEEE754', 'config': {'initType': 1, 'setValue': '1.7976931348623157E+309'}, 'index': 1}]
+[2023-08-24 17:09:29,591] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,600] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,600] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<1.7976931348623157E+309>错误
+[2023-08-24 17:09:29,600] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,600] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,605] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,605] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-float64-设定值非法
+[2023-08-24 17:09:29,605] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,606] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,606] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,606] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': 'F64位浮点数IEEE754', 'config': {'initType': 1, 'setValue': '-1.7976931348623157E+309'}, 'index': 1}]
+[2023-08-24 17:09:29,606] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,615] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,615] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<-1.7976931348623157E+309>错误
+[2023-08-24 17:09:29,615] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,615] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,620] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,620] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-float64-设定值非法
+[2023-08-24 17:09:29,620] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,620] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,620] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,620] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': 'F64位浮点数IEEE754', 'config': {'initType': 1, 'setValue': '中文'}, 'index': 1}]
+[2023-08-24 17:09:29,620] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,629] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,629] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<中文>错误
+[2023-08-24 17:09:29,629] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,629] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,634] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,634] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-字符串-设定值为空
+[2023-08-24 17:09:29,634] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,634] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,634] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,634] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '字符串', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,634] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,642] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,642] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,643] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,643] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,648] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,648] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-宽字符串-设定值为空
+[2023-08-24 17:09:29,648] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,648] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,648] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,648] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '宽字符串', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,648] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,656] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,656] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,656] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,657] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,662] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,662] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-日期-设定值为空
+[2023-08-24 17:09:29,663] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,663] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,663] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,663] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '日期', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,663] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,671] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,671] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,671] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,671] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,677] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,677] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-日期-设定值非法
+[2023-08-24 17:09:29,677] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,677] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,677] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,677] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '日期', 'config': {'initType': 1, 'setValue': '2023.01'}, 'index': 1}]
+[2023-08-24 17:09:29,678] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,685] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,686] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<2023.01>错误
+[2023-08-24 17:09:29,686] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,686] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,691] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,691] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-时间-设定值为空
+[2023-08-24 17:09:29,691] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,691] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,691] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,691] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '时间', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,692] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,700] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,700] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,700] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,700] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,705] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,706] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-时间-设定值非法
+[2023-08-24 17:09:29,706] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,706] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,706] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,706] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '时间', 'config': {'initType': 1, 'setValue': '18.10'}, 'index': 1}]
+[2023-08-24 17:09:29,706] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,714] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,714] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<18.10>错误
+[2023-08-24 17:09:29,714] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,715] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,719] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,719] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-日期时间-设定值为空
+[2023-08-24 17:09:29,719] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,720] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,720] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,720] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值为空', 'typeName': '日期时间', 'config': {'initType': 1, 'setValue': ''}, 'index': 1}]
+[2023-08-24 17:09:29,720] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,728] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,728] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值不能为空
+[2023-08-24 17:09:29,728] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,728] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,733] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-24 17:09:29,733] logger_util.py->write_log line:61 [INFO] 接口名称：校验内部变量必填项-日期时间-设定值非法
+[2023-08-24 17:09:29,734] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-24 17:09:29,734] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/tunnel/146/tag
+[2023-08-24 17:09:29,734] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-24 17:09:29,734] logger_util.py->write_log line:61 [INFO] 请求参数：[{'archiveSetting': None, 'groupId': None, 'name': 'ee2', 'description': '设定值非法', 'typeName': '日期时间', 'config': {'initType': 1, 'setValue': '2023.01'}, 'index': 1}]
+[2023-08-24 17:09:29,734] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-24 17:09:29,742] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 400}}]
+[2023-08-24 17:09:29,742] logger_util.py->write_log line:61 [INFO] 实际结果：序号<1>变量配置错误：设定值<2023.01>错误
+[2023-08-24 17:09:29,742] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-24 17:09:29,742] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-24 17:09:29,747] logger_util.py->error_log line:65 [INFO] 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+[2023-08-24 17:09:29,747] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 187, in analysis_yaml
+    res = self.send_request(name =name,method=method,
+  File "E:\Project_python\api_cms\common\requests_util.py", line 325, in send_request
+    error_log("发送请求异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 发送请求异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 306, in send_request
+    kwargs[key] = self.replace_load(value)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 142, in replace_load
+    new_value = getattr(DubugTalk(), func_name)(*args_value.split(','))
+  File "E:\Project_python\api_cms\debug_talk.py", line 26, in get_extract_data
+    return read_extract_file(node_name)
+  File "E:\Project_python\api_cms\common\yaml_util.py", line 19, in read_extract_file
+    return value[one_node]
+TypeError: 'NoneType' object is not subscriptable
+
+

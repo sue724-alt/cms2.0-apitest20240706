@@ -1,0 +1,83 @@
+[2023-08-17 16:52:48,739] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:52:48,739] logger_util.py->write_log line:61 [INFO] 接口名称：创建工程
+[2023-08-17 16:52:48,739] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 16:52:48,740] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node
+[2023-08-17 16:52:48,740] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:52:48,740] logger_util.py->write_log line:61 [INFO] 请求参数：{'name': '工程4940', 'path': 'C:\\自动化工程', 'type': 1}
+[2023-08-17 16:52:48,740] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:52:49,045] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 16:52:49,045] logger_util.py->write_log line:61 [INFO] 实际结果：328
+[2023-08-17 16:52:49,045] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:52:49,045] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 16:52:49,053] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:52:49,053] logger_util.py->write_log line:61 [INFO] 接口名称：更新节点-重命名工程
+[2023-08-17 16:52:49,053] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 16:52:49,053] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/updatenode
+[2023-08-17 16:52:49,054] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:52:49,054] logger_util.py->write_log line:61 [INFO] 请求参数：{'ID': '328', 'Name': '重命名6345', 'Path': 'C:\\自动化工程', 'Type': 1}
+[2023-08-17 16:52:49,054] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:52:49,103] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 16:52:49,103] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 328, 'parentId': None, 'name': '重命名6345', 'path': 'C:\\重命名6345.cmsproj', 'type': 1, 'createTime': '2023-08-17T16:52:48.9976749', 'updateTime': '2023-08-17T16:52:49.08414+08:00'}
+[2023-08-17 16:52:49,103] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:52:49,103] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 16:52:49,107] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:52:49,108] logger_util.py->write_log line:61 [INFO] 接口名称：获取当前软件版本
+[2023-08-17 16:52:49,108] logger_util.py->write_log line:61 [INFO] 接口方式：get
+[2023-08-17 16:52:49,108] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/getcurrentversion
+[2023-08-17 16:52:49,108] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:52:49,108] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:52:49,110] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 16:52:49,110] logger_util.py->write_log line:61 [INFO] 实际结果：2.0.3
+[2023-08-17 16:52:49,111] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:52:49,111] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 16:52:49,115] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:52:49,115] logger_util.py->write_log line:61 [INFO] 接口名称：检查本地工程id是否冲突
+[2023-08-17 16:52:49,115] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 16:52:49,115] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/checklocalprojectfileidconflict
+[2023-08-17 16:52:49,115] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:52:49,115] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj'}
+[2023-08-17 16:52:49,115] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:52:49,120] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'result': False}}]
+[2023-08-17 16:52:49,120] logger_util.py->write_log line:61 [INFO] 实际结果：{'result': False, 'conflictProjectID': -1}
+[2023-08-17 16:52:49,120] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:52:49,120] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 16:52:49,124] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:52:49,125] logger_util.py->write_log line:61 [INFO] 接口名称：导入本地低版本工程文件
+[2023-08-17 16:52:49,125] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-17 16:52:49,125] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/importlocalproject
+[2023-08-17 16:52:49,125] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:52:49,125] logger_util.py->write_log line:61 [INFO] 请求参数：{'localFilePath': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj', 'importConflictHandleType': 1}
+[2023-08-17 16:52:49,125] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:52:49,170] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 16:52:49,170] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 329, 'parentId': None, 'name': '2.0.2测试兼容性', 'path': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性.cmsproj', 'type': 1, 'createTime': '2023-08-17T16:52:49.1295408+08:00', 'updateTime': '2023-08-17T16:52:49.1295409+08:00'}
+[2023-08-17 16:52:49,171] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:52:49,171] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 16:52:49,179] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:52:49,179] logger_util.py->write_log line:61 [INFO] 接口名称：升级工程
+[2023-08-17 16:52:49,179] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 16:52:49,179] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/updateprojectfile
+[2023-08-17 16:52:49,179] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:52:49,179] logger_util.py->write_log line:61 [INFO] 请求参数：{'id': '329', 'isKeepOldFile': True}
+[2023-08-17 16:52:49,179] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:52:50,037] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 16:52:50,037] logger_util.py->write_log line:61 [INFO] 实际结果：{'id': 329, 'parentId': None, 'name': '2.0.2测试兼容性', 'path': 'E:\\Project_python\\api_cms\\data\\EngineeringManagement\\2.0.2测试兼容性-1.cmsproj', 'type': 1, 'createTime': '2023-08-17T16:52:49.1295408', 'updateTime': '2023-08-17T16:52:49.9929964+08:00'}
+[2023-08-17 16:52:50,037] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:52:50,037] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-17 16:52:50,042] logger_util.py->write_log line:61 [INFO] -------------接口请求开始-----------
+[2023-08-17 16:52:50,042] logger_util.py->write_log line:61 [INFO] 接口名称：删除升级后的工程
+[2023-08-17 16:52:50,042] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-17 16:52:50,042] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/project/node/deletenodes
+[2023-08-17 16:52:50,042] logger_util.py->write_log line:61 [INFO] 请求头：{}
+[2023-08-17 16:52:50,043] logger_util.py->write_log line:61 [INFO] 请求参数：{'ids': '329', 'isDeleteFile': False}
+[2023-08-17 16:52:50,043] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-17 16:52:50,104] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-17 16:52:50,104] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-17 16:52:50,104] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-17 16:52:50,104] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+

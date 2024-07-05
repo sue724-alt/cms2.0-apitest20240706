@@ -1,0 +1,648 @@
+[2023-08-23 17:16:48,774] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:48,774] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B1-int8缩放比：10
+[2023-08-23 17:16:48,774] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:48,775] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:48,775] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:48,775] logger_util.py->write_log line:61 [INFO] 请求参数：{'B1': '1270'}
+[2023-08-23 17:16:48,775] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:48,789] logger_util.py->error_log line:65 [INFO] 断言失败:allSuccess不等于True
+[2023-08-23 17:16:48,789] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': False, 'items': {'B1': {'value': 1270, 'quality': 2, 'errorMsg': '请输入正确的值, 应在-1280 - 1270'}}}
+[2023-08-23 17:16:48,789] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-23 17:16:48,789] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-23 17:16:48,790] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 368, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+[2023-08-23 17:16:48,790] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 368, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 368, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+
+[2023-08-23 17:16:48,896] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:48,896] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B1-int8缩放比：10
+[2023-08-23 17:16:48,896] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:48,896] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:48,896] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:48,896] logger_util.py->write_log line:61 [INFO] 请求参数：{'B1': '-1280'}
+[2023-08-23 17:16:48,896] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:48,899] logger_util.py->error_log line:65 [INFO] 断言失败:allSuccess不等于True
+[2023-08-23 17:16:48,899] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': False, 'items': {'B1': {'value': -1280, 'quality': 2, 'errorMsg': '请输入正确的值, 应在-1280 - 1270'}}}
+[2023-08-23 17:16:48,899] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-23 17:16:48,900] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-23 17:16:48,900] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 368, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+[2023-08-23 17:16:48,900] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 368, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 238, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 413, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 368, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:allSuccess不等于True
+
+
+[2023-08-23 17:16:48,930] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:48,930] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B2-int8缩放比：0.1
+[2023-08-23 17:16:48,930] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:48,930] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:48,930] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:48,930] logger_util.py->write_log line:61 [INFO] 请求参数：{'B2': '12.7'}
+[2023-08-23 17:16:48,930] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:48,993] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:48,993] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B2': {'value': 12.7, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:48,993] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:48,993] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,001] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,001] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B2-int8缩放比：0.1
+[2023-08-23 17:16:49,001] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,001] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,001] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,001] logger_util.py->write_log line:61 [INFO] 请求参数：{'B2': '-12.8'}
+[2023-08-23 17:16:49,002] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,055] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,055] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B2': {'value': -12.8, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,055] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,055] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,063] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,063] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B3-int16缩放比：0.01，小数位：1，舍位
+[2023-08-23 17:16:49,063] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,063] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,063] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,064] logger_util.py->write_log line:61 [INFO] 请求参数：{'B3': '327.67'}
+[2023-08-23 17:16:49,064] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,088] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,088] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B3': {'value': 327.6, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,088] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,088] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,097] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,097] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B3-int16缩放比：0.01，小数位：1，舍位
+[2023-08-23 17:16:49,097] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,097] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,097] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,097] logger_util.py->write_log line:61 [INFO] 请求参数：{'B3': '-327.68'}
+[2023-08-23 17:16:49,098] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,151] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,151] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B3': {'value': -327.6, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,151] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,151] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,159] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,159] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B4-int16缩放比：0.01，小数位：1，四舍
+[2023-08-23 17:16:49,160] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,160] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,160] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,160] logger_util.py->write_log line:61 [INFO] 请求参数：{'B4': '327.57'}
+[2023-08-23 17:16:49,160] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,182] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,182] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B4': {'value': 327.6, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,182] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,182] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,191] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,191] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B4-int16缩放比：0.01，小数位：1，四舍
+[2023-08-23 17:16:49,191] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,191] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,192] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,192] logger_util.py->write_log line:61 [INFO] 请求参数：{'B4': '-327.58'}
+[2023-08-23 17:16:49,192] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,213] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,213] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B4': {'value': -327.6, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,213] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,213] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,221] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,222] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B5-int16缩放比：0.01，小数位：1，进位
+[2023-08-23 17:16:49,222] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,222] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,222] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,222] logger_util.py->write_log line:61 [INFO] 请求参数：{'B5': '327.51'}
+[2023-08-23 17:16:49,222] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,246] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,246] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B5': {'value': 327.6, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,246] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,246] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,255] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,255] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B5-int16缩放比：0.01，小数位：1，进位
+[2023-08-23 17:16:49,256] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,256] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,256] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,256] logger_util.py->write_log line:61 [INFO] 请求参数：{'B5': '-327.51'}
+[2023-08-23 17:16:49,256] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,293] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,293] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B5': {'value': -327.6, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,293] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,293] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,301] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,302] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B6-float32小数位：2，舍位
+[2023-08-23 17:16:49,302] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,302] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,302] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,302] logger_util.py->write_log line:61 [INFO] 请求参数：{'B6': '10.4567'}
+[2023-08-23 17:16:49,302] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,340] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,340] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B6': {'value': 10.45, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,340] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,340] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,348] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,349] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B6-float32小数位：2，舍位
+[2023-08-23 17:16:49,349] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,349] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,349] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,349] logger_util.py->write_log line:61 [INFO] 请求参数：{'B6': '-10.4567'}
+[2023-08-23 17:16:49,349] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,371] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,371] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B6': {'value': -10.45, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,372] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,372] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,380] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,380] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B7-float32小数位：2，四舍
+[2023-08-23 17:16:49,380] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,380] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,380] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,380] logger_util.py->write_log line:61 [INFO] 请求参数：{'B7': '10.4567'}
+[2023-08-23 17:16:49,380] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,416] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,416] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B7': {'value': 10.46, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,417] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,417] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,424] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,425] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B7-float32小数位：2，四舍
+[2023-08-23 17:16:49,425] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,425] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,425] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,425] logger_util.py->write_log line:61 [INFO] 请求参数：{'B7': '-10.4567'}
+[2023-08-23 17:16:49,425] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,448] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,448] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B7': {'value': -10.46, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,448] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,448] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,456] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,456] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B8-float32小数位：2，进位
+[2023-08-23 17:16:49,456] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,456] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,456] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,457] logger_util.py->write_log line:61 [INFO] 请求参数：{'B8': '10.4512'}
+[2023-08-23 17:16:49,457] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,479] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,479] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B8': {'value': 10.46, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,479] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,479] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,488] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,488] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-B8-float32小数位：2，进位
+[2023-08-23 17:16:49,488] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,489] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,489] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,489] logger_util.py->write_log line:61 [INFO] 请求参数：{'B8': '-10.4512'}
+[2023-08-23 17:16:49,489] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,511] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,511] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'B8': {'value': -10.46, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,511] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,511] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,519] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,519] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A1-二进制
+[2023-08-23 17:16:49,519] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,519] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,520] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,520] logger_util.py->write_log line:61 [INFO] 请求参数：{'A1': '1'}
+[2023-08-23 17:16:49,520] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,572] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,573] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A1': {'value': True, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,573] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,573] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,581] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,581] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A1-二进制
+[2023-08-23 17:16:49,581] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,581] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,582] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,582] logger_util.py->write_log line:61 [INFO] 请求参数：{'A1': 'true'}
+[2023-08-23 17:16:49,582] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,648] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,648] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A1': {'value': True, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,648] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,648] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,656] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,656] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A1-二进制
+[2023-08-23 17:16:49,656] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,656] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,656] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,657] logger_util.py->write_log line:61 [INFO] 请求参数：{'A1': '0'}
+[2023-08-23 17:16:49,657] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,710] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,710] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A1': {'value': False, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,710] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,711] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,718] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,718] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A1-二进制
+[2023-08-23 17:16:49,719] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,719] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,719] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,719] logger_util.py->write_log line:61 [INFO] 请求参数：{'A1': 'false'}
+[2023-08-23 17:16:49,719] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,776] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,776] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A1': {'value': False, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,776] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,776] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,784] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,784] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A2-有符号8位整型
+[2023-08-23 17:16:49,784] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,784] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,785] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,785] logger_util.py->write_log line:61 [INFO] 请求参数：{'A2': '127'}
+[2023-08-23 17:16:49,785] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,839] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,839] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A2': {'value': 127, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,839] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,839] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,847] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,848] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A2-有符号8位整型
+[2023-08-23 17:16:49,848] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,848] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,848] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,848] logger_util.py->write_log line:61 [INFO] 请求参数：{'A2': '-128'}
+[2023-08-23 17:16:49,848] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,901] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,901] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A2': {'value': -128, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,901] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,902] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,910] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,910] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A3-无符号8位整型
+[2023-08-23 17:16:49,910] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,911] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,911] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,911] logger_util.py->write_log line:61 [INFO] 请求参数：{'A3': '0'}
+[2023-08-23 17:16:49,911] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:49,963] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:49,963] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A3': {'value': 0, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:49,963] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:49,963] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:49,971] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:49,971] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A3-无符号8位整型
+[2023-08-23 17:16:49,971] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:49,971] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:49,972] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:49,972] logger_util.py->write_log line:61 [INFO] 请求参数：{'A3': '255'}
+[2023-08-23 17:16:49,972] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,029] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,029] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A3': {'value': 255, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,029] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,029] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,038] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,038] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A4-有符号16位整型
+[2023-08-23 17:16:50,038] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,038] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,038] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,038] logger_util.py->write_log line:61 [INFO] 请求参数：{'A4': '32767'}
+[2023-08-23 17:16:50,038] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,082] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,082] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A4': {'value': 32767, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,082] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,082] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,091] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,091] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A4-有符号16位整型
+[2023-08-23 17:16:50,091] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,091] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,091] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,091] logger_util.py->write_log line:61 [INFO] 请求参数：{'A4': '-32768'}
+[2023-08-23 17:16:50,091] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,137] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,137] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A4': {'value': -32768, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,137] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,137] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,145] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,145] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A5-无符号16位整型
+[2023-08-23 17:16:50,145] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,145] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,145] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,146] logger_util.py->write_log line:61 [INFO] 请求参数：{'A5': '0'}
+[2023-08-23 17:16:50,146] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,200] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,200] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A5': {'value': 0, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,200] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,200] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,208] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,208] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A5-无符号16位整型
+[2023-08-23 17:16:50,208] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,208] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,209] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,209] logger_util.py->write_log line:61 [INFO] 请求参数：{'A5': '65535'}
+[2023-08-23 17:16:50,209] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,253] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,254] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A5': {'value': 65535, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,254] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,254] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,262] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,262] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A6-有符号32位整型
+[2023-08-23 17:16:50,262] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,263] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,263] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,263] logger_util.py->write_log line:61 [INFO] 请求参数：{'A6': '2147483647'}
+[2023-08-23 17:16:50,263] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,317] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,318] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A6': {'value': 2147483647, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,318] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,319] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,328] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,328] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A6-有符号32位整型
+[2023-08-23 17:16:50,328] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,329] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,329] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,329] logger_util.py->write_log line:61 [INFO] 请求参数：{'A6': '-2147483648'}
+[2023-08-23 17:16:50,329] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,369] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,369] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A6': {'value': -2147483648, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,369] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,369] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,377] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,377] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A7-无符号32位整型
+[2023-08-23 17:16:50,377] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,377] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,377] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,377] logger_util.py->write_log line:61 [INFO] 请求参数：{'A7': '0'}
+[2023-08-23 17:16:50,378] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,426] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,426] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A7': {'value': 0, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,427] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,427] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,450] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,450] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A7-无符号32位整型
+[2023-08-23 17:16:50,450] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,450] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,450] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,451] logger_util.py->write_log line:61 [INFO] 请求参数：{'A7': '429496725'}
+[2023-08-23 17:16:50,451] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,487] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,487] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A7': {'value': 429496725, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,487] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,488] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,496] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,496] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A8-有符号64位整型
+[2023-08-23 17:16:50,496] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,496] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,496] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,496] logger_util.py->write_log line:61 [INFO] 请求参数：{'A8': '9223372036854775807'}
+[2023-08-23 17:16:50,496] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,541] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,541] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A8': {'value': 9223372036854775807, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,541] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,541] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,549] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,549] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A8-有符号64位整型
+[2023-08-23 17:16:50,549] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,550] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,550] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,550] logger_util.py->write_log line:61 [INFO] 请求参数：{'A8': '-9223372036854775808'}
+[2023-08-23 17:16:50,550] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,594] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,594] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A8': {'value': -9223372036854775808, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,594] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,595] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,602] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,603] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A9-无符号64位整型
+[2023-08-23 17:16:50,603] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,603] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,603] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,603] logger_util.py->write_log line:61 [INFO] 请求参数：{'A9': '0'}
+[2023-08-23 17:16:50,603] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,636] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,636] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A9': {'value': 0, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,636] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,636] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,645] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,645] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A9-无符号64位整型
+[2023-08-23 17:16:50,645] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,646] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,646] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,646] logger_util.py->write_log line:61 [INFO] 请求参数：{'A9': '18446744073709551615'}
+[2023-08-23 17:16:50,646] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,689] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,689] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A9': {'value': 18446744073709551615, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,689] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,689] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,697] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,697] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A10-F32位浮点数IEEE754
+[2023-08-23 17:16:50,697] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,698] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,698] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,698] logger_util.py->write_log line:61 [INFO] 请求参数：{'A10': '3.40282346638528E+38'}
+[2023-08-23 17:16:50,698] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,744] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,745] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A10': {'value': 3.40282346638528e+38, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,745] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,745] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,753] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,753] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A10-F32位浮点数IEEE754
+[2023-08-23 17:16:50,753] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,754] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,754] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,754] logger_util.py->write_log line:61 [INFO] 请求参数：{'A10': '-3.40282346638528E+38'}
+[2023-08-23 17:16:50,754] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,797] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,797] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A10': {'value': -3.40282346638528e+38, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,797] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,797] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,806] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,806] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A11-F64位浮点数IEEE754
+[2023-08-23 17:16:50,806] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,806] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,806] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,806] logger_util.py->write_log line:61 [INFO] 请求参数：{'A11': '1.7976931348623157E+308'}
+[2023-08-23 17:16:50,806] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,854] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,854] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A11': {'value': 1.7976931348623157e+308, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,855] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,855] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,877] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,878] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A11-F64位浮点数IEEE754
+[2023-08-23 17:16:50,878] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,878] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,878] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,879] logger_util.py->write_log line:61 [INFO] 请求参数：{'A11': '-1.7976931348623157E+308'}
+[2023-08-23 17:16:50,879] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,916] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,916] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A11': {'value': -1.7976931348623157e+308, 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,916] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,916] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,924] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,925] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A12-字符串
+[2023-08-23 17:16:50,925] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,925] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,925] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,925] logger_util.py->write_log line:61 [INFO] 请求参数：{'A12': '文本1'}
+[2023-08-23 17:16:50,925] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:50,974] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:50,975] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A12': {'value': '文本1', 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:50,975] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:50,975] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-23 17:16:50,991] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-23 17:16:50,991] logger_util.py->write_log line:61 [INFO] 接口名称：写io变量-A12-字符串
+[2023-08-23 17:16:50,991] logger_util.py->write_log line:61 [INFO] 接口方式：post
+[2023-08-23 17:16:50,991] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+[2023-08-23 17:16:50,991] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'a68f8739e9094911b0f74421369649cb', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTY5MzM3ODA3MywiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.S9SP4sA72TUdkrWYwOwdq4bCYCOEyU34ROHH07ufUU4'}
+[2023-08-23 17:16:50,991] logger_util.py->write_log line:61 [INFO] 请求参数：{'A12': ' #-~（）%'}
+[2023-08-23 17:16:50,991] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-23 17:16:51,024] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}, {'equals': {'allSuccess': True}}]
+[2023-08-23 17:16:51,024] logger_util.py->write_log line:61 [INFO] 实际结果：{'allSuccess': True, 'items': {'A12': {'value': ' #-~（）%', 'quality': 0, 'errorMsg': None}}}
+[2023-08-23 17:16:51,024] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-23 17:16:51,024] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+

@@ -1,0 +1,19 @@
+-  name: 归档表实时缓存配置
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      enableCache-quantityLimit-timeSpanLimit-timeSpanLimitUnit-clearCache: data/DataManagement/create_cache_configuration.csv
+   request:
+      url: /api/v1/dataconfig/node/cacheconfig/${get_extract_data(Sort_ID)}/${get_extract_data(Original_Table_ID)}
+      method: put
+      json:
+         enableCache: ddt{{$csv{enableCache}}}
+         quantityLimit: ddt{{$csv{quantityLimit}}}
+         timeSpanLimit: ddt{{$csv{timeSpanLimit}}}
+         timeSpanLimitUnit: ddt{{$csv{timeSpanLimitUnit}}}
+         clearCache: $csv{clearCache}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200

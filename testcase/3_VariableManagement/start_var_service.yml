@@ -1,0 +1,7 @@
+-  name: 启动变量服务
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/service/var/start
+      method: post
+   validate:
+      -  equals: {status_code: 200}

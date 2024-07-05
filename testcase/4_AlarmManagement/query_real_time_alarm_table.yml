@@ -1,0 +1,18 @@
+-  name: 查询实时报警表
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/original
+      method: post
+      json:
+        {
+           "dataSetId": "a9b66e92-6f83-44e3-ba02-ccbdb0f149c1",
+           "tableName": "报警管理-实时表",
+           "limit": 500
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+     - equals: { status_code: 200 }
+     - equals: { 状态: "未恢复" }
+     - equals: { 记录值: "A1=True" }

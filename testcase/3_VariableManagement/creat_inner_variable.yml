@@ -1,0 +1,23 @@
+-  name: 新增内部变量-$csv{title}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+     title-index-name-description-typeName-inner_id: data/VariableManagement/creat_inner_variable.csv
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(inner_tunnel_id)}/tag
+      method: post
+      json:
+         -  archiveSetting: null
+            groupId: null
+            name: $csv{name}
+            description: $csv{description}
+            typeName: $csv{typeName}
+            config:
+               initType: 0
+               setValue: null
+            index: ddt{{$csv{index}}}
+      headers:
+        X-Project: ${get_extract_data(x_project)}
+   extract:
+      $csv{inner_id}: id.0
+   validate:
+      -  equals: {status_code: 200}

@@ -1,0 +1,34 @@
+-  name: 检查远程工程id是否冲突
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/checkremoteprojectfileidconflict
+      method: post
+      files:
+         file: ${get_project_path2()}\data\EngineeringManagement\RC8.cmsproj
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {result: False}
+
+-  name: 远程导入工程文件
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/importremoteproject
+      method: post
+      files:
+         file: ${get_project_path2()}\data\EngineeringManagement\RC8.cmsproj
+   extract:
+      import_remoteproject_id: id
+   validate:
+      -  equals: {status_code: 200}
+      -  contains: id
+
+-  name: 删除工程
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/project/node/deletenodes
+      method: put
+      data:
+         ids: ${get_extract_data(import_remoteproject_id)}
+         isDeleteFile: false
+   validate:
+      -  equals: {status_code: 200}

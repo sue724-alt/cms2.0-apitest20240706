@@ -1,0 +1,72 @@
+-  name: 查询数据（归档表-报警触发）
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/data/original
+      method: post
+      json:
+        {
+           "dataSetId": "${get_extract_data(Original_Table_alarm_Trigger_ID)}",
+           "tableName": "归档表_报警触发",
+           "limit": 500
+        }
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+     - equals: { status_code: 200 }
+     - equals: { A1: 11 }
+     - equals: { B1: 77.456 }
+     - equals: { G1: 1 }
+     - equals: { 绝对值B1: 77.456 }
+     - equals: { ROUND1: 77.5 }
+     - equals: { ROUNDDOWN1: 77.4 }
+     - equals: { ROUNDUP1: 77.5 }
+     - equals: { SUM1: 88.456 }
+     - equals: { AVERAGE1: 44.228 }
+     - equals: { COUNT1: 2 }
+     - equals: { COUNTA1: 2 }
+     - equals: { MAX1: 77.456 }
+     - equals: { MEDIAN1: 44.228 }
+     - equals: { MIN1: 11 }
+     - equals: { CHAR2: "\\" }
+     - equals: { CONCATENATE2: "Abcf123" }
+     - equals: { LEFT2: "Ab" }
+     - equals: { LEN2: "4" }
+     - equals: { LOWER2: "abcf" }
+     - equals: { UPPER2: "ABCF" }
+     - equals: { MID2: "Ab" }
+     - equals: { REPLACE2: "替换cf" }
+     - equals: { RIGHT2: "cf" }
+     - equals: { TEXT月日: "10月20日" }
+     - equals: { TODATE2: "2023-06-19 00:00:00" }
+     - equals: { TRIM2: "Abcf" }
+     - equals: { DATE3: "2023-06-19 00:00:00" }
+     - equals: { 差值3年: 3 }
+     - equals: { 差值5月: 5 }
+     - equals: { 差值177日: 177 }
+     - equals: { 差值4249时: 4249 }
+     - equals: { 差值254955分: 254955 }
+     - equals: { 差值15297325秒: 15297325 }
+     - equals: { DAYS18天: "18" }
+     - equals: { AND4: "False" }
+     - equals: { FALSE4: "False" }
+     - equals: { TRUE4: "True" }
+     - equals: { IF4: "及格" }
+     - equals: { NOT_true4: "False" }
+     - equals: { NOT_false4: "True" }
+     - equals: { OR4: "False" }
+     - equals: { Change4: 0 }
+     - greater_than: { 随机数0_1: 0 }
+     - greater_than: { 随机数1_100: 0 }
+     - length_greater_than: { NOW3: 0 }
+     - length_greater_than: { YEAR3: 0 }
+     - length_greater_than: { MONTH3: 0 }
+     - length_greater_than: { DAY3: 0 }
+     - length_greater_than: { HOUR3: 0 }
+     - length_greater_than: { MINUTE3: 0 }
+     - length_greater_than: { SECOND3: 0 }
+     - length_greater_than: { TODAY3: 0 }
+     - length_greater_than: { WEEKDAY3: 0 }
+     - length_greater_than: { WEEKNUM3: 0 }
+     - length_greater_than: { 班次: 0 }
+

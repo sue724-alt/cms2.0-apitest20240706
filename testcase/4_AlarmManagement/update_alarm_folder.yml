@@ -1,0 +1,16 @@
+-  name: 更新报警组
+   base_url: ${get_base_url(base_url)}
+   request:
+      url: /api/v1/alarmfolder/update
+      method: put
+      json:
+        {"id": "${get_extract_data(Alarm_Folder_ID)}","parentId":null,"name":"修改报警文件${get_random_number(1,1000)}","nodeType":0,"sort":1,"children":[]}
+      headers:
+         Content-Type: application/json;charset=UTF-8
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+   - equals:
+       status_code: 200
+   - equals:
+        nodeType: 0
+   - contains: id

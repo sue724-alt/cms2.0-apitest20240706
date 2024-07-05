@@ -1,0 +1,15 @@
+-  name: 执行插入语句
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(maptable_id)}/executetest
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {action: 插入}
+      -  equals: {status: 成功}
+      -  equals: {A12: 中文1}
+      -  equals: {A2: '10'}
+      -  equals: {A10: '10.456'}
+      -  equals: {aa16: 2023/10/20 18:40:55}

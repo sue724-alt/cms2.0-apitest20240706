@@ -1,0 +1,21 @@
+-  name: 校验内部变量必填项-$csv{title}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      title-name-description-typeName-initType-setValue: data/VariableManagement/check_inner_variable.csv
+   request:
+      url: /api/v1/variable/tunnel/${get_extract_data(io_tunnel_id)}/tag
+      method: post
+      json:
+         -  archiveSetting: null
+            groupId: null
+            name: $csv{name}
+            description: $csv{description}
+            typeName: $csv{typeName}
+            config:
+               initType: ddt{{$csv{initType}}}
+               setValue: $csv{setValue}
+            index: 1
+      headers:
+        X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 400}

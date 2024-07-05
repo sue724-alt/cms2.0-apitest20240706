@@ -1,0 +1,100 @@
+[2023-08-18 13:32:40,295] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-18 13:32:40,295] logger_util.py->write_log line:61 [INFO] 接口名称：创建跨天班次
+[2023-08-18 13:32:40,295] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-18 13:32:40,295] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/base/shift
+[2023-08-18 13:32:40,295] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'fa34e6cb96cc41b7938190482f21f160'}
+[2023-08-18 13:32:40,295] logger_util.py->write_log line:61 [INFO] 请求参数：{'count': 2, 'startTime': {'isNextDay': False, 'time': '08:00'}, 'endTime': {'isNextDay': True, 'time': '08:00'}, 'shifts': [{'shiftName': '早班', 'startTime': {'isNextDay': False, 'time': '08:00'}, 'endTime': {'isNextDay': False, 'time': '20:00'}, 'id': 0}, {'shiftName': '晚班', 'startTime': {'isNextDay': False, 'time': '20:00'}, 'endTime': {'isNextDay': True, 'time': '08:00'}, 'id': 1}]}
+[2023-08-18 13:32:40,296] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-18 13:32:40,326] logger_util.py->write_log line:61 [INFO] 预期结果：[{'equals': {'status_code': 200}}]
+[2023-08-18 13:32:40,326] logger_util.py->write_log line:61 [INFO] 实际结果：
+[2023-08-18 13:32:40,326] logger_util.py->write_log line:61 [INFO] 接口请求成功！
+[2023-08-18 13:32:40,326] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求结束-----------
+
+[2023-08-18 13:32:40,332] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-18 13:32:40,333] logger_util.py->write_log line:61 [INFO] 接口名称：开始时间不可大于结束时间
+[2023-08-18 13:32:40,333] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-18 13:32:40,333] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/base/shift
+[2023-08-18 13:32:40,333] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'fa34e6cb96cc41b7938190482f21f160'}
+[2023-08-18 13:32:40,333] logger_util.py->write_log line:61 [INFO] 请求参数：{'count': 1, 'startTime': {'isNextDay': False, 'time': '08:00'}, 'endTime': {'isNextDay': False, 'time': '07:00'}, 'shifts': [{'id': 0, 'shiftName': '班次1', 'startTime': {'isNextDay': False, 'time': '08:00'}, 'endTime': {'isNextDay': False, 'time': '07:00'}}]}
+[2023-08-18 13:32:40,333] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-18 13:32:40,336] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-18 13:32:40,336] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-18 13:32:40,336] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-18 13:32:40,337] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-18 13:32:40,337] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 232, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+
+[2023-08-18 13:32:40,441] logger_util.py->write_log line:61 [INFO] 
+-------------接口请求开始-----------
+[2023-08-18 13:32:40,442] logger_util.py->write_log line:61 [INFO] 接口名称：班次开始时间不能小于上一个班次结束时间
+[2023-08-18 13:32:40,442] logger_util.py->write_log line:61 [INFO] 接口方式：put
+[2023-08-18 13:32:40,442] logger_util.py->write_log line:61 [INFO] 接口路径：http://127.0.0.1:18000/api/v1/base/shift
+[2023-08-18 13:32:40,442] logger_util.py->write_log line:61 [INFO] 请求头：{'X-Project': 'fa34e6cb96cc41b7938190482f21f160'}
+[2023-08-18 13:32:40,442] logger_util.py->write_log line:61 [INFO] 请求参数：{'count': 2, 'startTime': {'isNextDay': False, 'time': '08:00'}, 'endTime': {'isNextDay': True, 'time': '07:00'}, 'shifts': [{'id': 0, 'shiftName': '班次1', 'startTime': {'isNextDay': False, 'time': '08:00'}, 'endTime': {'isNextDay': False, 'time': '20:00'}}, {'id': 1, 'shiftName': '班次2', 'startTime': {'isNextDay': False, 'time': '18:00'}, 'endTime': {'isNextDay': True, 'time': '07:00'}}]}
+[2023-08-18 13:32:40,442] logger_util.py->write_log line:61 [INFO] 文件上传：None
+[2023-08-18 13:32:40,446] logger_util.py->error_log line:65 [INFO] 断言失败:status_code不等于200
+[2023-08-18 13:32:40,446] logger_util.py->write_log line:61 [INFO] 接口请求失败！
+[2023-08-18 13:32:40,446] logger_util.py->write_log line:61 [INFO] -------------接口请求结束-----------
+
+[2023-08-18 13:32:40,446] logger_util.py->error_log line:65 [INFO] 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+[2023-08-18 13:32:40,446] logger_util.py->error_log line:65 [INFO] 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 232, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\Project_python\api_cms\common\requests_util.py", line 401, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\Project_python\api_cms\common\requests_util.py", line 347, in validate_result
+    error_log("断言失败:"+assert_key+"不等于"+str(assert_value))
+  File "E:\Project_python\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:status_code不等于200
+
+

@@ -1,0 +1,56 @@
+-  name: 创建映射表-定时触发-插入
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/${get_extract_data(intn_id)}/table
+      method: post
+      json:
+        {
+          "isBasic": true,
+          "databaseTableName": "student",
+          "querySql": "",
+          "name": "定时_插入${get_random_number(1000,9999)}"
+        }
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   extract:
+     time_maptable_id: id
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 保存配置-插入
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(time_maptable_id)}/save
+      method: put
+      json:
+        {"actionType":2,"filters":[],"sorts":[{"field":"id","sortType":2}],"mappings":[{"field":"time","relativeVariable":"aa16","dataType":"日期时间","order":1},{"field":"name","relativeVariable":"A12","dataType":"字符串","order":2},{"field":"age","relativeVariable":"A2","dataType":"有符号8位整型","order":3},{"field":"money","relativeVariable":"A10","dataType":"F32位浮点数IEEE754","order":4}]}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 触发配置-定时
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(time_maptable_id)}/trigger/save
+      method: put
+      json:
+         [{"effectiveDateTime":"2023-11-28T06:55:22.000Z","frequencyValue":1,"frequencyUnit":1,"matchAll":true,"condition":"A2>10","conditionDetail":1,"frequencyCheck":false,"alarmPointIds":[],"triggerType":1}]
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+
+-  name: 刷新-定时触发-插入
+   base_url: ${get_base_url(cms_url)}
+   request:
+      url: /api/v1/connection/table/${get_extract_data(time_maptable_id)}/preview
+      method: get
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 200}
+      -  equals: {age: 77}
+      -  equals: {money: 77.456}
+      -  equals: {name: '中文1'}
+      -  equals: {time: '2022-11-28 09:05:01'}

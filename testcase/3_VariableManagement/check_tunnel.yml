@@ -1,0 +1,14 @@
+-  name: 通道异常校验-$csv{title}
+   base_url: ${get_base_url(cms_url)}
+   parameters:
+      title-name-description-ServerName-DeviceID-Port-ConnectTimeOut-ResponseTimeout-PduLength-msg: data/VariableManagement/check_tunnel.csv
+   request:
+      url: /api/v1/variable/tunnel
+      method: post
+      json:
+         {"id":5,"parentId":null,"sort":2,"name":"$csv{name}","description":"","type":1,"typeTag":"TCP","config":{"suppiler":"ModBus","model":"Modbus_TCP","protocol":"Modbus_TCP","parameters":{"ServerName":"$csv{ServerName}","DeviceID":"$csv{DeviceID}","Port":"$csv{Port}","HeadAddress":"1","ConnectTimeOut":"$csv{ConnectTimeOut}","ResponseTimeout":"$csv{ResponseTimeout}","Int32ByteOrder":"2143","Int64ByteOrder":"2143","UInt32ByteOrder":"2143","UInt64ByteOrder":"2143","F32ByteOrder":"3412","F64ByteOrder":"3412","StrByteOrder":"2143","EnableIndependentLink":"禁用","EnablePduDiagnosis":"启用","PduLength":"$csv{PduLength}","ChannelStatus":"启用","PacketCommitStatus":"禁用","isStaticSimulation":"禁用"}},"enable":true,"createTime":"2024-01-02T17:58:57.3894443+08:00","updateTime":"2024-01-02T17:58:57.3894445+08:00"}
+      headers:
+         X-Project: ${get_extract_data(x_project)}
+   validate:
+      -  equals: {status_code: 400}
+      -  contains: $csv{msg}

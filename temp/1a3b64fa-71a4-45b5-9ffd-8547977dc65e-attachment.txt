@@ -1,0 +1,42 @@
+INFO     log:logger_util.py:61 
+-------------接口请求开始-----------
+INFO     log:logger_util.py:61 接口名称：异常下发内部变量-$csv{title}
+INFO     log:logger_util.py:61 接口方式：post
+INFO     log:logger_util.py:61 接口路径：http://127.0.0.1:18000/api/v1/variable/setvalues
+INFO     log:logger_util.py:61 请求头：{'X-Project': '0b548e0c2d13469dbb6aca2b3ff1c6a5', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiU3VwZXJBZG1pbiIsImV4cCI6MTcwNzI4OTYxMSwiaXNzIjoiQ01TdjIiLCJhdWQiOiJBcGkifQ.jgCObA49FEeV8LnHOycPsyhMDwYR7YPdXAjPg3Lac7I'}
+INFO     log:logger_util.py:61 请求参数：{'aa3': '256'}
+INFO     log:logger_util.py:61 文件上传：None
+INFO     log:logger_util.py:65 断言失败:errorMsg不等于请输入正确的值, 应在0 - 255
+INFO     log:logger_util.py:61 实际结果：{'allSuccess': False, 'items': {'aa3': {'value': None, 'quality': 1, 'errorMsg': '写值失败'}}}
+INFO     log:logger_util.py:61 接口请求失败！
+INFO     log:logger_util.py:61 -------------接口请求结束-----------
+
+INFO     log:logger_util.py:65 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 381, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:errorMsg不等于请输入正确的值, 应在0 - 255
+
+INFO     log:logger_util.py:65 分析YAML文件异常：异常信息: Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 381, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:errorMsg不等于请输入正确的值, 应在0 - 255
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 248, in analysis_yaml
+    self.validate_result(yq_result, return_data, status_code)
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 448, in validate_result
+    error_log("断言异常：异常信息: %s" % str(traceback.format_exc()))
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言异常：异常信息: Traceback (most recent call last):
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\requests_util.py", line 381, in validate_result
+    error_log("断言失败:" + assert_key + "不等于" + str(assert_value))
+  File "E:\测试工具\CMS接口自动化教程\工程\api_cms20240122\api_cms\common\logger_util.py", line 66, in error_log
+    raise Exception(log_message)
+Exception: 断言失败:errorMsg不等于请输入正确的值, 应在0 - 255
